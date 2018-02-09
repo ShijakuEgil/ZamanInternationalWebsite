@@ -8,7 +8,7 @@
       <div class="col-9 post-content">
         <?php the_title( sprintf('<h1 class="post-title"><a href="%s">', esc_url( get_permalink() ) ),'</a></h1>' ); ?>
         <?php the_excerpt(); ?>
-        <h1>test</h1>
+  
         <div class="credits">
               <small class="post-credits"><i class="fa fa-pencil"></i>Posted by <strong><?php echo get_the_author();?></strong> on <?php the_time('l, F jS, Y') ?>
                   <span class="tags"><?php the_tags('<i class="fa fa-tags"></i>',' / ') ?></span>
