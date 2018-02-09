@@ -152,7 +152,7 @@
     <!--Featured content updated-->
     <div class="row container-fluid post-contents">
      <div class="col-4 single-post">
-<?php//==========================================================================
+<?php
           $args = array(
             'posts_per_page' => '6',
             'post_type' => 'event',
@@ -176,7 +176,7 @@
 ?>
      </div>
      <div class="col-4 single-post">
-<?php//=========================================================================
+<?php
       $args = array(
         'post_type' => 'news',
         'posts_per_page' => 1
@@ -190,7 +190,7 @@
 ?>
      </div>
      <div class="col-4 single-post">
-<?php//=========================================================================
+<?php
       $args = array(
         'post_type' => 'blog-post',
         'posts_per_page' => 1
