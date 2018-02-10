@@ -8,6 +8,7 @@
 @import "single-blog";
 @import "news-page";
 @import "calendar-style";
+@import "our-team";
 // TODO: create styling for responsive design
 .logged-in {
 	.navbar{top: 30px;}
@@ -15,6 +16,7 @@
 body{
 	font-family: 'Open Sans', sans-serif;
 }
+
 // ====================
 // HEADER STYLING
 // ====================
@@ -29,6 +31,7 @@ nav { @include headfootcol;
 		}
 	}
 }
+
 // ====================
 // FOOTER STYLING
 // ====================
@@ -133,6 +136,7 @@ footer{
 		}//footer-logo
 	}//contact-us
 }//footer
+
 //=====================
 //	ANIMATED HEADING
 // ====================
@@ -221,6 +225,7 @@ main {
 						}
 			}//clip
 		}//#animated-heading
+
 /*====================================
 		CAROUSEL BUTTON STYLE
 ===================================*/
@@ -249,6 +254,7 @@ main {
 		}//#button_group_id
 	}//#myCarousel
 }//main
+
 /*====================================
 		TITLE COMPONENT STYLING
 ===================================*/
