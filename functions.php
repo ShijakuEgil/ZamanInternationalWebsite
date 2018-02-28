@@ -1,6 +1,7 @@
 <?php
 require get_template_directory() .'/inc/enqueue.php';
 require get_template_directory() .'/inc/post_types.php';
+require get_template_directory() .'/inc/custom_fields.php';
 require get_template_directory() .'/inc/class-wp-bootstrap-navwalker.php';
 
 
