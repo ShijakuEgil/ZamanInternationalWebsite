@@ -1,5 +1,5 @@
 <?php
-// 
+//
 // //TIMELINE
 //
 // function your_prefix_register_post_type() {
@@ -461,3 +461,49 @@
 // 	register_post_type( 'animated-heading', $args );
 // }
 // add_action( 'init', 'your_prefix_register_post_type' );
+function cptui_register_my_cpts() {
+
+	/**
+	 * Post Type: Slides.
+	 */
+
+	$labels = array(
+		"name" => __( "Slides", "" ),
+		"singular_name" => __( "Slide", "" ),
+		"menu_name" => __( "Home Page Slides", "" ),
+		"all_items" => __( "All Slides", "" ),
+		"add_new" => __( "Add New Slide", "" ),
+		"add_new_item" => __( "New Slide", "" ),
+		"edit_item" => __( "Edit Slide", "" ),
+		"view_items" => __( "View Slides", "" ),
+		"not_found_in_trash" => __( "No Slides Found", "" ),
+		"featured_image" => __( "Slide For Home Slider", "" ),
+		"set_featured_image" => __( "Set Slide Image", "" ),
+		"remove_featured_image" => __( "Remove Slide Image", "" ),
+	);
+
+	$args = array(
+		"label" => __( "Slides", "" ),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => false,
+		"rest_base" => "",
+		"has_archive" => false,
+		"show_in_menu" => true,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"rewrite" => array( "slug" => "home_page_slides", "with_front" => true ),
+		"query_var" => true,
+		"supports" => array( "title", "editor", "thumbnail", "excerpt", "author" ),
+		"taxonomies" => array( "post_tag" ),
+	);
+
+	register_post_type( "home_page_slides", $args );
+}
+
+add_action( 'init', 'cptui_register_my_cpts' );
