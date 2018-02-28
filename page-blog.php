@@ -1,5 +1,5 @@
 <?php get_header( );
-  get_template_part( 'content', 'banner' );?>
+  get_template_part( 'templates/content', 'banner' );?>
 <div class="row">
 
   <div class="col-xs-12 col-sm-9">
@@ -14,7 +14,7 @@
 
           while($blog_loop->have_posts() ) : $blog_loop->the_post(); ?>
 
-              <?php get_template_part( 'content', 'blog' ); ?>
+              <?php get_template_part( 'templates/content', 'blog' ); ?>
 
           <?php endwhile;?>
       <div class="pagination">
@@ -27,7 +27,7 @@
                    'total' => $blog_loop->max_num_pages
               ) );
           ?>
-      </div>        
+      </div>
     </div>
   </div>
   <div class="col-xs-12 col-sm-3 column">

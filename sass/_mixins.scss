@@ -1,15 +1,6 @@
 //Mixings are implamented here
 
 //mixins -----to include @include headfootcol;
-@mixin headfootcol{
-  background:-moz-linear-gradient(left, rgb(13,75,126) 0%, rgb(73,155,234) 49%, rgb(44,114,180) 100%);
-  background:-webkit-gradient(left top, right top, color-stop(0%, rgb(13,75,126)), color-stop(49%, rgb(73,155,234)), color-stop(100%, rgb(44,114,180)));
-  background:-webkit-linear-gradient(left, rgb(13,75,126) 0%, rgb(73,155,234) 49%, rgb(44,114,180) 100%);
-  background:-o-linear-gradient(left, rgb(13,75,126) 0%, rgb(73,155,234) 49%, rgb(44,114,180) 100%);
-  background:-ms-linear-gradient(left, rgb(13,75,126) 0%, rgb(73,155,234) 49%, rgb(44,114,180) 100%);
-  background:linear-gradient(to right, rgb(13,75,126) 0%, rgb(73,155,234) 49%, rgb(44,114,180) 100%);
-  filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d4b7e', endColorstr='#2c72b4', GradientType=1 );
-}
 
 @mixin box_shadow {
   -webkit-box-shadow: 0px 0px 26px 10px rgba(0,0,0,0.04);
@@ -17,15 +8,21 @@
   box-shadow: 0px 0px 26px 10px rgba(0,0,0,0.04);
 }
 
-@mixin headfootcol2 {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#258dc8+0,258dc8+100;Blue+Flat+%231 */
-  background: rgb(37,141,200); /* Old browsers */
-  background: -moz-linear-gradient(left,  rgba(37,141,200,1) 0%, rgba(37,141,200,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left,  rgba(37,141,200,1) 0%,rgba(37,141,200,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right,  rgba(37,141,200,1) 0%,rgba(37,141,200,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#258dc8', endColorstr='#258dc8',GradientType=1 ); /* IE6-9 */
+@mixin box_shadow_black {
+  -webkit-box-shadow: 0px 0px 26px 10px rgba(255,255,255,0.1);
+  -moz-box-shadow: 0px 0px 26px 10px rgba(255,255,255,0.1);
+  box-shadow: 0px 0px 26px 10px rgba(255,255,255,0.1);
 }
 
+@mixin box_shadow_inset($color) {
+  font-weight: bolder;
+  background-color: $color;
+  color: transparent;
+  text-shadow: 0px 2px 3px rgba(255,255,255,0.3);
+ -webkit-background-clip: text;
+ -moz-background-clip: text;
+ background-clip: text;
+}
 @mixin headerfooterfont{
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5f6f6+0,dbdce2+21,b8bac6+49,dddfe3+80,f5f6f6+100;Grey+Pipe */
   background: rgb(245,246,246); /* Old browsers */
@@ -84,6 +81,37 @@
 @mixin font-size($size) {
   font-size: $size;
   font-size: calculateRem($size);
+}
+
+@mixin push--auto {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+@mixin center($position) {
+  position: absolute;
+
+  @if $position == 'vertical' {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  @else if $position == 'horizontal' {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+  }
+  @else if $position == 'both' {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
 }
 //breakpoints for media queries
 @mixin bp-large {

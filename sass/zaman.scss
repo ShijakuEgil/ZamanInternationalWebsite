@@ -9,6 +9,9 @@
 @import "news-page";
 @import "calendar-style";
 @import "our-team";
+@import "contact-us";
+@import "about-us";
+
 // TODO: create styling for responsive design
 .logged-in {
 	.navbar{top: 30px;}
@@ -16,12 +19,13 @@
 body{
 	font-family: 'Open Sans', sans-serif;
 }
-
 // ====================
 // HEADER STYLING
 // ====================
-nav { @include headfootcol;
-	a { color: font_color; font-weight: bold;
+nav {
+	 @include header_footer_background;
+	  max-height: 10vh;
+	a { color: $menu_font_color; font-weight: bold;
 	}
 }
 .navbar-collapse{
@@ -31,6 +35,9 @@ nav { @include headfootcol;
 		}
 	}
 }
+.navbar-brand {
+	padding:20px;
+}
 
 // ====================
 // FOOTER STYLING
@@ -38,7 +45,7 @@ nav { @include headfootcol;
 .social-media{	text-align: center;
 								color:  rgba(255,255,255,0.4);
 								margin: 20px auto;
-		a{	font-size: 20px;
+		a{	@include font-size(20px);
 				width:40px;
 				height: 40px;
 				line-height: 40px;
@@ -54,8 +61,9 @@ nav { @include headfootcol;
 			}//a
 }//social-media
 footer{
-	@include headfootcol;
-	padding: 100px 10px;
+	@include header_footer_background;
+	padding: 10px;
+	padding-top:100px;
 	.menu{
 		text-align: center;
 		.menu-item-type-custom{
@@ -64,12 +72,11 @@ footer{
 			vertical-align: top;
 			margin: 0 5%;
 			a{
-				color:$font_color;
-				// opacity: $font_opacity_high;
+				color:$menu_font_color;
 				display:inline-block;
 				margin-bottom: 20px;
 				text-decoration: none;
-				font-size: 12pt;
+				@include font-size(18px);
 				font-weight:bold;
 				&:after{	display: block;
 									content: url('../img/separa_34.png');
@@ -81,7 +88,7 @@ footer{
 				a {	margin-bottom: 0;
 						margin-left: 0;
 						margin-right: 0;
-						font-size: 11pt;
+						@include font-size(14px);
 						font-weight:normal;
 						opacity:$font_opacity_low;
 						&:hover {	opacity: $font_opacity_high;
@@ -91,8 +98,9 @@ footer{
 				}
 			}
 		}
-	.contact-us{	color: $font_color;
-								margin-top: 1%;
+	.contact-us{
+		color: $menu_font_color;
+		margin-top: 1%;
 		.row {	margin-left: 12%;
 						margin-right:	12%;
 				.col {	padding: 0 50px;
@@ -100,9 +108,9 @@ footer{
 								&:last-child {border-left: 1px solid rgba(255, 255, 255, .2);}
 				}//col
 		}//row
-		h3{	color:$font_color;
+		h3{	color:$menu_font_color;
 				margin-bottom: 20px;
-				font-size: 12pt;
+				@include font-size(18px);
 				font-weight:bold;
 				margin-left: 15%;
 				&:after{	display: block;
@@ -112,19 +120,19 @@ footer{
 		.contact-info{	text-align: center;
 				.espacio-ico-01{	opacity:$font_opacity_high;
 													font-weight:normal;
-													font-size:13pt;
+													@include font-size(15px);
 												}
 				a{	text-decoration: none;
 						color: inherit;
 						opacity:$font_opacity_low;
 						font-style: italic;
 						float: right;
-						font-size:11pt;
+						@include font-size(15px);
 						&:hover{	opacity:$font_opacity_high;}
 					}
 					span{	opacity:$font_opacity_low;
 								float:left;
-								font-size:11pt;
+								@include font-size(13px);
 							}//span
 				}//contact-info
 		.copyright{	text-align: center;
@@ -141,60 +149,54 @@ footer{
 //	ANIMATED HEADING
 // ====================
 main {
-	#myCarousel {	top:119px;
-								margin-bottom:100px;
-								position: relative;
+	#myCarousel {	top:95px;
+								// position: relative;
 		.carousel-indicators {
 						li{
-							position: relative;
+							// position: relative;
 						}
 		}
 		.carousel-inner {
-
+										height: 75vh;
 				.carousel-item {
 													display: block;
 													opacity: 0;
-													transition: opacity .75s ease-in-out;
+													transition: opacity .9s ease-in-out;
 													&.active {	opacity: 1 !important;}
 
 					img {	min-width:100%;
 				}//img
 				.slide-heading{
 
-					.carousel-caption { margin-bottom: 15em;
+					.carousel-caption { margin-bottom: 5em;
 
-						h1{ font-size: 40pt;
-								color:$font_color;
+						h1{
+								@include picture_font_style;
+								@include font-size(40px);
 								font-weight: bold;
-								opacity: .75;
-								text-shadow:5px 5px 5px rgba(0,0,0,.7);
-
-
 						}//h1
-						.slider-paragraph{ 	color: $font_color;
-																font-size: 15pt;
-																font-weight: bold;
-																opacity: $font_opacity_low;
-																text-shadow: 5px 5px 5px rgba(0,0,0,.7);
-
+						.slider-paragraph{
+										@include font-size(20px);
+										font-weight: bold;
+										@include picture_font_style;
 						}//slider-paragraph
 					}//carousel-caption
 				}//slide-heading
 			}//carousel-item
 		}//carousel-inner
 		.carousel-control-next { z-index: 1;
-														@include right_side_fade_to_black;}
+														// @include right_side_fade_to_black;
+}
 		.carousel-control-prev { z-index: 1;
-														@include left_side_fade_to_black;}
-		#animated-heading	{ position: absolute;
-												top:0;
-												left:0;
-												width:100%;
-												height:40vw;
-												padding-top:200px;
-												color:#f0f9ff;
-												opacity:.6;
-												text-shadow:5px 5px 10px rgba(0,0,0,0.81);
+														// @include left_side_fade_to_black;
+													}
+		#animated-heading	{
+							position: absolute;
+							top:0;
+							left:0;
+							width:100%;
+							padding-top:200px;
+							@include picture_font_style;
 
 				.clip{	margin:0 auto;
 								font-size: 80pt;
@@ -229,28 +231,99 @@ main {
 /*====================================
 		CAROUSEL BUTTON STYLE
 ===================================*/
-		#button_group_id {	position:absolute;
-												text-align: center;
-												bottom:0;
-												left:0;
+#button_group_id{
+				padding: 15px 0;
+				background-color: $grey2;
+					.btn{
+						@include box_shadow_black;
+						margin:0 7.5px;
+						height: 120px;
+						background-color: $main_grey;
+						padding:0;
+						border:none;
+						color: $menu_font_color;
+						@include font-size(70px);
+						.btn-icon{
+							width:25%;
+							height:100%;
+							.fa{
+								@include box_shadow_inset($font_color);
+							}
+						}
+						.triangle{
 
-			.btn-group { 	height: 100px;
-										 width: 100%;
-
-				.btn{	width: 20%;
-							margin: 10px auto;
-							opacity: .7;
-							text-align: center;
-							font-size: 25pt;
-							border-radius: 5%;
-							// box-shadow:0 0 0 1px rgba(255,255,255,$font_opacity_low);
-							color: $font_color;
+						}
+						span{
+							@include font-size(40px);
 							font-weight: 600;
-							text-shadow: 0 0 0 1px rgb(255,255,255);
-							&:hover{	opacity:1;
-												box-shadow:0 0 0 1px rgba(255,255,255,$font_opacity_high);}
-				}//btn
-			}//.btn-group
+							position:absolute;
+							top:30px;
+							left:40%;
+						}
+						&:hover{
+							.btn-icon{
+								@include animate(all, 500ms);
+								width:85%;
+								i{
+									// @include font-size(100px);
+								}
+							}
+							.triangle{
+								@include animate(all, 500ms);
+								left:85%;
+							}
+							span{
+								@include animate(all, 200ms);
+								opacity:0;
+							}
+						}
+					}
+
+					.need-help-btn{
+						.btn-icon{
+							background-color: #F29228;
+						}
+						.triangle{
+							@include triangle('right', 3.75rem, #F29228);
+							position:absolute;
+							top: 0%;
+							left:25%;
+						}
+					}
+					.volunteer-btn{
+						.btn-icon{
+							background-color: #89C4F3;
+						}
+						.triangle{
+							@include triangle('right', 3.75rem, #89C4F3);
+							position:absolute;
+							top: 0%;
+							left:25%;
+						}
+					}
+					.donate-btn{
+						.btn-icon{
+							background-color: #A9CF33;
+						}
+						.triangle{
+							@include triangle('right', 3.75rem, #A9CF33);
+							position:absolute;
+							top: 0%;
+							left:25%;
+						}
+					}
+					.wishlists-btn{
+						.btn-icon{
+							background-color: #F8E620;
+						}
+						.triangle{
+							@include triangle('right', 3.75rem, #F8E620);
+							position:absolute;
+							top: 0%;
+							left:25%;
+						}
+					}
+			//}//.btn-group
 		}//#button_group_id
 	}//#myCarousel
 }//main
@@ -258,18 +331,23 @@ main {
 /*====================================
 		TITLE COMPONENT STYLING
 ===================================*/
-.title-conponent {	text-align: center;
-										margin: 150px 0;
-		.title-row{
-			.title { margin: 0 50px;
+.title-conponent {
+			text-align: center;
+			margin-top: 150px;
 
-					h1{	text-align: center;
-							font-weight: 600;
-							font-size: 60px;
+		.title-row {
+				.title {
+					margin: 0 50px;
+
+					h1{
+						text-align: center;
+						font-weight: 600;
+						font-size: 60px;
+						}
 					}
-			}
-			.separator {	background: url('../img/header-bg.png') repeat-x center;
-										padding: 0;
+			.separator {
+				background: url('../img/header-bg.png') repeat-x center;
+				padding: 0;
 			}
 		}//.row
 		.description {	color:$paragraph_font_color;
@@ -278,9 +356,3 @@ main {
 										margin: 10px 20px;
 		}
 }//title-component
-
-
-//gallery page
-.gallery-container{
-	height: 500px;
-}

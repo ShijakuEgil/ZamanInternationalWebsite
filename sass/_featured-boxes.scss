@@ -2,25 +2,19 @@
 //	IMPACT BOXES
 // ====================
 main{
-  .impact-boxes{  width:100%;
-                  padding: 0 15em;
+  .impact-boxes{  margin-top:5%;
+                  width:100%;
+                  padding: 5em 15em;
+                  background: $grey1;
 
       .item{ text-align: center;
 
-          .box{ background-color: $lighter-grey;
-                height: 400px;
-                padding: 2rem;
-                box-shadow: 1px 1px 20px gray;
-                border-radius: 1%;
-          }
+          .box{}
           .icon { font-size:100pt;
                   color: $icon_color;
           }
           .title-of-box{  font-weight:600;
                           font-size:30pt;
-                          border-top: 1px solid rgba(125,130,133, .1);
-                          border-bottom: 1px solid rgba(125,130,133, .1);
-                          border-radius: 5%;
                           padding: 4px 0;
                           margin: 15px 0;
           }//title-of-box
@@ -30,107 +24,106 @@ main{
           }//description-of-box
       }//item
   }//impact-boxes
-  
+
 //=====================
 //	FEATURED BOXES
 // ====================
-  .post-contents{ padding: 2% 5%;
-                  background-color: rgba(203,203,203,.6);
+  .post-contents{ padding: 3% 10%;
+                  margin: 5% 0;
+                  background-color: $grey1;
 
-    .single-post{ padding: 3.5em 3.5em;
-                  position: relative;
-                  border:5px solid rgba(203,203,203,.5);
-                  border-radius: 10px;
-                  background-color: $lighter-grey;
+    .single-post{ padding: 3.5em 1.5em;
+                  padding-bottom: 1em;
+                  // background-color: white;
 
-
-      h1{ width:inherit;
+      h1{
           position:absolute;
           z-index: 1;
-          font-size: 60px;
+          @include font-size(60px);
           font-style: italic;
-          font-weight: 600;
-          text-shadow: 1px 1px 5px white;
-          opacity: .5;
+          font-weight: 700;
+          @include picture_font_style;
+          padding:2% 5%;
           ul{ list-style: none;
             li{
-              a{  text-decoration: none;
-                  color: $dark-grey;
-                  pointer-events: none;
-                  cursor: default;
+              a{
+                cursor: default;
               }
             }
           }
-
-      }
-      .post-image{  position: relative;
+        }
+      .post-image{
+        position: relative;
+        height: 300px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 5px;
+        box-shadow: inset 0px 0px 150px 15px rgba(0,0,0,0.8);
 
         a{
           img{  width:100%;
-                height:350px;
+                height:300px;
                 float: left;
-                box-shadow: 1px 1px 20px gray;
+                //box-shadow: 1px 1px 20px gray;
+
                 border-radius: 5px;
           }//img
         }//a
       }//post-image
       .post-content{
+                      margin-left: 2%;
+                      margin-right: 2%;
 
-        .post-header{ width: 100%;
+        .post-header{
+                      width: 100%;
                       position:relative;
-
-                img{  position: relative;
+                img{
+                      position: relative;
                       top:-2em;
-                      max-width:50%;
+                      max-width:40%;
                       height:auto;
                       margin-left: 2%;
-              }
+                  }
             }//post-header
-          .post-title{  float:left;
-                        width: 100%;
+          .post-title{
                         text-decoration: none;
                         font-style: italic;
-                        color: black;
-                        margin-bottom: 20px;
-                        margin-left: 10%;
-                        text-shadow: 1px 1px 5px gray;
-                        &:hover{  text-decoration:none; }
+                        @include font-size(28px);
+                        margin-left: 4%;
 
               a{  text-decoration: none;
-                  font-style: italic;
-                  color: black;
-                  &:hover{  text-decoration:none; }
+                  color:black;
+                  &:hover{  color:$font_hover_color;
+                  }
               }//a
           }//post-title
-        p{  margin-left: 5%;
-            margin-bottom: 22.5px;
-            font-size: 18px;
-            line-height: 30px;
+        p{
+            @include font-size(20px);
+            line-height: 27px;
             text-align: left;
-            color:#3d3d3d;
+            margin-left:4%;
+            color:$paragraph_font_color;
             min-height: 150px;
         }//p
-        .transparent-bg-btn{  //display: inline-block;
-                              position: absoute;
-                              bottom:0;
-                              left:0;
-                              // background: 0;
-                              //float: left;
-                              border: 2px solid white;
-                              border-radius: 3px;
-                              line-height: 36px;
-                              text-decoration: none;
-                              text-align:center;
-                              color: #268fdc;
-                              font-weight: 600;
-                              padding: 0 20px;
-                              height: 40px;
-                              margin-left: 5%;
-                              box-shadow: 2px 2px 5px gray;
-                              width:50%;
-                              &:hover{  color: #268fdc;
-                                        border-color: #268fdc;
-                                        transition: all .3s ease-in-out; }
+        .transparent-bg-btn{
+                position: absoute;
+                bottom:0;
+                left:0;
+                border: 2px solid $grey1;
+                border-radius: 4px;
+                text-decoration: none;
+                text-align:center;
+                color: $button_border_blue;
+                font-weight: 600;
+                @include font-size(20px);
+                font-style: italic;
+                padding: 10px 40px;
+
+                &:hover{  color: $button_border_blue;
+                          border-color: $button_border_blue;
+                          transition: all .5s ease-in-out;
+                      }
         }//transparent-bg-btn
       }//post-content
     }//single-post

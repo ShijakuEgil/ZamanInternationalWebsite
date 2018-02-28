@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <?php wp_head(); ?>
   </head>
+  <!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
   <body <?php body_class( ); ?>>
     <header>
       <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-light" role="navigation">
@@ -16,7 +17,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="<?php home_url();?>">
-                  <img src="<?php echo get_template_directory_uri();?>/img/logo.png" width="180" height="95" alt="">
+                  <img src="<?php echo get_template_directory_uri();?>/img/logo-hope.png" width="170" height="90" alt="">
             </a>
             <?php
                 wp_nav_menu( array(

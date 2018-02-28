@@ -7,7 +7,7 @@ get_template_part( 'templates/content', 'banner' );
   <div class="row title-row justify-content-center">
     <div class="col separator"></div>
     <div class="col-auto title">
-      <h1>OUR TEAM</h1>
+      <h1>BOARD OF DIRECTORS</h1>
     </div>
     <div class="col separator"></div>
   </div>
@@ -22,14 +22,14 @@ get_template_part( 'templates/content', 'banner' );
     <div class="row no-gutters container-fluid team-container">
 <?php
       $args = array(
-        'post_type' => 'team-member',
+        'post_type' => 'board-member',
         'post_per_page' => -1,
       );
       $k = 0;
       $team_query = new WP_Query($args);
       while($team_query->have_posts()): $team_query->the_post();
 ?>
-      <div class="col-3 team-member">
+      <div class="col-4 team-member">
 <?php
           get_template_part( 'templates\content', 'team' );
 ?>
@@ -54,7 +54,7 @@ get_template_part( 'templates/content', 'banner' );
                     <?php the_content( ); ?>
                   </div>
                   <form class="modal-button-group" action="mailto:<?php the_field('email');?>" method="post" enctype="text/plain">
-                      <button type="submit" class="btn btn-primary">Email</button>
+                      <button type="submit" class="btn btn-primary"><i class="fa fa"></i>Email</button>
                   </form>
                 </div>
               </div>

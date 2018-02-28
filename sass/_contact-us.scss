@@ -1,0 +1,116 @@
+.contact-us-container{
+  margin-top:4.5%;
+  width:100%;
+  height:100vh;
+}
+.contact-us-map{
+  width:100%;
+  height: 100%;
+}
+
+// .contact-us-phones{
+//   position:absolute;
+//   top:15%;
+//   left:0;
+//   bottom:0;
+//   width:30%;
+//   height:95%;
+//   background-color: $grey3;
+// }
+
+.contact-us-email{
+  text-align: center;
+  position:absolute;
+  top:15%;
+  //bottom:0;
+  right:0;
+  width:30%;
+  height:95%;
+  background-color: $grey3;
+  padding:2%;
+  h3{
+    color:$menu_font_color;
+    @include font-size(50px);
+    opacity: $font_opacity_high;
+    font-weight:800;
+  }
+  h4{
+    color:$menu_font_color;
+    @include font-size(30px);
+  }
+  .input-group{
+    margin: 10% 0;
+  }
+  .valid-feedback,
+  .invalid-feedback{
+    @include font-size(15px);
+  }
+}
+.sidenav-close {
+
+  height:95%;
+  width:3%;
+  position:absolute;
+  z-index: 1;
+  top:15%;
+  left:0;
+  background-color: $grey3;
+  overflow-x: hidden;
+  transition: 0.5s;
+  .close-container{
+    text-align: right;
+  }
+  .fa{
+    margin-top:2px;
+    margin-right: 5px;
+    text-align: right;
+    color:white;
+    @include font-size(50px);
+    cursor: pointer;
+    transition: 1s;
+    // transform: rotate(180deg);
+  }
+  .side-note{
+    h1{
+      color:white;
+    }
+  }
+}
+
+.sidenav-open {
+
+  height:95%;
+  width:30%;
+  position:absolute;
+  z-index: 1;
+  top:15%;
+  left:0;
+  background-color: $grey3;
+  overflow-x: hidden;
+  transition: 0.5s;
+  .close-container{
+    text-align: right;
+  }
+  .fa{
+    text-align: right;
+    color:white;
+    @include font-size(50px);
+    transition: 1s;
+    transform: rotate(180deg);
+  }
+}
+
+.sidenav-phone-fax-container{
+  .col-11{
+
+  }
+  .col-1{
+    .side-note{
+      .text-container{
+        .vertical-text{
+
+        }
+      }
+    }
+  }
+}
