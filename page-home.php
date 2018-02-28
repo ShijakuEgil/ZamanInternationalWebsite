@@ -1,6 +1,5 @@
 <?php get_header(); ?>
   <main>
-
 <!--carousel slide-->
       <div id="myCarousel" class="carousel carousel-fade" data-ride="carousel" data-interval="3000">
 
@@ -69,13 +68,50 @@
           <!--animated heading end  -->
 
         <!--button group -->
-        <div id="button_group_id" class="container-fluid">
-            <div class="btn-group btn-group-justified">
+        <div id="button_group_id" class=" row no-gutters container-fluid">
+            <!-- <div class="btn-group ">
               <?php // TODO: insert url for buttons ?>
-                <a href="#" class="btn btn-danger">Need Help</a>
-                <a href="#" class="btn btn-success">Volunteer</a>
-                <a href="#" class="btn btn-warning">Donate</a>
-                <a href="#" class="btn btn-info">Wishlists</a>
+                <a href="#" class="btn btn-1"><span>Need Help</span><i class="fa fa-handshake-o"></i></a>
+                <a href="#" class="btn btn-2"><span>Volunteer</span><i class="fa fa-hand-paper-o"></i></a>
+                <a href="#" class="btn btn-3"><span>Donate</span><i class="fa fa-money"></i></a>
+                <a href="#" class="btn btn-4"><span>Wishlists</span><i class="fa fa-list-ul"></i></a>
+            </div> -->
+            <div class="col btn need-help-btn">
+              <div class="btn-icon">
+                <i class="fa fa-handshake-o"></i>
+              </div>
+              <div class="triangle"></div>
+              <span>Need Help</span>
+            </div>
+
+            <div class="col btn volunteer-btn">
+              <div class="btn-icon">
+                <i class="fa fa-hand-paper-o"></i>
+              </div>
+              <div class="triangle">
+
+              </div>
+              <span>Volunteer</span>
+            </div>
+
+            <div class="col btn donate-btn">
+              <div class="btn-icon">
+                <i class="fa fa-money"></i>
+              </div>
+              <div class="triangle">
+
+              </div>
+              <span>Donate</span>
+            </div>
+
+            <div class="col btn wishlists-btn">
+              <div class="btn-icon">
+                <i class="fa fa-list-ul"></i>
+              </div>
+              <div class="triangle">
+
+              </div>
+              <span>Wishlists</span>
             </div>
         </div>
       <!--button group end  -->
@@ -97,6 +133,7 @@
         pellentesque ut laoreet vitae.
     </div>
     <!--title-component end-->
+
     <!--start of featured boxes with icons  -->
     <div class="row justify-content-center impact-boxes">
         <div class="col-lg item">
@@ -167,7 +204,7 @@
           while($event_query->have_posts() && $check == true) : $event_query->the_post();
                 $calDate = new DateTime(get_field( 'time_date' ));
                   if($calDate >= $currDate){
-                    get_template_part( 'content', 'featured' );
+                    get_template_part( 'templates\content', 'featured' );
                     $check = false;
                     }
           endwhile;
@@ -184,7 +221,7 @@
       $news_query = new WP_Query($args);
       if($news_query->have_posts() ):
           while($news_query->have_posts()) : $news_query->the_post();
-              get_template_part( 'content', 'featured' );
+              get_template_part( 'templates\content', 'featured' );
           endwhile;
       endif;
 ?>
@@ -198,7 +235,7 @@
       $blog_query = new WP_Query($args);
       if($blog_query->have_posts() ):
           while($blog_query->have_posts()) : $blog_query->the_post();
-              get_template_part( 'content', 'featured' );
+              get_template_part( 'templates\content', 'featured' );
           endwhile;
       endif;
 ?>
@@ -240,14 +277,17 @@
             <h1>Subscribe<br />To Our<br /><span>Newsletter</span></h1>
         </div>
         <div class="col-1 triangle">
-            <i class="fa fa-play"></i>
+            <!-- <i class="fa fa-play"></i> -->
         </div>
-        <div class="col-5 info">
+        <div class="col-4 info">
           <label for="exampleInputEmail1"><h3>What is your email?</h3></label>
           <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
           <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
         </div>
-        <div class="col-3 submit">
+        <div class="col-1 triangle-2">
+            <!-- <i class="fa fa-play"></i> -->
+        </div>
+        <div class="col submit">
           <h3>What is your interest?</h3>
           <ul>
             <li>

@@ -1,5 +1,6 @@
 <?php
 require get_template_directory() .'/inc/enqueue.php';
+require get_template_directory() .'/inc/post_types.php';
 require get_template_directory() .'/inc/class-wp-bootstrap-navwalker.php';
 
 
@@ -59,7 +60,7 @@ add_action('widgets_init','zaman_widget_setup');
  * @return int (Maybe) modified excerpt length.
  */
 function wpdocs_custom_excerpt_length( $length ) {
-    return 25;//the amount of words the excerpt shows
+    return 20;//the amount of words the excerpt shows
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 

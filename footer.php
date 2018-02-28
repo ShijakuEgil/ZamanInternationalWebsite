@@ -49,7 +49,7 @@
               <a href="#"><i class="fa fa-instagram"></i></a>
             </div>
             <div class="footer-logo container-fluid">
-              <img src="<?php echo get_template_directory_uri();?>/img/logo.png"width="200" height="110" alt="">
+              <img src="<?php echo get_template_directory_uri();?>/img/logo-o.png" width="140" height="100" alt="">
             </div>
             <p class="copyright">Zaman International © 2017</p>
         </div><!--.contact-us-->

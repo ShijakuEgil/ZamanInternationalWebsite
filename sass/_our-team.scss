@@ -1,54 +1,145 @@
-.our-team-container{
-    background-color: rgba(0,0,0,0.03);
-    padding: 5% 18%;
-    .team-container{
-      width:100%;
-        // margin: 0 auto;
-        padding: 0;
-        background-color: white;
-        @include box_shadow;
+$picture_size: 15vw;
 
-      }
-}
 /*==============================
       CONTENT-TEAM STYLE
 ================================*/
-.member-link{
-  .member-container{
-    height:400px;
-    border: 1px solid rgba(0,0,0,0.03);
-    background-color: white;
-    padding:20px;
-    .image-container{
-      height:60%;
-      border-radius: 50%;
-      margin:4% 9%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+.our-team-container {
+    margin: 5% 0;
+    background-color: $grey1;
+    padding: 5% 10%;
 
-      .color{
-        width:100%;
-        height:100%;
-        //background-color: rgba(63, 127, 191, .0);
-        border-radius: 50%;
-        &:hover{
-           background-color: rgba(63, 127, 191, .5);
+  .team-container {
+      padding: 0;
+      @include box_shadow;
 
-        }
+    .member-link{
+        border: 2px solid $grey1;
+        padding: 5%;
+
+      .image-container{
+        width:$picture_size;
+        height:$picture_size;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 0;
+
+        @include animate(all, 1000ms);
+        border-top-right-radius: 100%;
+        border-top-left-radius: 100%;
+        border-bottom-right-radius: 100%;
+        border-bottom-left-radius: 100%;
+      }//image-container
+
+      .info-container{
+        padding-top: 5%;
+        text-align: center;
+      }//info-container
+      .spin{
+        margin-left:2%;
       }
-    }
-    .team-member{
-      background-color: white;
-    }
-    .info-container{
-      padding-top: 10%;
-        .name {
-
+      &:hover{
+        .image-container{
+          @include animate(all, 1000ms);
+          border-top-right-radius: 100%;
+          border-bottom-left-radius: 0%;
+          border-bottom-right-radius: 100%;
         }
-        .email{
+        .color{
+          @include animate(all, 1000ms);
+          background-color: rgba(43,155,223,.5);
+          @include animate(all, 1000ms);
+          border-top-right-radius: 100%;
+          border-bottom-left-radius: 0%;
+          border-bottom-right-radius: 100%;
+        }//color
+        .fa{
+          @include animate(all, 1500ms);
+          opacity: 1;
+          @include box_shadow;
+          &:hover{
+            color:$green;
+            opacity:1;
+          }//fa:hover
+        }//fa
+      }//member-link:hover
+    }//member-link
+  }//team-container
+}//our-team-container
+.color{
+    width: $picture_size;
+    height:$picture_size;
+    @include animate(all, 1000ms);
+    border-top-right-radius: 100%;
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    @include animate(all, 1000ms);
+    background-color: rgba(43,155,223,0);
+    position: relative;
 
-        }
+    .spin{
+      outline: none;
+      margin:0;
+      padding: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      cursor:pointer;
+
+      .fa {
+          color: $menu_font_color;
+          @include font-size(60px);
+          @include animate(all, 800ms);
+          opacity: 0;
+    }//.fa
+  }//.spin
+}//.color
+
+
+// ===========================
+//MODAL STYLING
+// ===========================
+.modal-image-container{
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius:4px;
+
+}
+.modal-body{
+  padding:0;
+  .team-modal-content{
+    max-height: 50vh;
+  }
+}
+
+.team-member-info{
+  .btn-close{
+    width:2.5em;
+    height:2.5em;
+    border-radius:100%;
+    text-align: center;
+    border:none;
+    position: absolute;
+    top:-5%;
+    left:95%;
+    cursor: pointer;
+    .fa{
+      color:white;
+      @include font-size(30px);
     }
   }
+}
+.member-info-container{
+  height: 60%;
+  overflow: auto;
+  max-height: 60%;
+}
+.modal-button-group{
+  text-align: right;
+  padding-right: 4%;
+  margin:0;
+
 }
