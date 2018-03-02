@@ -18,7 +18,7 @@
                   <i class="fa fa-phone espacio-ico-01"> Phone, Fax, &amp; email</i><br>
                   <span>Phone : </span><a href="#">(313) 551-3994</a><br/>
                   <span>Fax : </span> <a href="#">(313) 633-1211</a><br />
-                  <span>Email : </span><a href="#">info@zamaninternational.org</a>
+                  <span>Email : </span><a href="mailto:info@zamaninternational.org">info@zamaninternational.org</a>
                 </div>
               </div>
               <div class="col">
@@ -28,7 +28,7 @@
                   <i class="fa fa-phone espacio-ico-01"> Phone, Fax, &amp; email</i><br>
                   <span>Phone : </span><a href="#">(313) 749-7923</a><br/>
                   <span>Fax : </span> <a href="#">(313) 633-1211</a><br />
-                  <span>Email : </span><a href="#">info@zamaninternational.org</a>
+                  <span>Email : </span><a href="mailto:info@zamaninternational.org">info@zamaninternational.org</a>
                 </div>
               </div>
               <div class="col">
@@ -38,7 +38,7 @@
                   <i class="fa fa-phone espacio-ico-01"> Phone, Fax, &amp; email</i><br>
                   <span>Phone : </span><a href="#">(313) 749-7923</a><br/>
                   <span>Fax : </span> <a href="#">(313) 749-7975</a><br />
-                  <span>Email : </span><a href="#">pickups@zamaninternational.org</a>
+                  <span>Email : </span><a href="mailto:pickups@zamaninternational.org">pickups@zamaninternational.org</a>
                 </div>
               </div>
             </div><!--.row-->
