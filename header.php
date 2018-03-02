@@ -2,9 +2,10 @@
 <html <?php language_attributes( ); ?>>
   <head>
     <meta charset="<?php bloginfo('charset');?>">
+
     <title><?php bloginfo('name'); ?> <?php wp_title('|'); ?></title>
     <meta name="description" content="<?php bloginfo('description');?>"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
   </head>
   <!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
