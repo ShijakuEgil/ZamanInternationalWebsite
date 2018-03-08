@@ -507,3 +507,51 @@ function cptui_register_my_cpts() {
 }
 
 add_action( 'init', 'cptui_register_my_cpts' );
+
+function zaman_register_donation_bins() {
+
+	$args = array (
+		'label' => esc_html__( 'Donation Bins', 'text-domain' ),
+		'labels' => array(
+			'menu_name' => esc_html__( 'Donation Bins', 'text-domain' ),
+			'name_admin_bar' => esc_html__( 'Donation Bin', 'text-domain' ),
+			'add_new' => esc_html__( 'Add new', 'text-domain' ),
+			'add_new_item' => esc_html__( 'Add new Donation Bin', 'text-domain' ),
+			'new_item' => esc_html__( 'New Donation Bin', 'text-domain' ),
+			'edit_item' => esc_html__( 'Edit Donation Bin', 'text-domain' ),
+			'view_item' => esc_html__( 'View Donation Bin', 'text-domain' ),
+			'update_item' => esc_html__( 'Update Donation Bin', 'text-domain' ),
+			'all_items' => esc_html__( 'All Donation Bins', 'text-domain' ),
+			'search_items' => esc_html__( 'Search Donation Bins', 'text-domain' ),
+			'parent_item_colon' => esc_html__( 'Parent Donation Bin', 'text-domain' ),
+			'not_found' => esc_html__( 'No Donation Bins found', 'text-domain' ),
+			'not_found_in_trash' => esc_html__( 'No Donation Bins found in Trash', 'text-domain' ),
+			'name' => esc_html__( 'Donation Bins', 'text-domain' ),
+			'singular_name' => esc_html__( 'Donation Bin', 'text-domain' ),
+		),
+		'public' => true,
+		'exclude_from_search' => false,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'show_in_nav_menus' => true,
+		'show_in_menu' => true,
+		'show_in_admin_bar' => false,
+		'show_in_rest' => false,
+		'menu_icon' => 'dashicons-location-alt',
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'has_archive' => true,
+		'query_var' => true,
+		'can_export' => true,
+		'rewrite_no_front' => false,
+		'supports' => array(
+			'title',
+			'editor',
+			'thumbnail',
+		),
+		'rewrite' => true,
+	);
+
+	register_post_type( 'donation-bin', $args );
+}
+add_action( 'init', 'zaman_register_donation_bins' );

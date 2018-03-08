@@ -18,7 +18,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="<?php home_url();?>">
-                  <img src="<?php echo get_template_directory_uri();?>/img/logo-hope.png" width="170" height="90" alt="">
+                  <img src="<?php echo get_template_directory_uri();?>/img/logo-hope.png" width="170" height="90" alt="logo">
             </a>
             <?php
                 wp_nav_menu( array(
