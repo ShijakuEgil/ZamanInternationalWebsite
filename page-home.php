@@ -191,22 +191,22 @@
      <div class="col-4 single-post">
 <?php
           $args = array(
-            'posts_per_page' => '6',
             'post_type' => 'event',
-            'orderby' => 'meta_value',
-            'meta_key' => 'time_date',
-            'order' => 'ASC'
+            'posts_per_page' => 1
+            // 'orderby' => 'meta_value',
+            // 'meta_key' => 'time_date',
+            // 'order' => 'ASC'
               );
       $event_query = new WP_Query($args);
-      $check = true;
+      // $check = true;
       if($event_query->have_posts() ):
-          $currDate = new DateTime(current_time( 'Y-m-d H:i' ));
-          while($event_query->have_posts() && $check == true) : $event_query->the_post();
-                $calDate = new DateTime(get_field( 'time_date' ));
-                  if($calDate >= $currDate){
+          // $currDate = new DateTime(current_time( 'Y-m-d H:i' ));
+          while($event_query->have_posts() ) : $event_query->the_post();
+                // $calDate = new DateTime(get_field( 'time_date' ));
+                  // if($calDate >= $currDate){
                     get_template_part( 'templates\content', 'featured' );
-                    $check = false;
-                    }
+                    // $check = false;
+                    // }
           endwhile;
       endif;
       wp_reset_postdata();
