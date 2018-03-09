@@ -17,57 +17,57 @@
  </div>
  <!--title-component end-->
  <div class="row container-fluid calendar-main-container">
-   <div class="col-3 calendar-left-container">
+   <!-- <div class="col-3 calendar-left-container">
      <div class="background">
        <h1 class="past-events-title">PAST EVENTS</h1>
        <hr>
 <?php
-        $args = array(
-                      'posts_per_page' => '3' ,
-                      'post_type' => 'event',
-                      'orderby' => 'meta_value',
-                      'meta_key' => 'time_date',
-                      'order' => 'ASC'
-        );
-        $query = new WP_Query($args);
-        $currDate = new DateTime(current_time( 'Y-m-d H:i' ));
-
-        while($query->have_posts() ) : $query->the_post();
-            $calDate = new DateTime(get_field( 'time_date' ));
-            //function to check if date is older than current
-            if($calDate < $currDate){
-               get_template_part('templates/content', 'pastEvent');
-            }
-        endwhile;
-        wp_reset_postdata();
+        // $args = array(
+        //               'posts_per_page' => -1 ,
+        //               'post_type' => 'event',
+        //               'orderby' => 'meta_value',
+        //               'meta_key' => 'time_date',
+        //               'order' => 'ASC'
+        // );
+        // $query = new WP_Query($args);
+        // $currDate = new DateTime(current_time( 'Y-m-d H:i' ));
+        //
+        // while($query->have_posts() ) : $query->the_post();
+        //     $calDate = new DateTime(get_field( 'time_date' ));
+        //     //function to check if date is older than current
+        //     if($calDate < $currDate){
+        //        get_template_part('templates/content', 'pastEvent');
+        //     }
+        // endwhile;
+        // wp_reset_postdata();
 ?>
        <hr>
        <div class="btn-group btn-group-justified">
+
 <?php       // TODO: insert url for buttons
 ?>
            <a href="#" class="btn btn-success">Volunteer</a> <br />
            <a href="#" class="btn btn-warning">Donate</a>
        </div>
      </div>
-   </div>
+   </div> -->
    <div class="col-6 calendar-center-container ">
-
 <?php
      $args = array(
-                   'posts_per_page' => '5',
-                   'post_type' => 'event',
-                   'orderby' => 'meta_value',
-                   'meta_key' => 'time_date',
-                   'order' => 'ASC'
+                   'posts_per_page' => -1,
+                   'post_type' => 'event'
+                   // 'orderby' => 'meta_value',
+                   // 'meta_key' => 'time_date',
+                   // 'order' => 'ASC',
      );
 
      // TODO: fix the post per page problem
 
      $query = new WP_Query($args);
-     $currDate = new DateTime(current_time( 'Y-m-d H:i' ));
+     // $currDate = new DateTime(current_time( 'Y-m-d H:i' ));
 
      while($query->have_posts() ) : $query->the_post();
-        $calDate = new DateTime(get_field( 'time_date' ));
+        // $calDate = new DateTime(get_field( 'time_date' ));
 
         // following var dumps are used for testing the time functions
         //var_dump($calDate == $currDate);
@@ -75,9 +75,9 @@
         //var_dump($calDate < $currDate);
 
         // check if date is older than current or not
-      if($calDate >= $currDate){
+      // if($calDate >= $currDate){
         get_template_part('templates/content', 'calendar');
-      }
+      // }
       endwhile;
       wp_reset_postdata();
 ?>
