@@ -204,7 +204,7 @@
           while($event_query->have_posts() ) : $event_query->the_post();
                 // $calDate = new DateTime(get_field( 'time_date' ));
                   // if($calDate >= $currDate){
-                    get_template_part( 'templates\content', 'featured' );
+                    get_template_part( 'templates/content', 'featured' );
                     // $check = false;
                     // }
           endwhile;
@@ -221,7 +221,7 @@
       $news_query = new WP_Query($args);
       if($news_query->have_posts() ):
           while($news_query->have_posts()) : $news_query->the_post();
-              get_template_part( 'templates\content', 'featured' );
+              get_template_part( 'templates/content', 'featured' );
           endwhile;
       endif;
 ?>
@@ -235,7 +235,7 @@
       $blog_query = new WP_Query($args);
       if($blog_query->have_posts() ):
           while($blog_query->have_posts()) : $blog_query->the_post();
-              get_template_part( 'templates\content', 'featured' );
+              get_template_part( 'templates/content', 'featured' );
           endwhile;
       endif;
 ?>

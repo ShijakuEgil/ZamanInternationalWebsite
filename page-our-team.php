@@ -31,7 +31,7 @@ get_template_part( 'templates/content', 'banner' );
 ?>
       <div class="col-3 team-member">
 <?php
-          get_template_part( 'templates\content', 'team' );
+          get_template_part( 'templates/content', 'team' );
 ?>
       </div>
 
