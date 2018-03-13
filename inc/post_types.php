@@ -307,26 +307,28 @@ add_action( 'init', 'zaman_register_news' );
 
 //EVENT POST
 
-function zaman_register_events() {
+
+
+function zaman_register_calendar() {
 
 	$args = array (
-		'label' => esc_html__( 'Events', 'text-domain' ),
+		'label' => esc_html__( 'Calendar', 'text-domain' ),
 		'labels' => array(
-			'menu_name' => esc_html__( 'Events', 'text-domain' ),
-			'name_admin_bar' => esc_html__( 'Event', 'text-domain' ),
+			'menu_name' => esc_html__( 'Calendar', 'text-domain' ),
+			'name_admin_bar' => esc_html__( 'Calendar event', 'text-domain' ),
 			'add_new' => esc_html__( 'Add new', 'text-domain' ),
-			'add_new_item' => esc_html__( 'Add new Event', 'text-domain' ),
-			'new_item' => esc_html__( 'New Event', 'text-domain' ),
-			'edit_item' => esc_html__( 'Edit Event', 'text-domain' ),
-			'view_item' => esc_html__( 'View Event', 'text-domain' ),
-			'update_item' => esc_html__( 'Update Event', 'text-domain' ),
-			'all_items' => esc_html__( 'All Events', 'text-domain' ),
-			'search_items' => esc_html__( 'Search Events', 'text-domain' ),
-			'parent_item_colon' => esc_html__( 'Parent Event', 'text-domain' ),
-			'not_found' => esc_html__( 'No Events found', 'text-domain' ),
-			'not_found_in_trash' => esc_html__( 'No Events found in Trash', 'text-domain' ),
-			'name' => esc_html__( 'Events', 'text-domain' ),
-			'singular_name' => esc_html__( 'Event', 'text-domain' ),
+			'add_new_item' => esc_html__( 'Add new Calendar event', 'text-domain' ),
+			'new_item' => esc_html__( 'New Calendar event', 'text-domain' ),
+			'edit_item' => esc_html__( 'Edit Calendar event', 'text-domain' ),
+			'view_item' => esc_html__( 'View Calendar event', 'text-domain' ),
+			'update_item' => esc_html__( 'Update Calendar event', 'text-domain' ),
+			'all_items' => esc_html__( 'All Calendar', 'text-domain' ),
+			'search_items' => esc_html__( 'Search Calendar', 'text-domain' ),
+			'parent_item_colon' => esc_html__( 'Parent Calendar event', 'text-domain' ),
+			'not_found' => esc_html__( 'No Calendar found', 'text-domain' ),
+			'not_found_in_trash' => esc_html__( 'No Calendar found in Trash', 'text-domain' ),
+			'name' => esc_html__( 'Calendar', 'text-domain' ),
+			'singular_name' => esc_html__( 'Calendar event', 'text-domain' ),
 		),
 		'public' => true,
 		'exclude_from_search' => false,
@@ -336,7 +338,7 @@ function zaman_register_events() {
 		'show_in_menu' => true,
 		'show_in_admin_bar' => false,
 		'show_in_rest' => false,
-		'menu_icon' => 'dashicons-megaphone',
+		'menu_icon' => 'dashicons-calendar-alt',
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'has_archive' => true,
@@ -357,7 +359,7 @@ function zaman_register_events() {
 
 	register_post_type( 'event', $args );
 }
-add_action( 'init', 'zaman_register_events' );
+add_action( 'init', 'zaman_register_calendar' );
 
 //BLOG POST
 function zaman_register_blog() {
