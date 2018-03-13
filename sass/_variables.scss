@@ -13,9 +13,9 @@ $lighter-grey :         #F1F1F1;
 $font_color:            #1f1f1f;
 $menu_font_color:       #f0f9ff;
 $font_hover_color:      #215299;
-$grey1:                 rgba(0,0,0,0.03);
-$grey2:                 rgba(0,0,0,0.08);
-$grey3:                 rgba(0,0,0,0.7);
+// $grey1:                 rgba(0,0,0,0.03);
+// $grey2:                 rgba(0,0,0,0.08);
+// $grey3:                 rgba(0,0,0,0.7);
 $button_border_blue:    #268fdc;
 $orange:                #F29228;
 $blue:                  #89C4F3;
@@ -25,6 +25,23 @@ $yellow:                #F8E620;
 $background_grey:       #323232;
 $main_grey:             #1E1E1E;
 $dark:                  #263238;
+
+
+
+
+//Material Grey
+$grey0:   #FAFAFA;
+$grey1:   #F5F5F5;
+$grey2:   #EEEEEE;
+$grey3:   #E0E0E0;
+$grey4:   #BDBDBD;
+$grey5:   #9E9E9E;
+$grey6:   #757575;
+$grey7:   #616161;
+$grey8:   #424242;
+$grey9:   #212121;
+
+//Material Orange
 
 
 @function solid-lighten($color, $percentage) {
@@ -85,26 +102,6 @@ $dark:                  #263238;
     border-left: $size solid $color;
   }
 }
-// Color1
-// HEX: #263238
-// RGB: 38 50 56
-//
-// Color2
-// HEX: #03A9F4
-// RGB: 3 169 244
-//
-// Color3
-// HEX: #039BE5
-// RGB: 3 155 229
-//
-// Color4
-// HEX: #78909C
-// RGB: 120 144 156
-//
-// Color5
-// HEX: #80DEEA
-// RGB: 128 222 234
-
 
 @mixin header_footer_background {
   background:-moz-linear-gradient(left, rgb(13,75,126) 0%, rgb(73,155,234) 49%, rgb(44,114,180) 100%);
@@ -118,6 +115,6 @@ $dark:                  #263238;
 
 @mixin picture_font_style{
   color:$menu_font_color;
-  opacity: .75;
+  opacity: .6;
   text-shadow:5px 5px 10px rgba(0,0,0,.7);
 }

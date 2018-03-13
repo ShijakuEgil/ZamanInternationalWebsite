@@ -4,11 +4,11 @@
             wp_nav_menu( array(
               'theme_location'    => 'secondary',
               'container'         => 'div',
-              'container_class'   => 'container-fluid',
+              'container_class'   => 'ul-container container',
             )
           );
           ?>
-          <div class="contact-us container-fluid">
+          <div class="contact-us container">
             <h3>Contact Us</h3>
             <div class="row">
               <div class="col">

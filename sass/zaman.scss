@@ -1,4 +1,5 @@
 @import "mixins";
+@import "color_pallete";
 @import "variables";
 @import "featured-boxes";
 @import "newsletter-component";
@@ -13,31 +14,42 @@
 @import "about-us";
 
 // TODO: create styling for responsive design
+
+//adds a 30px to the top of the navbar when we are logged in in wordpress
+// so the wordpress dashboard doesnt oberlay with the website navbar
 .logged-in {
-	.navbar{top: 30px;}
+	.navbar{
+		top: 30px;}
 }
 body{
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
+
+
 // ====================
 // HEADER STYLING
 // ====================
 nav {
 	 @include header_footer_background;
-	  max-height: 10vh;
-	a { color: $menu_font_color; font-weight: bold;
-	}
+	  height: 100px;
 }
-.navbar-collapse{
-	ul{
-		li{
-			color:$font_color;
+.navbar-nav{
+	.menu-item{
+		.nav-link{//navbar menu page links
+			color:$clr-grey-50;
+			opacity: .5;
+			font-weight: bolder;
+			font-size: 20px;
+			cursor: pointer;
+			transition: 500ms;
+			&:hover{
+				color:$clr-grey-50;
+				opacity: 1;
+			}
 		}
 	}
 }
-.navbar-brand {
-	padding:20px;
-}
+
 
 // ====================
 // FOOTER STYLING
@@ -45,17 +57,17 @@ nav {
 .social-media{	text-align: center;
 								color:  rgba(255,255,255,0.4);
 								margin: 20px auto;
-		a{	@include font-size(20px);
-				width:40px;
-				height: 40px;
-				line-height: 40px;
+		a{	font-size:30px;
+				width:50px;
+				height: 50px;
+				line-height: 50px;
 				display: inline-block;
 				text-align: center;
-				border-radius: 50%;
+				border-radius: 100%;
 				margin: 3px;
-				box-shadow:0 0 0 1px rgba(255,255,255,$font_opacity_low);
+				box-shadow:0 0 0 1px rgba(255,255,255,.5);
 				color: rgba(255,255,255,0.4);
-				&:hover{	box-shadow:0 0 0 1px rgba(255,255,255,$font_opacity_high);
+				&:hover{	box-shadow:0 0 0 1px rgba(255,255,255,.8);
 									color: rgba(255,255,255, 1);
 									text-shadow: 0 0 0 1px rgba(255,255,255,0.4);}
 			}//a
@@ -63,127 +75,148 @@ nav {
 footer{
 	@include header_footer_background;
 	padding: 10px;
-	padding-top:100px;
+	padding-top:50px;
+	.ul-container{
+		padding:0;
+		margin:0 auto;
+	}
 	.menu{
+		// margin:0 40px;
+		padding:0;
 		text-align: center;
 		.menu-item-type-custom{
 			display: inline-block;
 			text-align: left;
 			vertical-align: top;
-			margin: 0 5%;
+			margin: 0 50px;
 			a{
-				color:$menu_font_color;
+				color:$clr-grey-50;
 				display:inline-block;
 				margin-bottom: 20px;
 				text-decoration: none;
-				@include font-size(18px);
+				font-size: 20px;
 				font-weight:bold;
 				&:after{	display: block;
 									content: url('../img/separa_34.png');
-									margin-top: 10px;}
+									width:100%;
+									margin-top: 2px;}
 			}
 		}
-		.sub-menu {	padding: 0;
-			.menu-item-type-post_type {	display: block;
-				a {	margin-bottom: 0;
-						margin-left: 0;
-						margin-right: 0;
-						@include font-size(14px);
-						font-weight:normal;
-						opacity:$font_opacity_low;
-						&:hover {	opacity: $font_opacity_high;
-											transition: all .3s ease-in-out;}
-						&:after{	content: none;}
-					}
+		.sub-menu {
+			padding: 0;
+			.menu-item-type-post_type{
+							display: flex;
+							a {
+									margin: 0;
+									font-size:15px;
+									font-weight:normal;
+									transition: .5s;
+									opacity:.5;
+									&:hover {	opacity: 1;
+														transition: all .3s ease-in-out;}
+									&:after{	content: none;}
+								}
+							}
+						}
 				}
-			}
-		}
-	.contact-us{
-		color: $menu_font_color;
-		margin-top: 1%;
-		.row {	margin-left: 12%;
-						margin-right:	12%;
+		.contact-us{
+							padding: 0;
+							margin:0 auto;
+							color: $clr-grey-100;
+							margin-top: 10px;
+							display: block;
+		.row {	padding: 0;
+						margin:0;
+
 				.col {	padding: 0 50px;
 								&:first-child{ border-right: 1px solid rgba(255, 255, 255, .2);}
 								&:last-child {border-left: 1px solid rgba(255, 255, 255, .2);}
 				}//col
 		}//row
-		h3{	color:$menu_font_color;
-				margin-bottom: 20px;
-				@include font-size(18px);
+		h3{	color:;
+				font-size:20px;
 				font-weight:bold;
-				margin-left: 15%;
-				&:after{	display: block;
+				padding:0 50px;
+				&:after{
+									display: block;
 									content: url('../img/separa_34.png');
-									margin-top: 10px;}
+								}
 			}
-		.contact-info{	text-align: center;
-				.espacio-ico-01{	opacity:$font_opacity_high;
+		.contact-info{
+			text-align: center;
+				.espacio-ico-01{	opacity:1;
 													font-weight:normal;
-													@include font-size(15px);
+													font-size: 18px;
 												}
 				a{	text-decoration: none;
 						color: inherit;
-						opacity:$font_opacity_low;
+						opacity:.5;
 						font-style: italic;
 						float: right;
-						@include font-size(15px);
-						&:hover{	opacity:$font_opacity_high;}
+						font-size: 15px;
+						transition: .5s;
+						&:hover{
+							opacity:1;
+						}
 					}
-					span{	opacity:$font_opacity_low;
+					span{	opacity:.5;
 								float:left;
-								@include font-size(13px);
+								font-size: 15px;
 							}//span
 				}//contact-info
-		.copyright{	text-align: center;
+		.copyright{
+								font-size: 15px;
+								text-align: center;
 								font-weight: bold;
 								margin-top: 10px;
-								opacity: .4;
+								opacity: .5;
 		}//copyright
 		.footer-logo{	text-align: center;
 		}//footer-logo
 	}//contact-us
 }//footer
+//=====================
+//	CAROUSEL STYLE
+// ====================
+#myCarousel{
+	position: relative;
+		top:95px;
+		height: 80vh;
+		.carousel-inner{
+			height:inherit;
+			.carousel-item{
+				height: inherit;
+				display: block;
+				opacity: 0;
+				transition: opacity .9s ease-in-out;
+				&.active {	opacity: 1 !important;}
 
+				.wp-post-image{
+					min-width:100%;
+					height:inherit;
+				}
+			}
+		}
+}
 //=====================
 //	ANIMATED HEADING
 // ====================
 main {
-	#myCarousel {	top:95px;
-								// position: relative;
-		.carousel-indicators {
-						li{
-							// position: relative;
-						}
-		}
-		.carousel-inner {
-										height: 75vh;
-				.carousel-item {
-													display: block;
-													opacity: 0;
-													transition: opacity .9s ease-in-out;
-													&.active {	opacity: 1 !important;}
 
-					img {	min-width:100%;
-				}//img
 				.slide-heading{
-
-					.carousel-caption { margin-bottom: 5em;
-
+					.carousel-caption { //margin-bottom: 5em;
 						h1{
 								@include picture_font_style;
-								@include font-size(40px);
+								font-size: 40px;
 								font-weight: bold;
 						}//h1
 						.slider-paragraph{
-										@include font-size(20px);
+										font-size: 20px;
 										font-weight: bold;
 										@include picture_font_style;
 						}//slider-paragraph
 					}//carousel-caption
 				}//slide-heading
-			}//carousel-item
-		}//carousel-inner
 		.carousel-control-next { z-index: 1;
 														// @include right_side_fade_to_black;
 }
@@ -192,20 +225,19 @@ main {
 													}
 		#animated-heading	{
 							position: absolute;
-							top:0;
-							left:0;
+							top:400px;
 							width:100%;
-							padding-top:200px;
 							@include picture_font_style;
 
 				.clip{	margin:0 auto;
-								font-size: 80pt;
+								font-size: 120px;
 
 							.blc{	display: inline-block;
 										padding-bottom: 5px;
 										padding: .2em 0;
 							}
-							.cd-words-wrapper {	display: inline-block;
+							.cd-words-wrapper {
+																	display: inline-block;
 																	position:relative;
 																	text-align:left;
 																	overflow: hidden;
@@ -233,21 +265,21 @@ main {
 ===================================*/
 #button_group_id{
 				padding: 15px 0;
-				background-color: $grey2;
+				background-color: $clr-grey-50;
 					.btn{
 						@include box_shadow_black;
 						margin:0 7.5px;
 						height: 120px;
-						background-color: $main_grey;
+						background-color: $clr-grey-900;
 						padding:0;
 						border:none;
-						color: $menu_font_color;
-						@include font-size(70px);
+						color: $clr-grey-100;
+						font-size: 70px;
 						.btn-icon{
 							width:25%;
 							height:100%;
 							.fa{
-								@include box_shadow_inset($font_color);
+								@include box_shadow_inset(black);
 							}
 						}
 						.triangle{
@@ -325,15 +357,13 @@ main {
 					}
 			//}//.btn-group
 		}//#button_group_id
-	}//#myCarousel
-}//main
 
 /*====================================
 		TITLE COMPONENT STYLING
 ===================================*/
 .title-conponent {
 			text-align: center;
-			margin-top: 150px;
+			// margin-top: 150px;
 
 		.title-row {
 				.title {
@@ -356,3 +386,4 @@ main {
 										margin: 10px 20px;
 		}
 }//title-component
+}

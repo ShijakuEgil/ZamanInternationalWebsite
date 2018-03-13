@@ -21,7 +21,7 @@ main .impact-boxes {
   margin-top: 5%;
   width: 100%;
   padding: 5em 15em;
-  background: rgba(0, 0, 0, 0.03); }
+  background: #F5F5F5; }
   main .impact-boxes .item {
     text-align: center; }
     main .impact-boxes .item .icon {
@@ -40,7 +40,7 @@ main .impact-boxes {
 main .post-contents {
   padding: 3% 10%;
   margin: 5% 0;
-  background-color: rgba(0, 0, 0, 0.03); }
+  background-color: #F5F5F5; }
   main .post-contents .single-post {
     padding: 3.5em 1.5em;
     padding-bottom: 1em; }
@@ -52,7 +52,7 @@ main .post-contents {
       font-style: italic;
       font-weight: 700;
       color: #f0f9ff;
-      opacity: .75;
+      opacity: .6;
       text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
       padding: 2% 5%; }
       main .post-contents .single-post h1 ul {
@@ -108,7 +108,7 @@ main .post-contents {
         position: absoute;
         bottom: 0;
         left: 0;
-        border: 2px solid rgba(0, 0, 0, 0.03);
+        border: 2px solid #F5F5F5;
         border-radius: 4px;
         text-decoration: none;
         text-align: center;
@@ -130,7 +130,7 @@ main .newsletter {
   padding: 0; }
   main .newsletter .newsletter-content .title {
     color: #7d8285;
-    background-color: rgba(0, 0, 0, 0.03);
+    background-color: #F5F5F5;
     text-align: center;
     padding: 30px 6%; }
     main .newsletter .newsletter-content .title .fa {
@@ -203,7 +203,7 @@ main .newsletter {
         font-weight: 600;
         padding-left: 3%;
         color: #f0f9ff;
-        opacity: .75;
+        opacity: .6;
         text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7); }
     .wrapper .image .col-3 {
       position: absolute;
@@ -221,7 +221,7 @@ main .newsletter {
         font-size: 25px;
         font-size: 1.5625rem;
         color: #f0f9ff;
-        opacity: .75;
+        opacity: .6;
         text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7); }
 
 .blog-container {
@@ -315,16 +315,15 @@ main .newsletter {
   .pagination .prev {
     float: left; }
 
-.icon-sidebar-container {
+#sidebar .icon-sidebar-container {
   background-color: #1f1f1f;
   height: 100%;
   text-align: center; }
 
-.sidebar-container {
-  color: #7d8285;
+#sidebar .sidebar-container {
   height: 100%; }
 
-h1.widget-title {
+#sidebar h1.widget-title {
   font-size: 25px;
   background: #333333;
   padding: 5px;
@@ -595,8 +594,8 @@ h1.widget-title {
     width: 100%;
     font-size: 20pt;
     font-weight: 600;
-    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.08);
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.08); }
+    -webkit-box-shadow: 1px 1px 1px #EEEEEE;
+    box-shadow: 1px 1px 1px #EEEEEE; }
 
 .calendar-right-container .background {
   -webkit-box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.2);
@@ -618,7 +617,7 @@ h1.widget-title {
 ================================*/
 .our-team-container {
   margin: 5% 0;
-  background-color: rgba(0, 0, 0, 0.03);
+  background-color: #F5F5F5;
   padding: 5% 10%; }
   .our-team-container .team-container {
     padding: 0;
@@ -626,7 +625,7 @@ h1.widget-title {
     -moz-box-shadow: 0px 0px 26px 10px rgba(0, 0, 0, 0.04);
     box-shadow: 0px 0px 26px 10px rgba(0, 0, 0, 0.04); }
     .our-team-container .team-container .member-link {
-      border: 2px solid rgba(0, 0, 0, 0.03);
+      border: 2px solid #F5F5F5;
       padding: 5%; }
       .our-team-container .team-container .member-link .image-container {
         width: 15vw;
@@ -774,7 +773,7 @@ h1.widget-title {
   height: 100%;
   margin: 20px auto;
   font-weight: bolder;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #E0E0E0;
   color: transparent;
   text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.3);
   -webkit-background-clip: text;
@@ -786,7 +785,7 @@ h1.widget-title {
   bottom: 3%;
   left: 35.8%;
   z-index: 8;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #E0E0E0;
   padding: 0px;
   text-align: center;
   padding-left: 10px;
@@ -815,7 +814,7 @@ h1.widget-title {
   text-align: center;
   position: absolute;
   padding-top: 2%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #E0E0E0;
   width: 30%;
   height: 100%;
   top: 0;
@@ -920,7 +919,7 @@ p.department-address i {
     /* The tip is 8px high, and 12px wide. */
     border-left: 36px solid transparent;
     border-right: 36px solid transparent;
-    border-top: 100px solid rgba(0, 0, 0, 0.7); }
+    border-top: 100px solid #E0E0E0; }
 
 /* The popup bubble itself. */
 .popup-bubble-content {
@@ -931,7 +930,7 @@ p.department-address i {
   -ms-transform: translate(-50%, -100%);
   transform: translate(-50%, -100%);
   /* Style the info window. */
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #E0E0E0;
   padding: 5px;
   border-radius: 25px;
   max-height: 200px;
@@ -979,7 +978,7 @@ section {
         top: 20px;
         left: -45px;
         border-width: 20px 45px 20px 0;
-        border-color: transparent rgba(0, 0, 0, 0.7) transparent transparent; }
+        border-color: transparent #E0E0E0 transparent transparent; }
     section .timeline-item::after {
       content: '';
       display: block;
@@ -989,7 +988,7 @@ section {
     width: 45%;
     padding: 10px 30px;
     border-radius: 4px;
-    background: rgba(0, 0, 0, 0.03);
+    background: #F5F5F5;
     -webkit-box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.3);
     box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.3); }
     section .timeline-content::after {
@@ -1001,7 +1000,7 @@ section {
       top: 20px;
       right: -45px;
       border-width: 20px 0 20px 45px;
-      border-color: transparent transparent transparent rgba(0, 0, 0, 0.7); }
+      border-color: transparent transparent transparent #E0E0E0; }
   section .timeline-img {
     width: 30px;
     height: 30px;
@@ -1042,7 +1041,7 @@ section {
     background-size: cover; }
     section .timeline-img-header h2 {
       color: #f0f9ff;
-      opacity: .75;
+      opacity: .6;
       text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
       font-size: 60px;
       font-size: 3.75rem;
@@ -1071,7 +1070,7 @@ section {
     text-align: center; }
     section .end-note h1 {
       color: #f0f9ff;
-      opacity: .75;
+      opacity: .6;
       text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
       margin-top: 30%; }
   section .end-note-container {
@@ -1096,13 +1095,13 @@ section {
       top: 30px;
       left: -15px;
       border-width: 10px 15px 10px 0;
-      border-color: transparent rgba(0, 0, 0, 0.7) transparent transparent; } }
+      border-color: transparent #E0E0E0 transparent transparent; } }
 
 .logged-in .navbar {
   top: 30px; }
 
 body {
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Roboto', sans-serif; }
 
 nav {
   background: -moz-linear-gradient(left, #0d4b7e 0%, #499bea 49%, #2c72b4 100%);
@@ -1113,30 +1112,33 @@ nav {
   background: -webkit-gradient(linear, left top, right top, from(#0d4b7e), color-stop(49%, #499bea), to(#2c72b4));
   background: linear-gradient(to right, #0d4b7e 0%, #499bea 49%, #2c72b4 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d4b7e', endColorstr='#2c72b4', GradientType=1 );
-  max-height: 10vh; }
-  nav a {
-    color: #f0f9ff;
-    font-weight: bold; }
+  height: 100px; }
 
-.navbar-collapse ul li {
-  color: #1f1f1f; }
-
-.navbar-brand {
-  padding: 20px; }
+.navbar-nav .menu-item .nav-link {
+  color: #fafafa;
+  opacity: .5;
+  font-weight: bolder;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms; }
+  .navbar-nav .menu-item .nav-link:hover {
+    color: #fafafa;
+    opacity: 1; }
 
 .social-media {
   text-align: center;
   color: rgba(255, 255, 255, 0.4);
   margin: 20px auto; }
   .social-media a {
-    font-size: 20px;
-    font-size: 1.25rem;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
     display: inline-block;
     text-align: center;
-    border-radius: 50%;
+    border-radius: 100%;
     margin: 3px;
     -webkit-box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5);
@@ -1157,51 +1159,60 @@ footer {
   background: linear-gradient(to right, #0d4b7e 0%, #499bea 49%, #2c72b4 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d4b7e', endColorstr='#2c72b4', GradientType=1 );
   padding: 10px;
-  padding-top: 100px; }
+  padding-top: 50px; }
+  footer .ul-container {
+    padding: 0;
+    margin: 0 auto; }
   footer .menu {
+    padding: 0;
     text-align: center; }
     footer .menu .menu-item-type-custom {
       display: inline-block;
       text-align: left;
       vertical-align: top;
-      margin: 0 5%; }
+      margin: 0 50px; }
       footer .menu .menu-item-type-custom a {
-        color: #f0f9ff;
+        color: #fafafa;
         display: inline-block;
         margin-bottom: 20px;
         text-decoration: none;
-        font-size: 18px;
-        font-size: 1.125rem;
+        font-size: 20px;
         font-weight: bold; }
         footer .menu .menu-item-type-custom a:after {
           display: block;
           content: url("../img/separa_34.png");
-          margin-top: 10px; }
+          width: 100%;
+          margin-top: 2px; }
     footer .menu .sub-menu {
       padding: 0; }
       footer .menu .sub-menu .menu-item-type-post_type {
-        display: block; }
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
         footer .menu .sub-menu .menu-item-type-post_type a {
-          margin-bottom: 0;
-          margin-left: 0;
-          margin-right: 0;
-          font-size: 14px;
-          font-size: 0.875rem;
+          margin: 0;
+          font-size: 15px;
           font-weight: normal;
-          opacity: 0.5; }
+          -webkit-transition: .5s;
+          -o-transition: .5s;
+          transition: .5s;
+          opacity: .5; }
           footer .menu .sub-menu .menu-item-type-post_type a:hover {
-            opacity: 0.8;
+            opacity: 1;
             -webkit-transition: all .3s ease-in-out;
             -o-transition: all .3s ease-in-out;
             transition: all .3s ease-in-out; }
           footer .menu .sub-menu .menu-item-type-post_type a:after {
             content: none; }
   footer .contact-us {
-    color: #f0f9ff;
-    margin-top: 1%; }
+    padding: 0;
+    margin: 0 auto;
+    color: #F5F5F5;
+    margin-top: 10px;
+    display: block; }
     footer .contact-us .row {
-      margin-left: 12%;
-      margin-right: 12%; }
+      padding: 0;
+      margin: 0; }
       footer .contact-us .row .col {
         padding: 0 50px; }
         footer .contact-us .row .col:first-child {
@@ -1209,107 +1220,108 @@ footer {
         footer .contact-us .row .col:last-child {
           border-left: 1px solid rgba(255, 255, 255, 0.2); }
     footer .contact-us h3 {
-      color: #f0f9ff;
-      margin-bottom: 20px;
-      font-size: 18px;
-      font-size: 1.125rem;
+      color: #FAFAFA;
+      font-size: 20px;
       font-weight: bold;
-      margin-left: 15%; }
+      padding: 0 50px; }
       footer .contact-us h3:after {
         display: block;
-        content: url("../img/separa_34.png");
-        margin-top: 10px; }
+        content: url("../img/separa_34.png"); }
     footer .contact-us .contact-info {
       text-align: center; }
       footer .contact-us .contact-info .espacio-ico-01 {
-        opacity: 0.8;
+        opacity: 1;
         font-weight: normal;
-        font-size: 15px;
-        font-size: 0.9375rem; }
+        font-size: 18px; }
       footer .contact-us .contact-info a {
         text-decoration: none;
         color: inherit;
-        opacity: 0.5;
+        opacity: .5;
         font-style: italic;
         float: right;
         font-size: 15px;
-        font-size: 0.9375rem; }
+        -webkit-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s; }
         footer .contact-us .contact-info a:hover {
-          opacity: 0.8; }
+          opacity: 1; }
       footer .contact-us .contact-info span {
-        opacity: 0.5;
+        opacity: .5;
         float: left;
-        font-size: 13px;
-        font-size: 0.8125rem; }
+        font-size: 15px; }
     footer .contact-us .copyright {
+      font-size: 15px;
       text-align: center;
       font-weight: bold;
       margin-top: 10px;
-      opacity: .4; }
+      opacity: .5; }
     footer .contact-us .footer-logo {
       text-align: center; }
 
-main #myCarousel {
+#myCarousel {
+  position: relative;
   top: 95px;
-  /*====================================
-		CAROUSEL BUTTON STYLE
-===================================*/ }
-  main #myCarousel .carousel-inner {
-    height: 75vh; }
-    main #myCarousel .carousel-inner .carousel-item {
+  height: 80vh; }
+  #myCarousel .carousel-inner {
+    height: inherit; }
+    #myCarousel .carousel-inner .carousel-item {
+      height: inherit;
       display: block;
       opacity: 0;
       -webkit-transition: opacity .9s ease-in-out;
       -o-transition: opacity .9s ease-in-out;
       transition: opacity .9s ease-in-out; }
-      main #myCarousel .carousel-inner .carousel-item.active {
+      #myCarousel .carousel-inner .carousel-item.active {
         opacity: 1 !important; }
-      main #myCarousel .carousel-inner .carousel-item img {
-        min-width: 100%; }
-      main #myCarousel .carousel-inner .carousel-item .slide-heading .carousel-caption {
-        margin-bottom: 5em; }
-        main #myCarousel .carousel-inner .carousel-item .slide-heading .carousel-caption h1 {
-          color: #f0f9ff;
-          opacity: .75;
-          text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
-          font-size: 40px;
-          font-size: 2.5rem;
-          font-weight: bold; }
-        main #myCarousel .carousel-inner .carousel-item .slide-heading .carousel-caption .slider-paragraph {
-          font-size: 20px;
-          font-size: 1.25rem;
-          font-weight: bold;
-          color: #f0f9ff;
-          opacity: .75;
-          text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7); }
-  main #myCarousel .carousel-control-next {
-    z-index: 1; }
-  main #myCarousel .carousel-control-prev {
-    z-index: 1; }
-  main #myCarousel #animated-heading {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding-top: 200px;
+      #myCarousel .carousel-inner .carousel-item .wp-post-image {
+        min-width: 100%;
+        height: inherit; }
+
+main {
+  /*====================================
+		CAROUSEL BUTTON STYLE
+===================================*/
+  /*====================================
+		TITLE COMPONENT STYLING
+===================================*/ }
+  main .slide-heading .carousel-caption h1 {
     color: #f0f9ff;
-    opacity: .75;
+    opacity: .6;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+    font-size: 40px;
+    font-weight: bold; }
+  main .slide-heading .carousel-caption .slider-paragraph {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f0f9ff;
+    opacity: .6;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7); }
-    main #myCarousel #animated-heading .clip {
+  main .carousel-control-next {
+    z-index: 1; }
+  main .carousel-control-prev {
+    z-index: 1; }
+  main #animated-heading {
+    position: absolute;
+    top: 400px;
+    width: 100%;
+    color: #f0f9ff;
+    opacity: .6;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7); }
+    main #animated-heading .clip {
       margin: 0 auto;
-      font-size: 80pt; }
-      main #myCarousel #animated-heading .clip .blc {
+      font-size: 120px; }
+      main #animated-heading .clip .blc {
         display: inline-block;
         padding-bottom: 5px;
         padding: .2em 0; }
-      main #myCarousel #animated-heading .clip .cd-words-wrapper {
+      main #animated-heading .clip .cd-words-wrapper {
         display: inline-block;
         position: relative;
         text-align: left;
         overflow: hidden;
         vertical-align: top;
         padding: .2em 0; }
-        main #myCarousel #animated-heading .clip .cd-words-wrapper b {
+        main #animated-heading .clip .cd-words-wrapper b {
           display: inline-block;
           position: absolute;
           white-space: nowrap;
@@ -1317,67 +1329,66 @@ main #myCarousel {
           top: 0;
           opacity: 0;
           padding-bottom: 5px; }
-        main #myCarousel #animated-heading .clip .cd-words-wrapper .is-visible {
+        main #animated-heading .clip .cd-words-wrapper .is-visible {
           position: relative;
           opacity: 1;
           font-weight: bold; }
-  main #myCarousel #button_group_id {
+  main #button_group_id {
     padding: 15px 0;
-    background-color: rgba(0, 0, 0, 0.08); }
-    main #myCarousel #button_group_id .btn {
+    background-color: #FAFAFA; }
+    main #button_group_id .btn {
       -webkit-box-shadow: 0px 0px 26px 10px rgba(255, 255, 255, 0.1);
       -moz-box-shadow: 0px 0px 26px 10px rgba(255, 255, 255, 0.1);
       box-shadow: 0px 0px 26px 10px rgba(255, 255, 255, 0.1);
       margin: 0 7.5px;
       height: 120px;
-      background-color: #1E1E1E;
+      background-color: #212121;
       padding: 0;
       border: none;
-      color: #f0f9ff;
-      font-size: 70px;
-      font-size: 4.375rem; }
-      main #myCarousel #button_group_id .btn .btn-icon {
+      color: #F5F5F5;
+      font-size: 70px; }
+      main #button_group_id .btn .btn-icon {
         width: 25%;
         height: 100%; }
-        main #myCarousel #button_group_id .btn .btn-icon .fa {
+        main #button_group_id .btn .btn-icon .fa {
           font-weight: bolder;
-          background-color: #1f1f1f;
+          background-color: black;
           color: transparent;
           text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.3);
           -webkit-background-clip: text;
           -moz-background-clip: text;
           background-clip: text; }
-      main #myCarousel #button_group_id .btn span {
+      main #button_group_id .btn span {
         font-size: 40px;
         font-size: 2.5rem;
         font-weight: 600;
         position: absolute;
         top: 30px;
         left: 40%; }
-      main #myCarousel #button_group_id .btn:hover .btn-icon {
+      main #button_group_id .btn:hover .btn-icon {
         -webkit-transition: all 500ms ease;
         -moz-transition: all 500ms ease;
         -ms-transition: all 500ms ease;
         -o-transition: all 500ms ease;
         transition: all 500ms ease;
         width: 85%; }
-      main #myCarousel #button_group_id .btn:hover .triangle {
+      main #button_group_id .btn:hover .triangle {
         -webkit-transition: all 500ms ease;
         -moz-transition: all 500ms ease;
         -ms-transition: all 500ms ease;
         -o-transition: all 500ms ease;
         transition: all 500ms ease;
         left: 85%; }
-      main #myCarousel #button_group_id .btn:hover span {
+      main #button_group_id .btn:hover span {
         -webkit-transition: all 200ms ease;
         -moz-transition: all 200ms ease;
         -ms-transition: all 200ms ease;
         -o-transition: all 200ms ease;
         transition: all 200ms ease;
         opacity: 0; }
-    main #myCarousel #button_group_id .need-help-btn .btn-icon {
+    main #button_group_id .need-help-btn .btn-icon {
       background-color: #F29228; }
-    main #myCarousel #button_group_id .need-help-btn .triangle {
+    main #button_group_id .need-help-btn .triangle {
       content: '';
       display: block;
       position: relative;
@@ -1389,9 +1400,9 @@ main #myCarousel {
       position: absolute;
       top: 0%;
       left: 25%; }
-    main #myCarousel #button_group_id .volunteer-btn .btn-icon {
+    main #button_group_id .volunteer-btn .btn-icon {
       background-color: #89C4F3; }
-    main #myCarousel #button_group_id .volunteer-btn .triangle {
+    main #button_group_id .volunteer-btn .triangle {
       content: '';
       display: block;
       position: relative;
@@ -1403,9 +1414,9 @@ main #myCarousel {
       position: absolute;
       top: 0%;
       left: 25%; }
-    main #myCarousel #button_group_id .donate-btn .btn-icon {
+    main #button_group_id .donate-btn .btn-icon {
       background-color: #A9CF33; }
-    main #myCarousel #button_group_id .donate-btn .triangle {
+    main #button_group_id .donate-btn .triangle {
       content: '';
       display: block;
       position: relative;
@@ -1417,9 +1428,9 @@ main #myCarousel {
       position: absolute;
       top: 0%;
       left: 25%; }
-    main #myCarousel #button_group_id .wishlists-btn .btn-icon {
+    main #button_group_id .wishlists-btn .btn-icon {
       background-color: #F8E620; }
-    main #myCarousel #button_group_id .wishlists-btn .triangle {
+    main #button_group_id .wishlists-btn .triangle {
       content: '';
       display: block;
       position: relative;
@@ -1431,24 +1442,20 @@ main #myCarousel {
       position: absolute;
       top: 0%;
       left: 25%; }
-
-/*====================================
-		TITLE COMPONENT STYLING
-===================================*/
-.title-conponent {
-  text-align: center;
-  margin-top: 150px; }
-  .title-conponent .title-row .title {
-    margin: 0 50px; }
-    .title-conponent .title-row .title h1 {
-      text-align: center;
+  main .title-conponent {
+    text-align: center;
+    margin-top: 150px; }
+    main .title-conponent .title-row .title {
+      margin: 0 50px; }
+      main .title-conponent .title-row .title h1 {
+        text-align: center;
+        font-weight: 600;
+        font-size: 60px; }
+    main .title-conponent .title-row .separator {
+      background: url("../img/header-bg.png") repeat-x center;
+      padding: 0; }
+    main .title-conponent .description {
+      color: #7d8285;
+      font-size: 15pt;
       font-weight: 600;
-      font-size: 60px; }
-  .title-conponent .title-row .separator {
-    background: url("../img/header-bg.png") repeat-x center;
-    padding: 0; }
-  .title-conponent .description {
-    color: #7d8285;
-    font-size: 15pt;
-    font-weight: 600;
-    margin: 10px 20px; }
+      margin: 10px 20px; }
