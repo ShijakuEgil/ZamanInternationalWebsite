@@ -4,7 +4,7 @@
       <div id="myCarousel" class="carousel carousel-fade" data-ride="carousel" data-interval="3000">
 
           <!--carousel-inner-->
-          <div role="listbox" class="carousel-inner embed-responsive embed-responsive-21by9">
+          <div role="listbox" class="carousel-inner embed-responsive ">
               <?php
               $k = 0;
               $args = array('post_type' => 'home_page_slides');
@@ -26,7 +26,7 @@
                     </div>
                   </div>
                 <?php endif; ?>
-              </div>
+              </div><!--carousel-inner-->
               <?php $k++; ?>
               <?php endwhile; ?>
           </div>

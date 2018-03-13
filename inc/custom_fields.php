@@ -269,6 +269,8 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 0,
 	));
+
+
 	register_field_group(array (
 		'id' => 'acf_text-field',
 		'title' => 'Text Field',
