@@ -1,4 +1,6 @@
 <?php
+
+
 if(function_exists("register_field_group"))
 {
 	register_field_group(array (
@@ -67,70 +69,83 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 0,
 	));
+
 	register_field_group(array (
-		'id' => 'acf_date-and-time-field',
-		'title' => 'Date and Time Field',
-		'fields' => array (
-			array (
-				'key' => 'field_5a7bb61677936',
-				'label' => 'Time and Date',
-				'name' => 'time_date',
-				'type' => 'date_time_picker',
-				'instructions' => 'Enter the Date and Time for the Event',
-				'required' => 1,
-				'field_type' => 'date_time',
-				'date_format' => 'yy-mm-dd',
-				'time_format' => 'HH:mm',
-				'past_dates' => 'yes',
-				'time_selector' => 'select',
-				'first_day' => 1,
-			),
-			array (
-				'key' => 'field_5a7be6d87851a',
-				'label' => 'End time',
-				'name' => 'end_time',
-				'type' => 'date_time_picker',
-				'instructions' => 'Select the time the event ends',
-				'field_type' => 'time',
-				'date_format' => 'yy-mm-dd',
-				'time_format' => 'HH:mm',
-				'past_dates' => 'yes',
-				'first_day' => 1,
-				'time_selector' => 'slider',
-			),
-			array (
-				'key' => 'field_5a7be7a53cfae',
-				'label' => 'Location ',
-				'name' => 'location',
-				'type' => 'text',
-				'instructions' => 'Enter the Location of Event',
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'formatting' => 'html',
-				'maxlength' => '',
-			),
-		),
-		'location' => array (
-			array (
+			'id' => 'acf_calendar-fields',
+			'title' => 'Calendar Fields',
+			'fields' => array (
 				array (
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'event',
-					'order_no' => 0,
-					'group_no' => 0,
+					'key' => 'field_5aa727da1ab12',
+					'label' => 'Location',
+					'name' => 'location',
+					'type' => 'google_map',
+					'instructions' => 'Enter the address where the event is being held',
+					'required' => 1,
+					'center_lat' => '42.294226',
+					'center_lng' => '-83.293490',
+					'zoom' => 4,
+					'height' => 300,
+				),
+				array (
+					'key' => 'field_5aa7286d1ab13',
+					'label' => 'Date',
+					'name' => 'date',
+					'type' => 'date_picker',
+					'instructions' => 'Select the date for the event',
+					'required' => 1,
+					'date_format' => 'yymmdd',
+					'display_format' => 'dd/mm/yy',
+					'first_day' => 1,
+				),
+				array (
+					'key' => 'field_5aa728bc1ab14',
+					'label' => 'Start Time',
+					'name' => 'start_time',
+					'type' => 'date_time_picker',
+					'instructions' => 'Enter the start time of the event ',
+					'required' => 1,
+					'field_type' => 'time',
+					'date_format' => 'yy-mm-dd',
+					'time_format' => 'HH:mm',
+					'past_dates' => 'yes',
+					'time_selector' => 'select',
+					'first_day' => 1,
+				),
+				array (
+					'key' => 'field_5aa728f11ab15',
+					'label' => 'End Time',
+					'name' => 'end_time',
+					'type' => 'date_time_picker',
+					'instructions' => 'Enter the end time for the event',
+					'required' => 1,
+					'field_type' => 'time',
+					'date_format' => 'yy-mm-dd',
+					'time_format' => 'HH:mm',
+					'past_dates' => 'yes',
+					'time_selector' => 'select',
+					'first_day' => 1,
 				),
 			),
-		),
-		'options' => array (
-			'position' => 'side',
-			'layout' => 'no_box',
-			'hide_on_screen' => array (
+			'location' => array (
+				array (
+					array (
+						'param' => 'post_type',
+						'operator' => '==',
+						'value' => 'event',
+						'order_no' => 0,
+						'group_no' => 0,
+					),
+				),
 			),
-		),
-		'menu_order' => 0,
-	));
+			'options' => array (
+				'position' => 'normal',
+				'layout' => 'no_box',
+				'hide_on_screen' => array (
+				),
+			),
+			'menu_order' => 0,
+		));
+
 	register_field_group(array (
 		'id' => 'acf_home-slider-fields',
 		'title' => 'Home Slider Fields',
@@ -194,6 +209,7 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 0,
 	));
+
 	register_field_group(array (
 		'id' => 'acf_member-fields',
 		'title' => 'Member Fields',
@@ -289,6 +305,7 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 0,
 	));
+
 	register_field_group(array (
 		'id' => 'acf_timeline-fileds',
 		'title' => 'Timeline Fileds',
