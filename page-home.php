@@ -135,7 +135,7 @@
     <!--title-component end-->
 
     <!--start of featured boxes with icons  -->
-    <div class="row justify-content-center impact-boxes">
+    <div class="row no-gutters justify-content-center impact-boxes container-fluid">
         <div class="col-lg item">
           <div data-bs-hover-animate="pulse" class="box">
             <i class="fa fa-eye icon"></i>
@@ -173,7 +173,7 @@
     <!--end of featured boxes with icon  -->
     <!--title-component-->
     <div class="container-fluid title-conponent">
-      <div class="row title-row justify-content-center">
+      <div class="row no-gutters title-row justify-content-center">
         <div class="col separator"></div>
         <div class="col-auto title">
           <h1>FEATURED CONTENT</h1>
@@ -186,8 +186,9 @@
         pellentesque ut laoreet vitae.
     </div>
     <!--title-component end-->
+
     <!--Featured content updated-->
-    <div class="row container-fluid post-contents">
+    <div class="row no-gutters container-fluid post-contents">
      <div class="col-4 single-post">
 <?php
           $args = array(

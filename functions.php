@@ -73,7 +73,7 @@ add_action('widgets_init','zaman_widget_setup');
  * @return int (Maybe) modified excerpt length.
  */
 function wpdocs_custom_excerpt_length( $length ) {
-    return 20;//the amount of words the excerpt shows
+    return 50;//the amount of words the excerpt shows
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 

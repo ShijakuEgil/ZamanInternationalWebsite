@@ -1,8 +1,6 @@
 @import "mixins";
 @import "color_pallete";
 @import "variables";
-@import "featured-boxes";
-@import "newsletter-component";
 @import "content-banner";
 @import "blog-page";
 @import "blog-sidebar";
@@ -11,20 +9,23 @@
 @import "calendar-style";
 @import "our-team";
 @import "contact-us";
-@import "about-us";
+@import "our_history";
 
 // TODO: create styling for responsive design
 
 //adds a 30px to the top of the navbar when we are logged in in wordpress
 // so the wordpress dashboard doesnt oberlay with the website navbar
+//====================================
 .logged-in {
 	.navbar{
 		top: 30px;}
 }
 body{
 	font-family: 'Roboto', sans-serif;
+	margin:0;
+	padding:0;
 }
-
+//===================================
 
 // ====================
 // HEADER STYLING
@@ -133,7 +134,7 @@ footer{
 								&:last-child {border-left: 1px solid rgba(255, 255, 255, .2);}
 				}//col
 		}//row
-		h3{	color:;
+		h3{
 				font-size:20px;
 				font-weight:bold;
 				padding:0 50px;
@@ -179,25 +180,43 @@ footer{
 //	CAROUSEL STYLE
 // ====================
 #myCarousel{
-	position: relative;
+		position: relative;
 		top:95px;
 		height: 80vh;
+		margin-bottom: 400px;//size might differ from screen size
 		.carousel-inner{
+
 			height:inherit;
 			.carousel-item{
 				height: inherit;
 				display: block;
 				opacity: 0;
 				transition: opacity .9s ease-in-out;
-				&.active {	opacity: 1 !important;}
+				&.active {
+					opacity: 1 !important;
+					}
 
-				.wp-post-image{
+				img{
+					position:relative;
 					min-width:100%;
 					height:inherit;
+					&:before{
+						content: "";
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						box-shadow: inset 0 0 80px rgba(0,0,0,.6);
+						-moz-box-shadow: inset 0 0 80px rgba(0,0,0,.6);
+						-webkit-box-shadow: inset 0 0 80px rgba(0,0,0,.6);
+					}
+
 				}
 			}
 		}
 }
+
 //=====================
 //	ANIMATED HEADING
 // ====================
@@ -313,10 +332,10 @@ main {
 
 					.need-help-btn{
 						.btn-icon{
-							background-color: #F29228;
+							background-color: $clr-orange;//#F29228;
 						}
 						.triangle{
-							@include triangle('right', 3.75rem, #F29228);
+							@include triangle('right', 3.75rem, $clr-orange);//#F29228);
 							position:absolute;
 							top: 0%;
 							left:25%;
@@ -324,10 +343,10 @@ main {
 					}
 					.volunteer-btn{
 						.btn-icon{
-							background-color: #89C4F3;
+							background-color: $clr-light-blue;//#89C4F3;
 						}
 						.triangle{
-							@include triangle('right', 3.75rem, #89C4F3);
+							@include triangle('right', 3.75rem,$clr-light-blue);// #89C4F3);
 							position:absolute;
 							top: 0%;
 							left:25%;
@@ -335,10 +354,10 @@ main {
 					}
 					.donate-btn{
 						.btn-icon{
-							background-color: #A9CF33;
+							background-color: $clr-lime;//#A9CF33;
 						}
 						.triangle{
-							@include triangle('right', 3.75rem, #A9CF33);
+							@include triangle('right', 3.75rem, $clr-lime);//#A9CF33);
 							position:absolute;
 							top: 0%;
 							left:25%;
@@ -346,10 +365,10 @@ main {
 					}
 					.wishlists-btn{
 						.btn-icon{
-							background-color: #F8E620;
+							background-color: $clr-yellow;//#F8E620;
 						}
 						.triangle{
-							@include triangle('right', 3.75rem, #F8E620);
+							@include triangle('right', 3.75rem, $clr-yellow);//#F8E620);
 							position:absolute;
 							top: 0%;
 							left:25%;
@@ -363,16 +382,17 @@ main {
 ===================================*/
 .title-conponent {
 			text-align: center;
-			// margin-top: 150px;
+			margin-top: 150px;
 
 		.title-row {
 				.title {
 					margin: 0 50px;
 
 					h1{
+						color:$clr-ui-title;
 						text-align: center;
-						font-weight: 600;
-						font-size: 60px;
+						font-size: 80px;
+						font-weight:300;
 						}
 					}
 			.separator {
@@ -380,10 +400,179 @@ main {
 				padding: 0;
 			}
 		}//.row
-		.description {	color:$paragraph_font_color;
-										font-size: 15pt;
+		.description {	color:$clr-ui-display-4;
+										font-size: 25px;
 										font-weight: 600;
-										margin: 10px 20px;
+										margin: 10px 40px;
 		}
 }//title-component
 }
+
+//=====================
+//	IMPACT BOXES HOME PAGE
+// ====================
+main{
+  .impact-boxes{  margin-top:50px;
+                  padding: 5em 15em;
+                  background: $clr-grey-100;
+
+      .item{ text-align: center;
+
+          .icon { font-size:200px;
+                  color: $icon_color;
+          }
+          .title-of-box{
+													color:$clr-ui-title;
+													font-weight: 400;
+                          font-size:60px;
+                          padding: 5px 0;
+                          margin: 15px 0;
+          }//title-of-box
+          .description-of-box{  font-size:25px;
+                                font-weight: 500;
+                                color:$clr-ui-display-4;
+          }//description-of-box
+      }//item
+  }//impact-boxes
+
+//=====================
+//	FEATURED BOXES HOME PAGE
+// ====================
+  .post-contents{ padding: 60px 100px;
+                  margin: 50px 0;
+                  background-color:$clr-grey-100;
+
+    .single-post{
+				padding:20px 20px 0 20px;
+
+      .post-image{
+        position: relative;
+        height: 500px;//height of picture needs to change in smaller screens
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 5px;
+        box-shadow: inset 0px 0px 150px 15px rgba(0,0,0,0.8);
+				.post-header{
+											width: 100%;
+											height:130px;
+											position:absolute;
+											left:0;
+											right:0;
+											bottom:0;
+											background-color: rgba(0, 0, 0, 0.35);
+											text-align: center;
+									a.featured-post-type{
+											font-size:90px;
+											font-weight: 300;
+											@include picture_font_style;
+											transition: .3s;
+											&:hover{
+												text-decoration: none;
+												color:$font_hover_color;
+												opacity:1;
+											}
+
+										}
+						}//post-header
+      }//post-image
+      .post-content{
+				padding-left:30px;
+				margin-bottom: 30px;
+						.featured-content{
+							padding-top:20px;
+							height:260px;
+							overflow:auto;
+							.post-title{
+														text-decoration: none;
+														font-style: italic;
+														font-weight: 300;
+														font-size:45px;
+
+									a{  text-decoration: none;
+											color:black;
+											transition: .5;
+											&:hover{  color:$font_hover_color;
+											}
+									}//a
+							}//post-title
+						}
+
+        p{
+          font-size: 20px;
+          color:$clr-ui-display-1;
+        }//p
+
+      }//post-content
+    }//single-post
+		.transparent-bg-btn{
+						margin-top:40px;
+						border: 2px solid $clr-grey;
+						border-radius: 4px;
+						text-decoration: none;
+						text-align:center;
+						color: $button_border_blue;
+						font-weight: 600;
+						@include font-size(20px);
+						font-style: italic;
+						padding: 10px 40px;
+						&:hover{  color: $button_border_blue;
+											border-color: $button_border_blue;
+											transition: all .5s ease-in-out;
+									}
+		}//transparent-bg-btn
+  }//post-contents
+}//main
+
+// ====================
+// NEWSLETTER COMPONENT HOME PAGE
+// ====================
+main{
+
+  .newsletter{
+          margin: 5em 0;
+          padding: 0;
+
+    .newsletter-content{
+
+      .title{
+        color:$paragraph_font_color;
+        background-color: $clr-grey-50;
+        text-align: center;
+        padding:30px 6%;
+        .fa{  color:$icon_color;
+              font-size: 7em;
+        }
+        h1{
+          font-weight: 700;
+          font-size: 40px;
+          text-align: center;
+      }
+      }//title
+      .triangle{
+        @include rgba(bg, $icon_color, .8);
+        @include triangle('right', 10.4rem, rgb(248,248,248));
+      }
+      .info{
+        padding: 5% 2%;
+        text-align: left;
+        @include rgba(bg, $icon_color, .8);
+        color: rgb(248,248,248);
+      }//info
+      .triangle-2{
+        @include rgba(bg, $icon_color, 1);
+        @include triangle('right', 10.4rem, #439DF1);
+      }
+      .submit{  background-color: $icon_color;
+                color:rgb(248,248,248);
+                padding: 70px;
+
+        .btn{ background-color: rgb(248,248,248);
+              color: $paragraph_font_color;
+              font-weight:600;
+              width: 50%;
+        }
+      }//submit
+    }//newsletter-content
+  }//newsletter
+}//main
