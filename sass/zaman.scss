@@ -114,8 +114,8 @@ footer{
 						padding: 0;
 						margin:0 auto;
 						height:auto;
+
 				.footer-contact-us-col{
-					// height:auto;
 					padding: 0 50px;
 					&:first-child{
 						border-right: 1px solid rgba(255, 255, 255, .2);
@@ -227,7 +227,11 @@ footer{
 			}//carousel-item
 		}//carousel-inner
 }//myCarousel
-
+@media (min-width: 1920px) {
+	#myCarousel{
+		height:70vh;
+	}
+}
 //=====================
 //	ANIMATED HEADING
 // ====================
@@ -261,7 +265,11 @@ main {
 
 				.clip{	margin:0 auto;
 								font-size: 120px;
-
+							}
+							@media (min-width: 1920px){
+								.clip{
+									font-size: 100px;
+								}
 							.blc{	display: inline-block;
 										padding-bottom: 5px;
 										padding: .2em 0;
@@ -285,6 +293,7 @@ main {
 								 .is-visible{	position: relative;
 															opacity: 1;
 															font-weight: bold;
+
 									}
 						}//cd-words-wrapper
 			}//clip
@@ -386,7 +395,6 @@ main {
 						}
 					}//wishlists-btn
 		}//#button_group_id
-}
 /*====================================
 		TITLE COMPONENT STYLING
 ===================================*/

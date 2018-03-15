@@ -9,7 +9,7 @@
   <div class="col-6 calendar-title">
     <div class="event-title">
       <?php the_title( sprintf('<h1 class="title"><a href="%s">', esc_url( get_permalink() ) ),'</a></h1>' ); ?>
-    </div>
+    </div> 
     <div class="event-info">
       <small><i class="fa fa-calendar"></i><?php echo date('l, F j, Y', strtotime(get_field('date'))); ?> |
       <span class="the-hour"><?php echo date('g:i a', strtotime(get_field('start_time')));?> -
