@@ -1,19 +1,23 @@
 $picture_size: 15vw;
 
 /*==============================
-      CONTENT-TEAM STYLE
+      PAGE CONTENT STYLE
 ================================*/
 .our-team-container {
     margin: 5% 0;
-    background-color: $grey1;
+    background-color: $clr-grey-100;
     padding: 5% 10%;
 
   .team-container {
       padding: 0;
       @include box_shadow;
 
+      .team-member{
+        border: 2px solid $clr-grey-100;
+
+      }
+
     .member-link{
-        border: 2px solid $grey1;
         padding: 5%;
 
       .image-container{
@@ -58,7 +62,7 @@ $picture_size: 15vw;
           opacity: 1;
           @include box_shadow;
           &:hover{
-            color:$green;
+            color:$clr-lime;
             opacity:1;
           }//fa:hover
         }//fa
@@ -66,6 +70,7 @@ $picture_size: 15vw;
     }//member-link
   }//team-container
 }//our-team-container
+
 .color{
     width: $picture_size;
     height:$picture_size;
@@ -100,8 +105,14 @@ $picture_size: 15vw;
 // ===========================
 //MODAL STYLING
 // ===========================
+@media (min-width: 768px) {
+  .modal-xl {
+    width: 90%;
+   max-width:1200px;
+  }
+}
 .modal-image-container{
-  height: 50vh;
+  height: 30vw;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -111,7 +122,8 @@ $picture_size: 15vw;
 .modal-body{
   padding:0;
   .team-modal-content{
-    max-height: 50vh;
+    max-height: 30vw;
+
   }
 }
 
@@ -123,21 +135,35 @@ $picture_size: 15vw;
     text-align: center;
     border:none;
     position: absolute;
-    top:-5%;
-    left:95%;
+    top:-20px;
+    right:-10px;
     cursor: pointer;
     .fa{
       color:white;
       @include font-size(30px);
     }
   }
+  h1.modal-name{
+    font-size:50px;
+    font-weight:lighter;
+  }
+  h3.modal-job-title{
+    font-size:30px;
+    font-style: italic;
+    color:$clr-ui-display-1;
+  }
 }
 .member-info-container{
   height: 60%;
   overflow: auto;
   max-height: 60%;
+  font-size: 20px;
+  font-weight: 400;
 }
 .modal-button-group{
+  position:absolute;
+  bottom:10px;
+  right:10px;
   text-align: right;
   padding-right: 4%;
   margin:0;

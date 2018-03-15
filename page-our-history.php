@@ -31,13 +31,19 @@
     <div class="timeline-item">
 
 <?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full', false, '' ); ?>
-      <div class="timeline-img"></div>
+      <div class="timeline-img">
+      <div class="date"><?php echo date('M d Y', strtotime(get_field('date'))); ?></div>
+    </div>
+      <div class="timeline-divider">
+
+      </div>
       <div class="timeline-content timeline-card <?php if ($k % 2 == 0): echo 'js--fadeInRight'; else: echo'js--fadeInLeft'; endif;?>" >
         <div class="timeline-img-header" style="background-image: url('<?php echo esc_url( $src[0] ); ?>')">
-          <h2><?php the_title(); ?></h2>
+          <h2 class="timeline-title"><?php the_title(); ?></h2>
         </div>
-        <div class="date"><?php echo date('F j, Y', strtotime(get_field('date'))); ?></div>
-        <?php the_content(  ); ?>
+        <div class="timeline-paragraph">
+                  <?php the_content(  ); ?>
+        </div>
       </div>
     </div>
  <?php
@@ -45,11 +51,11 @@
       endwhile;
 ?>
       </div>
-      <div class="end-note-container container-fluid">
-      <div class="end-note">
-        <h1>Be Part Of Our Story!</h1>
-      </div>
-      </div>
     </section>
+    <div class="end-note-container container-fluid">
+
+      <?php // TODO: link to volunteer page ?>
+      <a href="#" class="btn btn-lg timeline-end-note" >Be Part <br/>Of <br/>Our Story!</a>
+    </div>
 
 <?php get_footer( ); ?>

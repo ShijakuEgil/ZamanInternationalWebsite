@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" class="col-4 single-post"<?php //post_class(); ?>>
   <?php $post_type = get_post_type( );
 
   if($post_type == 'event'):?>
@@ -25,6 +25,6 @@
         <?php the_title( sprintf('<h2 class="post-title"><a href="%s">', esc_url( get_permalink() ) ),'</a></h2>' ); ?>
         <?php the_excerpt(); ?>
     </div>
-    <a class="transparent-bg-btn medium-btn"href="<?php echo get_permalink(); ?>">Read More</a>
+    <a class="featured-content-btn btn btn-outline-primary"href="<?php echo get_permalink(); ?>">Read More »</a>
   </div>
 </article>

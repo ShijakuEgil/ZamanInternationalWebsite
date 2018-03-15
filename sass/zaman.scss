@@ -7,7 +7,7 @@
 @import "single-blog";
 @import "news-page";
 @import "calendar-style";
-@import "our-team";
+@import "team_board_pages";
 @import "contact-us";
 @import "our_history";
 
@@ -20,6 +20,8 @@
 	.navbar{
 		top: 30px;}
 }
+//sets font and margins as a start default value for overall website
+//===================================
 body{
 	font-family: 'Roboto', sans-serif;
 	margin:0;
@@ -47,32 +49,14 @@ nav {
 				color:$clr-grey-50;
 				opacity: 1;
 			}
-		}
-	}
-}
+		}//nav-link
+	}//nav-item
+}//navbar-nav
 
 
 // ====================
 // FOOTER STYLING
 // ====================
-.social-media{	text-align: center;
-								color:  rgba(255,255,255,0.4);
-								margin: 20px auto;
-		a{	font-size:30px;
-				width:50px;
-				height: 50px;
-				line-height: 50px;
-				display: inline-block;
-				text-align: center;
-				border-radius: 100%;
-				margin: 3px;
-				box-shadow:0 0 0 1px rgba(255,255,255,.5);
-				color: rgba(255,255,255,0.4);
-				&:hover{	box-shadow:0 0 0 1px rgba(255,255,255,.8);
-									color: rgba(255,255,255, 1);
-									text-shadow: 0 0 0 1px rgba(255,255,255,0.4);}
-			}//a
-}//social-media
 footer{
 	@include header_footer_background;
 	padding: 10px;
@@ -126,14 +110,21 @@ footer{
 							color: $clr-grey-100;
 							margin-top: 10px;
 							display: block;
-		.row {	padding: 0;
-						margin:0;
-
-				.col {	padding: 0 50px;
-								&:first-child{ border-right: 1px solid rgba(255, 255, 255, .2);}
-								&:last-child {border-left: 1px solid rgba(255, 255, 255, .2);}
+		.contact-us-container{
+						padding: 0;
+						margin:0 auto;
+						height:auto;
+				.footer-contact-us-col{
+					// height:auto;
+					padding: 0 50px;
+					&:first-child{
+						border-right: 1px solid rgba(255, 255, 255, .2);
+					}
+					&:last-child {
+						border-left: 1px solid rgba(255, 255, 255, .2);
+					}
 				}//col
-		}//row
+		}//contact-us-container
 		h3{
 				font-size:20px;
 				font-weight:bold;
@@ -165,6 +156,28 @@ footer{
 								font-size: 15px;
 							}//span
 				}//contact-info
+
+				.social-media{	text-align: center;
+												color:  rgba(255,255,255,0.4);
+												margin: 50px auto;
+						h5.social-media-title{
+							text-align: center;
+						}
+						a{	font-size:30px;
+								width:50px;
+								height: 50px;
+								line-height: 50px;
+								display: inline-block;
+								text-align: center;
+								border-radius: 100%;
+								margin: 3px;
+								box-shadow:0 0 0 1px rgba(255,255,255,.5);
+								color: rgba(255,255,255,0.4);
+								&:hover{	box-shadow:0 0 0 1px rgba(255,255,255,.8);
+													color: rgba(255,255,255, 1);
+													text-shadow: 0 0 0 1px rgba(255,255,255,0.4);}
+							}//a
+				}//social-media
 		.copyright{
 								font-size: 15px;
 								text-align: center;
@@ -185,8 +198,7 @@ footer{
 		height: 80vh;
 		margin-bottom: 400px;//size might differ from screen size
 		.carousel-inner{
-
-			height:inherit;
+				height:inherit;
 			.carousel-item{
 				height: inherit;
 				display: block;
@@ -195,7 +207,6 @@ footer{
 				&.active {
 					opacity: 1 !important;
 					}
-
 				img{
 					position:relative;
 					min-width:100%;
@@ -212,10 +223,10 @@ footer{
 						-webkit-box-shadow: inset 0 0 80px rgba(0,0,0,.6);
 					}
 
-				}
-			}
-		}
-}
+				}//img
+			}//carousel-item
+		}//carousel-inner
+}//myCarousel
 
 //=====================
 //	ANIMATED HEADING
@@ -238,7 +249,7 @@ main {
 				}//slide-heading
 		.carousel-control-next { z-index: 1;
 														// @include right_side_fade_to_black;
-}
+													}
 		.carousel-control-prev { z-index: 1;
 														// @include left_side_fade_to_black;
 													}
@@ -270,15 +281,15 @@ main {
 															top:0;
 															opacity: 0;
 															padding-bottom: 5px;
-									}
+														}
 								 .is-visible{	position: relative;
 															opacity: 1;
 															font-weight: bold;
 									}
-						}
+						}//cd-words-wrapper
 			}//clip
 		}//#animated-heading
-
+}//main
 /*====================================
 		CAROUSEL BUTTON STYLE
 ===================================*/
@@ -328,7 +339,7 @@ main {
 								opacity:0;
 							}
 						}
-					}
+					}//btn
 
 					.need-help-btn{
 						.btn-icon{
@@ -340,7 +351,7 @@ main {
 							top: 0%;
 							left:25%;
 						}
-					}
+					}//need-help-btn
 					.volunteer-btn{
 						.btn-icon{
 							background-color: $clr-light-blue;//#89C4F3;
@@ -351,7 +362,7 @@ main {
 							top: 0%;
 							left:25%;
 						}
-					}
+					}//volunteer-btn
 					.donate-btn{
 						.btn-icon{
 							background-color: $clr-lime;//#A9CF33;
@@ -362,7 +373,7 @@ main {
 							top: 0%;
 							left:25%;
 						}
-					}
+					}//donate-btn
 					.wishlists-btn{
 						.btn-icon{
 							background-color: $clr-yellow;//#F8E620;
@@ -373,8 +384,7 @@ main {
 							top: 0%;
 							left:25%;
 						}
-					}
-			//}//.btn-group
+					}//wishlists-btn
 		}//#button_group_id
 }
 /*====================================
@@ -411,8 +421,7 @@ main {
 //=====================
 //	IMPACT BOXES HOME PAGE
 // ====================
-main{
-  .impact-boxes{  margin-top:50px;
+.impact-boxes{  margin-top:50px;
                   padding: 5em 15em;
                   background: $clr-grey-100;
 
@@ -438,12 +447,13 @@ main{
 //=====================
 //	FEATURED BOXES HOME PAGE
 // ====================
-  .post-contents{ padding: 60px 100px;
+.featured-contents{ padding: 60px 100px;
                   margin: 50px 0;
                   background-color:$clr-grey-100;
 
-    .single-post{
+    article.single-post{
 				padding:20px 20px 0 20px;
+				height:auto;
 
       .post-image{
         position: relative;
@@ -480,7 +490,7 @@ main{
 				margin-bottom: 30px;
 						.featured-content{
 							padding-top:20px;
-							height:260px;
+							height:300px;
 							overflow:auto;
 							.post-title{
 														text-decoration: none;
@@ -496,83 +506,82 @@ main{
 											}
 									}//a
 							}//post-title
-						}
+						}//featured-content
 
-        p{
-          font-size: 20px;
-          color:$clr-ui-display-1;
-        }//p
+        		p{
+          		font-size: 20px;
+          		color:$clr-ui-display-1;
+        		}//p
+						.post-title{
+													text-decoration: none;
+													font-style: italic;
+													font-weight: 300;
+													font-size:45px;
 
-      }//post-content
-    }//single-post
-		.transparent-bg-btn{
-						margin-top:40px;
-						border: 2px solid $clr-grey;
-						border-radius: 4px;
-						text-decoration: none;
-						text-align:center;
-						color: $button_border_blue;
-						font-weight: 600;
-						@include font-size(20px);
-						font-style: italic;
-						padding: 10px 40px;
-						&:hover{  color: $button_border_blue;
-											border-color: $button_border_blue;
-											transition: all .5s ease-in-out;
-									}
-		}//transparent-bg-btn
-  }//post-contents
-}//main
+								a{  text-decoration: none;
+										color:black;
+										transition: .5;
+										&:hover{  color:$font_hover_color;
+										}
+								}//a
+						}//post-title
+			  }//post-content
+			}//single-post
+			.featured-content-btn{
+				margin-top:20px;
+			}
+}//featured-contents
 
 // ====================
 // NEWSLETTER COMPONENT HOME PAGE
 // ====================
-main{
+.newsletter{
+        margin: 5em 0;
+        padding: 0;
 
-  .newsletter{
-          margin: 5em 0;
-          padding: 0;
+  .newsletter-content{
 
-    .newsletter-content{
-
-      .title{
-        color:$paragraph_font_color;
-        background-color: $clr-grey-50;
+    .newsletter-title{
+			height:400px;
+      color:$paragraph_font_color;
+      background-color: $clr-grey-50;
+      text-align: center;
+      padding:30px 10px;
+      .fa-newspaper-o{
+						color:$icon_color;
+            font-size: 90px;
+      }
+      h1{
+        font-weight: 700;
+        font-size: 40px;
         text-align: center;
-        padding:30px 6%;
-        .fa{  color:$icon_color;
-              font-size: 7em;
-        }
-        h1{
-          font-weight: 700;
-          font-size: 40px;
-          text-align: center;
-      }
-      }//title
-      .triangle{
-        @include rgba(bg, $icon_color, .8);
-        @include triangle('right', 10.4rem, rgb(248,248,248));
-      }
-      .info{
-        padding: 5% 2%;
-        text-align: left;
-        @include rgba(bg, $icon_color, .8);
-        color: rgb(248,248,248);
-      }//info
-      .triangle-2{
-        @include rgba(bg, $icon_color, 1);
-        @include triangle('right', 10.4rem, #439DF1);
-      }
-      .submit{  background-color: $icon_color;
-                color:rgb(248,248,248);
-                padding: 70px;
+    	}
+    }//newsletter-title
+    .newsletter-triangle-title{
+			//height:400px;
+			background-color:$clr-blue;
+      @include triangle('right', 200px, $clr-grey-50);
+    }
+    .newsletter-email{
+			height:400px;
+      padding: 5% 2%;
+      text-align: left;
+			background-color: $clr-blue;
+      color: rgb(248,248,248);
+    }//info
+    .newsletter-triangle-email{
+      background-color: $icon_color;
+      @include triangle('right', 200px, $clr-blue);
+    }
+    .submit{  background-color: $icon_color;
+              color:rgb(248,248,248);
+              padding: 70px;
 
-        .btn{ background-color: rgb(248,248,248);
-              color: $paragraph_font_color;
-              font-weight:600;
-              width: 50%;
-        }
-      }//submit
-    }//newsletter-content
-  }//newsletter
-}//main
+      .btn{ //background-color: rgb(248,248,248);
+            //color: $paragraph_font_color;
+            //font-weight:600;
+            width: 50%;
+      }
+    }//submit
+  }//newsletter-content
+}//newsletter

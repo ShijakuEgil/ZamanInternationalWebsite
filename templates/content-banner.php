@@ -1,19 +1,20 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-<div class="wrapper container-fluid">
+<article id="post-<?php the_ID(); ?>" <?php post_class('banner-wrapper container-fluid'); ?>>
   <?php $src =
   wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full', false, '' ); ?>
-  <div class="row no-gutters coontainer-fluid image" style="background-image: url('<?php echo esc_url( $src[0] ); ?>')">
-    <div class="col-9 title-header">
-        <h1 class="title">Zaman |<strong> <?php wp_title('');?></strong></h1>
+  <div class="row no-gutters container-fluid banner-image" style="background-image: url('<?php echo esc_url( $src[0] ); ?>')">
+    <div class="col-9 banner-title-header">
+        <h1 class="banner-title">Zaman |<strong> <?php wp_title('');?></strong></h1>
     </div>
-    <div class="col-3">
-      <div class="info">
-        <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-            <?php the_content(); ?>
-        <?php endwhile;
-            endif; ?>
-      </div>
+  <?php if(get_post()->post_content != ''): ?>
+    <div class="col-3 banner-info-wrapper">
+      <i class="fa fa-quote-left"></i>
+      <?php while(have_posts()) : the_post(); ?>
+        <div class="banner-info">
+              <?php the_content(); ?>
+        </div>
+      <?php endwhile; ?>
+      <i class="fa fa-quote-right"></i>
     </div>
+  <?php endif; ?>
   </div>
-</div>
 </article>
