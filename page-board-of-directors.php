@@ -36,7 +36,7 @@ get_template_part( 'templates/content', 'banner' );
       </div>
 
       <div class="modal fade" id="team-modal-<?php the_ID();?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-body">
               <div class="row team-modal-content">
@@ -47,8 +47,8 @@ get_template_part( 'templates/content', 'banner' );
                 </div>
                 <div class="col-6 team-member-info">
                   <button type="button" class="btn-close btn-primary" data-dismiss="modal"><i class="fa fa-times"></i></button>
-                  <h1><?php the_title( ); ?></h1>
-                  <h3><?php the_field('job_title'); ?></h3>
+                  <h1 class="modal-name"><?php the_title( ); ?></h1>
+                  <h3 class="modal-job-title"><?php the_field('job_title'); ?></h3>
                   <hr>
                   <div class="member-info-container">
                     <?php the_content( ); ?>
