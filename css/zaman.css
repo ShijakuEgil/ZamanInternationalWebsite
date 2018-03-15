@@ -1099,10 +1099,6 @@ footer {
           -moz-box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.6);
           -webkit-box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.6); }
 
-<<<<<<< HEAD
-main {
-  /*====================================
-		CAROUSEL BUTTON STYLE
 ===================================*/ }
   main .slide-heading .carousel-caption h1 {
     color: #f0f9ff;
@@ -1178,90 +1174,8 @@ main #animated-heading {
       vertical-align: top;
       padding: .2em 0; }
       main #animated-heading .clip .cd-words-wrapper b {
->>>>>>> b044ed0ed1eab286deafc0856fd87715830ab62c
         display: inline-block;
         position: absolute;
-<<<<<<< HEAD
-        top: 30px;
-        left: 40%; }
-      main #button_group_id .btn:hover .btn-icon {
-        -webkit-transition: all 500ms ease;
-        -moz-transition: all 500ms ease;
-        -ms-transition: all 500ms ease;
-        -o-transition: all 500ms ease;
-        transition: all 500ms ease;
-        width: 85%; }
-      main #button_group_id .btn:hover .triangle {
-        -webkit-transition: all 500ms ease;
-        -moz-transition: all 500ms ease;
-        -ms-transition: all 500ms ease;
-        -o-transition: all 500ms ease;
-        transition: all 500ms ease;
-        left: 85%; }
-      main #button_group_id .btn:hover span {
-        -webkit-transition: all 200ms ease;
-        -moz-transition: all 200ms ease;
-        -ms-transition: all 200ms ease;
-        -o-transition: all 200ms ease;
-        transition: all 200ms ease;
-        opacity: 0; }
-    main #button_group_id .need-help-btn .btn-icon {
-      background-color: #ff9800; }
-    main #button_group_id .need-help-btn .triangle {
-      content: '';
-      display: block;
-      position: relative;
-      height: 0;
-      width: 0;
-      border-top: 3.75rem solid transparent;
-      border-bottom: 3.75rem solid transparent;
-      border-left: 3.75rem solid #ff9800;
-      position: absolute;
-      top: 0%;
-      left: 25%; }
-    main #button_group_id .volunteer-btn .btn-icon {
-      background-color: #03a9f4; }
-    main #button_group_id .volunteer-btn .triangle {
-      content: '';
-      display: block;
-      position: relative;
-      height: 0;
-      width: 0;
-      border-top: 3.75rem solid transparent;
-      border-bottom: 3.75rem solid transparent;
-      border-left: 3.75rem solid #03a9f4;
-      position: absolute;
-      top: 0%;
-      left: 25%; }
-    main #button_group_id .donate-btn .btn-icon {
-      background-color: #cddc39; }
-    main #button_group_id .donate-btn .triangle {
-      content: '';
-      display: block;
-      position: relative;
-      height: 0;
-      width: 0;
-      border-top: 3.75rem solid transparent;
-      border-bottom: 3.75rem solid transparent;
-      border-left: 3.75rem solid #cddc39;
-      position: absolute;
-      top: 0%;
-      left: 25%; }
-    main #button_group_id .wishlists-btn .btn-icon {
-      background-color: #ffeb3b; }
-    main #button_group_id .wishlists-btn .triangle {
-      content: '';
-      display: block;
-      position: relative;
-      height: 0;
-      width: 0;
-      border-top: 3.75rem solid transparent;
-      border-bottom: 3.75rem solid transparent;
-      border-left: 3.75rem solid #ffeb3b;
-      position: absolute;
-      top: 0%;
-      left: 25%; }
-=======
         white-space: nowrap;
         left: 0;
         top: 0;
@@ -1384,7 +1298,6 @@ main #animated-heading {
     position: absolute;
     top: 0%;
     left: 25%; }
->>>>>>> b044ed0ed1eab286deafc0856fd87715830ab62c
 
 /*====================================
 		TITLE COMPONENT STYLING
