@@ -482,8 +482,7 @@ main {
 												color:$font_hover_color;
 												opacity:1;
 											}
-
-										}
+									}
 						}//post-header
       }//post-image
       .post-content{
@@ -499,7 +498,8 @@ main {
 														font-weight: 300;
 														font-size:45px;
 
-									a{  text-decoration: none;
+									a{
+										  text-decoration: none;
 											color:black;
 											transition: .5;
 											&:hover{  color:$font_hover_color;
