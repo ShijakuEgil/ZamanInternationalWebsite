@@ -64,17 +64,16 @@
 
                             </div><!--samll-sections-->
                       </div><!--mid-setion-->
+                    </div><!--headline-news"-->
 <?php               endif;
 
                     if($i == 4):
 ?>
-                    </div><!--headline-news"-->
-
                     <div class="row no-gutters news-and-sidebar">
                         <div class="col-9 archive-news-section">
                             <div class="row no-gutters archive-news">
                               <div class="col-6 main-news-archive">
-<?php                             get_template_part('template/content','news'); ?>
+<?php                             get_template_part('templates/content','news'); ?>
 
 <?php                endif;
 
@@ -104,7 +103,7 @@
                         </div>
                     </div><!--news-and-sidebar-->
 <?php               endif; ?>
-<?php                 $i= $i + 1;
+<?php                 $i++;
               endwhile;
 ?>
 <?php  endif;
