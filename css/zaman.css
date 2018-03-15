@@ -1440,3 +1440,9 @@ main #animated-heading {
     padding: 70px; }
     .newsletter .newsletter-content .submit .btn {
       width: 50%; }
+
+      @media (min-width: 1920px) {
+      	#myCarousel{
+      		height:70vh;
+      	}
+      }

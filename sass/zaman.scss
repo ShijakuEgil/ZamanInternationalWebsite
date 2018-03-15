@@ -202,7 +202,7 @@ footer{
 			.carousel-item{
 				height: inherit;
 				display: block;
-				 
+
 				opacity: 0;
 				transition: opacity .9s ease-in-out;
 				&.active {
@@ -228,11 +228,7 @@ footer{
 			}//carousel-item
 		}//carousel-inner
 }//myCarousel
-@media (min-width: 1920px) {
-	#myCarousel{
-		height:70vh;
-	}
-}
+
 //=====================
 //	ANIMATED HEADING
 // ====================
