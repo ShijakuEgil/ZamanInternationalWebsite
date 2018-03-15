@@ -10,8 +10,8 @@
           ?>
           <div class="contact-us container">
             <h3>Contact Us</h3>
-            <div class="row">
-              <div class="col">
+            <div class="row contact-us-container">
+              <div class="col footer-contact-us-col">
                 <div class="contact-info">
                   <i class="fa fa-map-marker espacio-ico-01"> The Hope for Humanity Center</i><br />
                   <a href="#">26091 Trowbridge Inkster, MI 48141</a><br />
@@ -21,7 +21,7 @@
                   <span>Email : </span><a href="mailto:info@zamaninternational.org">info@zamaninternational.org</a>
                 </div>
               </div>
-              <div class="col">
+              <div class="col footer-contact-us-col">
                 <div class="contact-info">
                   <i class="fa fa-map-marker espacio-ico-01"> Client Services (BAZ)</i><br />
                   <a href="#">26091 Trowbridge Inkster, MI 48141</a><br />
@@ -31,7 +31,7 @@
                   <span>Email : </span><a href="mailto:info@zamaninternational.org">info@zamaninternational.org</a>
                 </div>
               </div>
-              <div class="col">
+              <div class="col footer-contact-us-col">
                 <div class="contact-info">
                   <i class="fa fa-map-marker espacio-ico-01"> Good Deeds Resale Store</i><br />
                   <a href="#">26091 Trowbridge Inkster, MI 48141</a><br />
@@ -42,7 +42,9 @@
                 </div>
               </div>
             </div><!--.row-->
+
             <div class="social-media">
+              <h5 class="social-media-title">Follow us on social media!</h5>
               <?php // TODO: insert url values for social media anchors to call contact us page ?>
               <a href="#"><i class="fa fa-facebook"></i></a>
               <a href="#"><i class="fa fa-twitter"></i></a>

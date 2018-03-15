@@ -144,7 +144,7 @@
               Aenean tortor est, vulputate quis leo in,
               vehicula rhoncus lacus. Praesent aliquam in tellus eu.
             </p><!-- change description of box here-->
-            <a href="#" class="learn-more-link">Learn more »</a>
+            <a href="#" class="btn btn-outline-primary">Learn more »</a>
           </div>
         </div>
         <div class="col-lg item">
@@ -155,7 +155,7 @@
               Aenean tortor est, vulputate quis leo in,
               vehicula rhoncus lacus. Praesent aliquam in tellus eu.
             </p>
-            <a href="#" class="learn-more-link">Learn more »</a>
+            <a href="#" class="btn btn-outline-primary">Learn more »</a>
           </div>
         </div>
         <div class="col-lg item">
@@ -166,7 +166,7 @@
               Aenean tortor est, vulputate quis leo in,
                vehicula rhoncus lacus. Praesent aliquam in tellus eu.
              </p>
-            <a href="#" class="learn-more-link">Learn more »</a>
+            <a href="#" class="btn btn-outline-primary">Learn more »</a>
           </div>
         </div>
     </div>
@@ -188,8 +188,8 @@
     <!--title-component end-->
 
     <!--Featured content updated-->
-    <div class="row no-gutters container-fluid post-contents">
-     <div class="col-4 single-post">
+    <div class="row no-gutters container-fluid featured-contents">
+     <!-- <div class="col-4 single-post"> -->
 <?php
           $args = array(
             'post_type' => 'event',
@@ -212,8 +212,8 @@
       endif;
       wp_reset_postdata();
 ?>
-     </div>
-     <div class="col-4 single-post">
+     <!-- </div> -->
+     <!-- <div class="col-4 single-post"> -->
 <?php
       $args = array(
         'post_type' => 'news',
@@ -226,8 +226,8 @@
           endwhile;
       endif;
 ?>
-     </div>
-     <div class="col-4 single-post">
+     <!-- </div> -->
+     <!-- <div class="col-4 single-post"> -->
 <?php
       $args = array(
         'post_type' => 'blog-post',
@@ -240,7 +240,7 @@
           endwhile;
       endif;
 ?>
-     </div>
+     <!-- </div> -->
     </div>
     <!--Featured content updated end-->
 
@@ -273,19 +273,19 @@
     <!--title-component end-->
     <div class="container-fluid newsletter">
       <div class="row no-gutters newsletter-content">
-        <div class="col-3 title">
+        <div class="col-3 newsletter-title">
             <i class="fa fa-newspaper-o"></i>
             <h1>Subscribe<br />To Our<br /><span>Newsletter</span></h1>
         </div>
-        <div class="col-1 triangle">
+        <div class="col-1 newsletter-triangle-title">
             <!-- <i class="fa fa-play"></i> -->
         </div>
-        <div class="col-4 info">
+        <div class="col-4 newsletter-email">
           <label for="exampleInputEmail1"><h3>What is your email?</h3></label>
           <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
           <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
         </div>
-        <div class="col-1 triangle-2">
+        <div class="col-1 newsletter-triangle-email">
             <!-- <i class="fa fa-play"></i> -->
         </div>
         <div class="col submit">
@@ -316,7 +316,7 @@
               </label>
             </li>
           </ul>
-          <button type="submit" class="btn">Submit</button>
+          <button type="submit" class="btn btn-outline-light">Submit</button>
         </div>
       </div>
     </div>
