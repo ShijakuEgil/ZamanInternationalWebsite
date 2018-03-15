@@ -1132,9 +1132,6 @@ footer {
 main {
   /*====================================
 		CAROUSEL BUTTON STYLE
-===================================*/
-  /*====================================
-		TITLE COMPONENT STYLING
 ===================================*/ }
   main .slide-heading .carousel-caption h1 {
     color: #f0f9ff;
@@ -1294,24 +1291,28 @@ main {
       position: absolute;
       top: 0%;
       left: 25%; }
-  main .title-conponent {
-    text-align: center;
-    margin-top: 150px; }
-    main .title-conponent .title-row .title {
-      margin: 0 50px; }
-      main .title-conponent .title-row .title h1 {
-        color: #212121;
-        text-align: center;
-        font-size: 80px;
-        font-weight: 300; }
-    main .title-conponent .title-row .separator {
-      background: url("../img/header-bg.png") repeat-x center;
-      padding: 0; }
-    main .title-conponent .description {
-      color: #757575;
-      font-size: 25px;
-      font-weight: 600;
-      margin: 10px 40px; }
+
+/*====================================
+		TITLE COMPONENT STYLING
+===================================*/
+.title-conponent {
+  text-align: center;
+  margin-top: 150px; }
+  .title-conponent .title-row .title {
+    margin: 0 50px; }
+    .title-conponent .title-row .title h1 {
+      color: #212121;
+      text-align: center;
+      font-size: 80px;
+      font-weight: 300; }
+  .title-conponent .title-row .separator {
+    background: url("../img/header-bg.png") repeat-x center;
+    padding: 0; }
+  .title-conponent .description {
+    color: #757575;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 40px; }
 
 main .impact-boxes {
   margin-top: 50px;
