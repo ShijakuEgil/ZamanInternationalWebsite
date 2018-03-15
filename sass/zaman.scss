@@ -202,6 +202,7 @@ footer{
 			.carousel-item{
 				height: inherit;
 				display: block;
+				 
 				opacity: 0;
 				transition: opacity .9s ease-in-out;
 				&.active {
