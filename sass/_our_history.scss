@@ -5,13 +5,13 @@ main{
   overflow-x: hidden;
 }
 section.timeline{
-  margin-top:100px;
+  margin-top:10vh;
   position:relative;
 
   .timeline-item{
-    height: 500px;
+    height: 50vh;
     width:100%;
-    padding-bottom: 100px;
+    padding-bottom: 10vh;
 
     .timeline-divider{
       position:absolute;
@@ -20,16 +20,16 @@ section.timeline{
       width: .2%;
       background-color: $clr-blue;
       left:49.9%;
-
     }
+
     .timeline-img{
-        width:6vw;
-        height:6vw;
+        width:10vw;
+        height:10vw;
         background-color: $clr-blue;
-        border: 5px solid $clr-grey-200;
+        border: 20px solid $clr-grey-200;
       	border-radius: 100%;
       	position: absolute;
-      	left: 47%;
+      	left: 45%;
         z-index: 1;
         text-align: center;
 
@@ -38,17 +38,16 @@ section.timeline{
           z-index: 2;
           top:30%;
           @include picture_font_style;
-          font-size: 40px;
+          font-size: $h2_subtitle;
           font-weight:bold;
           line-height: 40px;
         }
     }
     .timeline-content{
-      width:800px;
-      // overflow-y: auto;
+      width:40vw;
 
       .timeline-img-header{
-        height:300px;
+        height:25vh;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -56,15 +55,15 @@ section.timeline{
         h2.timeline-title{
           @include picture_font_style;
           opacity: .8;
-          font-size: 60px;
-          font-weight: 600;
+          font-size: $h1_title;
+          font-weight: 400;
           position:absolute;
-          top: 10px;
+          top: 2vh;
         }
       }
       .timeline-paragraph{
-        padding-top:10px;
-        height:180px;
+        padding-top:2%;
+        height:20%;
         overflow: auto;
 
       }
@@ -73,9 +72,9 @@ section.timeline{
 
        		.timeline-content {
       			float: right;
-      			padding: 10px 10px 10px 10px;
+      			padding: 1%;
             background-color: $clr-grey-200;
-            margin-right:270px;
+
             &::after {
               content: '';
       				position: absolute;
@@ -83,21 +82,21 @@ section.timeline{
       				width: 0;
       				height: 0;
       				top: 0;
-      				left: -200px;
-      				border-width: 0px 200px 500px 0;
+      				left: -7.9vw;
+      				border-width: 0px 8vw 48vh 0;
       				border-color: transparent $clr-grey-200 transparent transparent;
             }
             h2.timeline-title{
-              left:20px;
+              left:2vw;
             }
           }
         }
   &:nth-child(odd){
 
     .timeline-content{
-      padding: 10px;
+      padding:1%;
       background-color:$clr-grey-200;
-      margin-left:270px;
+
       &::after {
     		content: '';
     		position: absolute;
@@ -105,28 +104,31 @@ section.timeline{
     		width: 0;
     		height: 0;
     		top: 0;
-    		right: -200px;
-    		border-width: 0 0 500px 200px;
+    		right: -7.9vw;
+    		border-width: 0 0 48vh 8vw;
     		border-color: transparent transparent transparent $clr-grey-200;// #f5f5f5;
       	}
         h2.timeline-title{
-          right:20px;
+          right:2vw;
         }
       }
     }
   }
 }
 div.end-note-container{
+  position:relative;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 30vh;
   a.timeline-end-note{
+    position:absolute;
+    left:45%;
     padding-top:25px;
-    line-height: 40px;
+    line-height: 35px;
     text-align: center;
     font-size:35px;
     box-sizing: border-box;
-    width: 200px;
-    height: 200px;
+    width: 10vw;
+    height: 10vw;
     border: 5px solid $clr-blue;
     border-radius:100%;
     color:$clr-blue;

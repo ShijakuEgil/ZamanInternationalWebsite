@@ -20,8 +20,10 @@
                 <?php if( get_field( 'radio_button_text' ) == 'Show text') :?>
 
                   <div class="container-fluid slide-heading">
+
                     <div class="carousel-caption">
-                      <h1><?php the_field('large_heading'); ?></h1>
+                      <!-- <h1><?php //the_field('large_heading'); ?></h1> -->
+                      <div class="animated-heading-underline"></div>
                       <div class="slider-paragraph"><p><?php the_field('description_text');?></p></div>
                     </div>
                   </div>
@@ -31,18 +33,6 @@
               <?php endwhile; ?>
           </div>
           <!--carousel-inner-->
-
-          <!--prev next index-->
-          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-          <!--prev next index end  -->
-
           <!--animated heading start -->
           <div class="caption v-middle text-center" id="animated-heading">
             <h2 class="cd-headline clip">
@@ -64,63 +54,60 @@
                 <?php } ?>
                 <?php endwhile; ?>
               </h2>
+
             </div><!--.caption-->
           <!--animated heading end  -->
 
-        <!--button group -->
-        <div id="button_group_id" class=" row no-gutters container-fluid">
-            <!-- <div class="btn-group ">
-              <?php // TODO: insert url for buttons ?>
-                <a href="#" class="btn btn-1"><span>Need Help</span><i class="fa fa-handshake-o"></i></a>
-                <a href="#" class="btn btn-2"><span>Volunteer</span><i class="fa fa-hand-paper-o"></i></a>
-                <a href="#" class="btn btn-3"><span>Donate</span><i class="fa fa-money"></i></a>
-                <a href="#" class="btn btn-4"><span>Wishlists</span><i class="fa fa-list-ul"></i></a>
-            </div> -->
-            <div class="col btn need-help-btn">
-              <div class="btn-icon">
-                <i class="fa fa-handshake-o"></i>
-              </div>
-              <div class="triangle"></div>
-              <span>Need Help</span>
-            </div>
-
-            <div class="col btn volunteer-btn">
-              <div class="btn-icon">
-                <i class="fa fa-hand-paper-o"></i>
-              </div>
-              <div class="triangle">
-
-              </div>
-              <span>Volunteer</span>
-            </div>
-
-            <div class="col btn donate-btn">
-              <div class="btn-icon">
-                <i class="fa fa-money"></i>
-              </div>
-              <div class="triangle">
-
-              </div>
-              <span>Donate</span>
-            </div>
-
-            <div class="col btn wishlists-btn">
-              <div class="btn-icon">
-                <i class="fa fa-list-ul"></i>
-              </div>
-              <div class="triangle">
-
-              </div>
-              <span>Wishlists</span>
-            </div>
-        </div>
-      <!--button group end  -->
-
+          <!--prev next index-->
+          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+          <!--prev next index end  -->
     </div><!--#myCarousel-->
+    <!--button group -->
+    <div id="button_group_id" class="container-fluid">
+      <!-- <button type="button" class="btn btn-outline-success">Success</button>
+      <button type="button" class="btn btn-outline-danger">Danger</button>
+      <button type="button" class="btn btn-outline-warning">Warning</button>
+      <button type="button" class="btn btn-outline-info">Info</button> -->
+        <button class="btn need-help-btn">
+          <div class="btn-icon">
+            <i class="fa fa-handshake-o"></i>
+          </div>
+          <span>Need Help</span>
+        </button>
+
+        <button class="btn volunteer-btn">
+          <div class="btn-icon">
+            <i class="fa fa-hand-paper-o"></i>
+          </div>
+          <span>Volunteer</span>
+        </button>
+
+        <button class="btn donate-btn">
+          <div class="btn-icon">
+            <i class="fa fa-money"></i>
+          </div>
+          <span>Donate</span>
+        </button>
+
+        <button class="btn wishlists-btn">
+          <div class="btn-icon">
+            <i class="fa fa-list-ul"></i>
+          </div>
+          <span>Wishlists</span>
+        </button>
+    </div>
+  <!--button group end  -->
 
     <!--title-component-->
     <div class="container-fluid title-conponent">
-      <div class="row title-row justify-content-center">
+      <div class="row title-row no-gutters justify-content-center">
         <div class="col separator"></div>
         <div class="col-auto title">
           <h1>WHAT WE DO</h1>
@@ -280,8 +267,8 @@
         <div class="col-1 newsletter-triangle-title">
             <!-- <i class="fa fa-play"></i> -->
         </div>
-        <div class="col-4 newsletter-email">
-          <label for="exampleInputEmail1"><h3>What is your email?</h3></label>
+        <div class="col-3 newsletter-email">
+          <label class="email-form" for="exampleInputEmail1"><h3>What is your email?</h3></label>
           <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
           <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
         </div>
@@ -289,7 +276,7 @@
             <!-- <i class="fa fa-play"></i> -->
         </div>
         <div class="col submit">
-          <h3>What is your interest?</h3>
+          <h3 class="newsletter-submit-title">What is your interest?</h3>
           <ul>
             <li>
               <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
