@@ -1,0 +1,17 @@
+//STYLE FOR A SINGLE POST
+.single-post{
+  margin:0;
+  padding:0;
+
+  article.single-post-div{
+    width:100%;
+
+    div.single-post-image{
+      width:inherit;
+      height:50vh;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+}
