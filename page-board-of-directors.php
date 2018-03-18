@@ -22,12 +22,13 @@ get_template_part( 'templates/content', 'banner' );
     <div class="row no-gutters container-fluid team-container">
 <?php
       $args = array(
-        'post_type' => 'board-member',
+        'post_type' => 'team-members',
         'post_per_page' => -1,
       );
       $k = 0;
       $team_query = new WP_Query($args);
       while($team_query->have_posts()): $team_query->the_post();
+      if(get_field('member_board_team') == 'board'):
 ?>
       <div class="col-4 team-member">
 <?php
@@ -47,13 +48,13 @@ get_template_part( 'templates/content', 'banner' );
                 </div>
                 <div class="col-6 team-member-info">
                   <button type="button" class="btn-close btn-primary" data-dismiss="modal"><i class="fa fa-times"></i></button>
-                  <h1 class="modal-name"><?php the_title( ); ?></h1>
-                  <h3 class="modal-job-title"><?php the_field('job_title'); ?></h3>
+                  <h1 class="modal-name"><?php the_field('member_name'); ?></h1>
+                  <h3 class="modal-job-title"><?php the_field('member_position_title'); ?></h3>
                   <hr>
                   <div class="member-info-container">
-                    <?php the_content( ); ?>
+                    <p><?php the_field('member_description'); ?></p>
                   </div>
-                  <form class="modal-button-group" action="mailto:<?php the_field('email');?>" method="post" enctype="text/plain">
+                  <form class="modal-button-group" action="mailto:<?php the_field('member_email');?>" method="post" enctype="text/plain">
                       <button type="submit" class="btn btn-primary"><i class="fa fa"></i>Email</button>
                   </form>
                 </div>
@@ -63,6 +64,7 @@ get_template_part( 'templates/content', 'banner' );
         </div>
       </div>
 <?php
+      endif;
       $k++;
       endwhile;
 ?>

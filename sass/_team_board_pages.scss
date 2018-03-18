@@ -5,20 +5,22 @@ $picture_size: 15vw;
 ================================*/
 .our-team-container {
     margin: 5% 0;
-    background-color: $clr-grey-100;
+    
     padding: 5% 10%;
 
   .team-container {
       padding: 0;
-      @include box_shadow;
+      // @include box_shadow;
 
       .team-member{
-        border: 2px solid $clr-grey-100;
-
+        border: 1px solid $clr-grey-100;
+        // @include box_shadow;
+        margin:auto;
       }
 
     .member-link{
         padding: 5%;
+
 
       .image-container{
         width:$picture_size;
@@ -43,6 +45,8 @@ $picture_size: 15vw;
         margin-left:2%;
       }
       &:hover{
+        @include animate(all, 500ms);
+        box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.05);
         .image-container{
           @include animate(all, 1000ms);
           border-top-right-radius: 100%;

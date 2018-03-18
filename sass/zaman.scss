@@ -10,6 +10,7 @@
 @import "team_board_pages";
 @import "contact-us";
 @import "our_history";
+@import "single-post";
 
 // TODO: create styling for responsive design
 
@@ -231,13 +232,14 @@ footer{
 //	ANIMATED HEADING
 // ====================
 main {
-			.slide-heading{
+			.slider-heading{
 				width:100%;
 				height:80vh;
 				position:absolute;
 				top:0;
 					.carousel-caption {
-						margin-bottom: 20vh;
+						position:absolute;
+						top:35vh;
 						.animated-heading-underline {
 							width: 30vw;
 							background-color: rgba(255, 255, 255, 0.5);
@@ -598,12 +600,12 @@ main {
     }
     .newsletter-email{
 			height:50vh;
-      padding: 25% 2%;
       text-align: left;
 			background-color: $clr-blue;
       color: rgb(248,248,248);
 			label.email-form {
-				margin-top:10em;
+				margin: 0 auto;
+				margin-top:40%;
 				h3{
 					font-size: $h2_subtitle;
 				}
@@ -613,11 +615,17 @@ main {
       background-color: $icon_color;
       @include triangle('right', 25vh, $clr-blue);
     }
-    .submit{
+    div.submit{
 			background-color: $icon_color;
       color:rgb(248,248,248);
-      padding-top:8em;
 			text-align: left;
+			ul.submit-checklist{
+				margin:auto;
+				margin-top:40%;
+				li{
+					margin-left:25%;
+				}
+			}
 			h3.newsletter-submit-title{
 				font-size: $h2_subtitle;
 			}
@@ -628,7 +636,8 @@ main {
       .btn{ //background-color: rgb(248,248,248);
             //color: $paragraph_font_color;
             //font-weight:600;
-            width: 80%;
+            width: 60%;
+						margin: 5% 20%;
       }
     }//submit
   }//newsletter-content

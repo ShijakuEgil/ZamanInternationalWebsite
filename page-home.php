@@ -7,7 +7,7 @@
           <div role="listbox" class="carousel-inner embed-responsive ">
               <?php
               $k = 0;
-              $args = array('post_type' => 'home_page_slides');
+              $args = array('post_type' => 'home-carousel');
               $query = new WP_Query($args);
               $array_rev = array_reverse($query->posts);
               $query->posts = $array_rev;
@@ -17,14 +17,12 @@
               <div class="carousel-item embed-responsive-item <?php if($k == 0){ echo 'active'; }?>">
 
                 <?php the_post_thumbnail( 'full', array( 'class' => 'img-fluid' ) ); ?>
-                <?php if( get_field( 'radio_button_text' ) == 'Show text') :?>
+                <?php if( get_field( 'show_text' ) == true) :?>
 
-                  <div class="container-fluid slide-heading">
-
-                    <div class="carousel-caption">
-                      <!-- <h1><?php //the_field('large_heading'); ?></h1> -->
+                  <div class="container-fluid slider-heading">
+                    <div class="carousel-caption clearfix">
                       <div class="animated-heading-underline"></div>
-                      <div class="slider-paragraph"><p><?php the_field('description_text');?></p></div>
+                      <div class="slider-paragraph"><p><?php the_field('image_text');?></p></div>
                     </div>
                   </div>
                 <?php endif; ?>
@@ -33,6 +31,7 @@
               <?php endwhile; ?>
           </div>
           <!--carousel-inner-->
+
           <!--animated heading start -->
           <div class="caption v-middle text-center" id="animated-heading">
             <h2 class="cd-headline clip">
@@ -276,8 +275,9 @@
             <!-- <i class="fa fa-play"></i> -->
         </div>
         <div class="col submit">
-          <h3 class="newsletter-submit-title">What is your interest?</h3>
-          <ul>
+
+          <ul class="submit-checklist">
+            <h3 class="newsletter-submit-title">What is your interest?</h3>
             <li>
               <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
               <label class="form-check-label" for="defaultCheck1">

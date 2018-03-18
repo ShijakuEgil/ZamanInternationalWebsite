@@ -19,21 +19,22 @@ article.banner-wrapper{
               position:relative;
 
               h1.banner-title{
-                font-size: 100px;
+                font-size: 5vw;
                 font-weight: 300;
                 padding-left: 30px;
                 @include picture_font_style;
                 position: absolute;
-                left:30px;
+                left:1vw;
                 top:20vh;
               }
             }
 
             div.banner-info-wrapper{
+              max-height: 60vh;
               i.fa{
                 color: rgba(0,0,0,.7);
                 text-shadow: 2px 2px 25px rgba(255,255,255,.7);
-                font-size: 80px;
+                font-size: $h1_title;
               }
               i.fa-quote-right{
                 float:right;
@@ -46,7 +47,7 @@ article.banner-wrapper{
 
                 p{
                   @include picture_font_style;
-                  font-size: 30px;
+                  font-size: $h3_description;
                 }
               }
             }

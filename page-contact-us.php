@@ -10,9 +10,9 @@
     <button id="directions-btn"type="button" name="button" class="col-4 btn btn-secondary">Get Directions</button>
   </div>
   <div id="map" class="contact-us-map"></div>
-  <div id=content>
-      <img src="<?php echo get_template_directory_uri();?>/img/logo-hope.png" width="300" height="170" alt="logo"></img>
-  </div>
+  <!-- <div id=content>
+      <img src="<?php //echo get_template_directory_uri();?>/img/logo-hope.png" width="300" height="170" alt="logo"></img>
+  </div> -->
   <div class="sidenav-left" id="phone-fax-address">
 
       <h3>Phone|Fax|Address</h3>

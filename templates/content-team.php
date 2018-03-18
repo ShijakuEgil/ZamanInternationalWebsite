@@ -10,8 +10,8 @@
         </div>
       </div>
       <div class="info-container container-fluid">
-        <h3 class="name"><?php the_title(); ?></h4>
-        <h5 class="job-title"><?php the_field('job_title'); ?></h5>
+        <h3 class="name"><?php the_field('member_name');?></h4>
+        <h5 class="job-title"><?php the_field('member_position_title'); ?></h5>
       </div>
   </div>
 </article>
