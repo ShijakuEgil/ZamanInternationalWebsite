@@ -356,12 +356,26 @@ if(function_exists("register_field_group"))
 	));
 }
 
-function my_acf_google_map_api( $api ){
+function zaman_get_description_meta_box( $meta_boxes ) {
 
-	$api['key'] = 'AIzaSyBesoH9bG8c55GvG1umLf8W-jzkMD_5KHA';
+	$meta_boxes[] = array(
+		'id' => 'subtitle',
+		'title' => esc_html__( 'Description of title', 'metabox-online-generator' ),
+		'post_types' => array( 'page' ),
+		'context' => 'advanced',
+		'priority' => 'default',
+		'autosave' => true,
+		'fields' => array(
+			array(
+				'id' => 'description',
+				'type' => 'textarea',
+				'name' => esc_html__( 'Page Subtitle', 'metabox-online-generator' ),
+				'desc' => esc_html__( 'Description text for page', 'metabox-online-generator' ),
+				'std' => 'Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.',
+			),
+		),
+	);
 
-	return $api;
-
+	return $meta_boxes;
 }
-
-add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+add_filter( 'rwmb_meta_boxes', 'zaman_get_description_meta_box' );

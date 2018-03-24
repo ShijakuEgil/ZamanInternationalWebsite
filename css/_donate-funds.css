@@ -1,0 +1,15 @@
+#container {
+  margin: 0;
+  padding: 0; }
+
+.map-marker-image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 100%; }
+
+.infowindow-wrapper {
+  width: 500px; }
+
+.infowindow-btn {
+  margin: 10px auto; }

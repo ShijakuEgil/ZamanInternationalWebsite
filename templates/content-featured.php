@@ -11,12 +11,11 @@
     <?php $post_type = 'Blog'; ?>
   <?php
   endif;?>
-  <?php $src =
-  wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full', false, '' ); ?>
-  <div class="post-image" style="background-image: url('<?php echo esc_url( $src[0] ); ?>')">
+
+  <div class="post-image" style="background-image: url('<?php echo zaman_get_featured_image(); ?>')">
     <div class="post-header">
       <!-- <img class="featured-content-logo" src="<?php //echo get_template_directory_uri();?>/img/logo-hope.png" alt=""></img> -->
-      <a class="featured-post-type" href="#">Zaman <strong>| <?php echo $post_type; ?></strong></a>
+      <a class="featured-post-type" href="#">Zaman<strong> | <?php echo $post_type; ?></strong></a>
     </div>
   </div>
   <div class="post-content">

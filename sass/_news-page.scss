@@ -33,16 +33,20 @@ $archive_headline_height:100vh / 1.2;
                      border: 3px solid white;
                      border-radius: 10px;
 
-            .post-title{ width:100%;
-                         padding:2%;
+            .post-title{
+              width:100%;
+              padding:2%;
 
                       a { color:white;
                           opacity:.7;
                           text-shadow: 1px 1px 5px black;
-                        &:hover{ text-decoration: none;}
+                        &:hover{
+                          text-decoration: none;
+                          color:$icon_color;
+                        }
                         }
         }
-            .post-credits{ color:white;
+            .post-credits{ color:whitesmoke;
                            opacity:.7;
                            text-shadow: 1px 1px 7px black;}
 }
@@ -66,6 +70,7 @@ $archive_headline_height:100vh / 1.2;
   }
 }
 .post-title-group{
+  
   .post-title{
     a{
       &:hover{

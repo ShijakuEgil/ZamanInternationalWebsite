@@ -70,10 +70,6 @@
     </div><!--#myCarousel-->
     <!--button group -->
     <div id="button_group_id" class="container-fluid">
-      <!-- <button type="button" class="btn btn-outline-success">Success</button>
-      <button type="button" class="btn btn-outline-danger">Danger</button>
-      <button type="button" class="btn btn-outline-warning">Warning</button>
-      <button type="button" class="btn btn-outline-info">Info</button> -->
         <button class="btn need-help-btn">
           <div class="btn-icon">
             <i class="fa fa-handshake-o"></i>

@@ -17,5 +17,18 @@ function zaman_enqueue_scripts(){
   wp_enqueue_script( 'about_us_js', get_template_directory_uri() .'/js/about_us.js', array('jquery'), '1.0.0', true);
   wp_enqueue_script( 'scroll_reveal_js', get_template_directory_uri() .'/js/scrollreveal.min.js', array('jquery'), '1.0.0', true);
   wp_enqueue_script( 'sidenav_js', get_template_directory_uri() .'/js/sidenav.js', array('jquery'), '1.0.0', true);
+
+  wp_register_script('single_default_slideshow', get_template_directory_uri(). '/js/single_default_ui_slideshow.js', array( 'jquery' ), '1.0.0', true );
+  wp_enqueue_script( 'single_default_slideshow' );
+
+
+  // if(is_page('funds')){
+  //   wp_register_script( 'google_maps_js', get_template_directory_uri() .'/js/google_maps.js', array('jquery'), '1.0.0', true);
+  //   $template_url = get_template_directory_uri();
+  //   wp_localize_script( 'google_maps_js', 'template_url', $template_url );
+  //   wp_enqueue_script('google_maps_js');
+  //   wp_register_script('google_api', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBF2GtauZYiPD4kmTozqHMLHImnXXwPiiU&callback=initMap', array(), '', true);
+  //   wp_enqueue_script('google_api');
+  // }
 }
 add_action( 'wp_enqueue_scripts','zaman_enqueue_scripts');

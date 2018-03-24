@@ -98,15 +98,26 @@
 ?>                             </div><!--small-news-archive-->
                             </div><!--archive-news-->
                         </div><!--archive-news-section-->
-                        <div class="col-3 news-sidebar-section">
-<?php                         get_sidebar(); ?>
-                        </div>
+                        <!-- <div class="col-3 news-sidebar-section">
+<?php                        get_sidebar(); ?>
+                        </div> -->
                     </div><!--news-and-sidebar-->
 <?php               endif; ?>
 <?php                 $i++;
               endwhile;
-?>
-<?php  endif;
-?>
+
+              if($i < 9):?>
+                    </div><!--small-news-archive-->
+                  </div><!--archive-news-->
+                </div><!--archive-news-section-->
+                                           <!-- <div class="col-3 news-sidebar-section">
+        <?php    get_sidebar(); ?>
+                                           </div> -->
+            </div><!--news-and-sidebar-->
+        <?php endif; ?>
+
+<?php  endif; ?>
+
 </div><!--news-page-container-->
+
 <?php get_footer(); ?>

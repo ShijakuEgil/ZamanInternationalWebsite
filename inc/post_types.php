@@ -3,8 +3,8 @@
 function zaman_register_home_carousel() {
 
 	$args = array (
-		'label' => esc_html__( 'Home Carousel', 'text-domain' ),
-		'labels' => array(
+		  'label' => esc_html__( 'Home Carousel', 'text-domain' ),
+		  'labels' => array(
 			'menu_name' => esc_html__( 'Home Carousel', 'text-domain' ),
 			'name_admin_bar' => esc_html__( 'Home Carousel', 'text-domain' ),
 			'add_new' => esc_html__( 'Add new', 'text-domain' ),
@@ -20,25 +20,27 @@ function zaman_register_home_carousel() {
 			'not_found_in_trash' => esc_html__( 'No Home Carousel found in Trash', 'text-domain' ),
 			'name' => esc_html__( 'Home Carousel', 'text-domain' ),
 			'singular_name' => esc_html__( 'Home Carousel', 'text-domain' ),
+
 		),
 		'public' => true,
 		'exclude_from_search' => false,
 		'publicly_queryable' => true,
 		'show_ui' => true,
 		'show_in_nav_menus' => true,
-		'show_in_menu' => true,
+		// 'show_in_menu' => true,
+		'show_in_menu' => 'home_page_menu',
 		'show_in_admin_bar' => false,
 		'show_in_rest' => false,
 		'menu_icon' => 'dashicons-format-gallery',
 		'capability_type' => 'post',
-		'hierarchical' => false,
+		'hierarchical' => true,
 		'has_archive' => true,
 		'query_var' => true,
 		'can_export' => true,
 		'rewrite_no_front' => false,
 		'supports' => array(
-			'title',
-			'thumbnail',
+		'title',
+		'thumbnail',
 		),
 		'rewrite' => true,
 	);
@@ -192,7 +194,7 @@ function zaman_register_hope_4_humanity() {
 		'rewrite' => true,
 	);
 
-	register_post_type( 'hope-4-humanity-post', $args );
+	register_post_type( 'hope-4-humanity', $args );
 }
 add_action( 'init', 'zaman_register_hope_4_humanity' );
 
@@ -392,7 +394,7 @@ function zaman_register_animated_heading() {
 		'publicly_queryable' => true,
 		'show_ui' => true,
 		'show_in_nav_menus' => true,
-		'show_in_menu' => true,
+		'show_in_menu' => 'home_page_menu',
 		'show_in_admin_bar' => false,
 		'show_in_rest' => false,
 		'capability_type' => 'post',
@@ -402,8 +404,8 @@ function zaman_register_animated_heading() {
 		'can_export' => true,
 		'rewrite_no_front' => false,
 		'supports' => array(
-			'title',
-			'custom-fields',
+		'title',
+		'custom-fields',
 		),
 		'menu_icon' => 'dashicons-admin-home',
 		'rewrite' => true,

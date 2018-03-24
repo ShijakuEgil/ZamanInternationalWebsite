@@ -1,0 +1,78 @@
+#map-canvas{
+ height:70vh;
+ width:100%;
+}
+
+.map-marker-image{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:contain;
+  width: 150px;
+  height: 150px;
+  margin:0;
+}
+
+.infowindow-wrapper{
+  width: 400px;
+}
+
+.infowindow-btn{
+  margin:10px 40px;;
+}
+
+#container{
+  margin:1vh 0;
+  padding:60px 0;
+  position: relative;
+
+  .goods-bin-info-wrapper{
+    position:absolute;
+    left:1vw;
+    top:0;
+    bottom:0;
+    width:30vw;
+    @include rgba(bg, black, .7);
+
+    h3.goods-bin-info-title{
+      margin-top: 30px;
+      text-align: center;
+      @include picture_font_style;
+      font-size: $h2_subtitle;
+    }
+    .goods-search-bin{
+      width:100%;
+      height:50px;
+      font-size:25px;
+        label{
+          @include picture_font_style;
+        }
+        #afterSearchBar{
+          @include picture_font_style;
+        }
+        .bin-search-button{
+          margin:0 auto;
+        }
+        .form-row{
+          padding:10px;
+        }
+      }
+    }
+  }
+.bin-location-select{
+
+  max-height:50vh;
+  overflow:auto;
+  overflow-x: hidden;
+  padding:0;
+  margin:0;
+
+  div.location-wrapper{
+    margin-left:10px;
+    @include picture_font_style;
+    border-bottom:1px solid rgba(255,255,255,.4);
+    &:hover{
+      cursor: pointer;
+      color:$icon_color;
+    }
+  }
+}

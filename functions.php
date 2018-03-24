@@ -3,6 +3,8 @@ require get_template_directory() .'/inc/enqueue.php';
 require get_template_directory() .'/inc/post_types.php';
 require get_template_directory() .'/inc/custom_fields.php';
 require get_template_directory() .'/inc/class-wp-bootstrap-navwalker.php';
+require get_template_directory() .'/inc/theme_support_functions.php';
+require get_template_directory() .'/inc/custom_functions.php';
 
 
 // /**
@@ -20,63 +22,4 @@ require get_template_directory() .'/inc/class-wp-bootstrap-navwalker.php';
 //     return $size;
 // }
 // add_filter( 'upload_size_limit', 'filter_site_upload_size_limit', 20 );
-
-
-function zaman_theme_setup(){
-  add_theme_support( 'menus' );
-  register_nav_menus(
-    array(
-      'primary'     => __('Header Menu', 'zaman-website-theme'),
-      'secondary'   => __('Footer Menu', 'zaman-website-theme'),
-    )
-  );
-}
-add_action( 'init', 'zaman_theme_setup');
-/*
-==========================================
-          Sidebar Function
-==========================================
-*/
-function zaman_widget_setup() {
-
-	register_sidebar(
-		array(
-			'name'	=> 'Sidebar',
-			'id'	=> 'sidebar-1',
-			'class'	=> 'custom',
-			'description' => 'Standard Sidebar',
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</aside>',
-			'before_title'  => '<h1 class="widget-title">',
-			'after_title'   => '</h1>',
-		)
-	);
-  register_sidebar(
-    array(
-      'name'	=> 'Calendar Sidebar',
-      'id'	=> 'sidebar-calendar',
-      'class'	=> 'custom',
-      'description' => 'Calendar Page Sidebar',
-      'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-      'after_widget'  => '</aside>',
-      'before_title'  => '<h1 class="widget-title">',
-      'after_title'   => '</h1>',
-    )
-  );
-}
-add_action('widgets_init','zaman_widget_setup');
-
-/**
- * Filter the except length to 25 words.
- *
- * @param int $length Excerpt length.
- * @return int (Maybe) modified excerpt length.
- */
-function wpdocs_custom_excerpt_length( $length ) {
-    return 50;//the amount of words the excerpt shows
-}
-add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
-
-// theme support functions
-add_theme_support( 'post-thumbnails');
-add_theme_support( 'html5', array('search-form') );
+// add_action('acf/input/admin_head', 'my_acf_admin_head');

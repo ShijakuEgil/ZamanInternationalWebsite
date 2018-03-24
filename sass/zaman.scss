@@ -4,23 +4,26 @@
 @import "content-banner";
 @import "blog-page";
 @import "blog-sidebar";
-@import "single-blog";
 @import "news-page";
 @import "calendar-style";
 @import "team_board_pages";
 @import "contact-us";
 @import "our_history";
 @import "single-post";
+@import "hope-for-humanity";
+@import "donate-funds";
 
 // TODO: create styling for responsive design
 
 //adds a 30px to the top of the navbar when we are logged in in wordpress
 // so the wordpress dashboard doesnt oberlay with the website navbar
 //====================================
-.logged-in {
-	.navbar{
-		top: 30px;}
-}
+// .logged-in {
+// 	.navbar{
+// 		top: 30px;}
+// }
+
+
 //sets font and margins as a start default value for overall website
 //===================================
 body{
@@ -248,7 +251,7 @@ main {
 						}
 						.slider-paragraph{
 										padding-top: 2vh;
-										font-size: 40px;
+										font-size: 35px;
 										font-weight:300;
 										@include picture_font_style;
 						}//slider-paragraph
@@ -272,7 +275,7 @@ main {
 
 				.clip{
 					margin:0 auto;
-					font-size: 120px;
+					font-size: 100px;
 					@include bp-large{
 						font-size: 100px;
 					}
@@ -426,7 +429,6 @@ main {
 		.title-row {
 
 				.title {
-					margin: 0 1%;
 
 					h1{
 						color:$clr-ui-title;
@@ -446,7 +448,7 @@ main {
 			color:$clr-ui-display-4;
 			font-size: 25px;
 			font-weight: 600;
-			margin: 0 4%;
+			 // margin: 0 4%;
 		}
 }//title-component
 

@@ -9,7 +9,7 @@
                   style="background-image: url('<?php echo esc_url( $src[0] ); ?>')"></div>
                   <?php the_title('<h1 class="entry-title">','</h1>'); ?>
                   <small class="single-blog-credits"><i class="fa fa-pencil"></i>Posted by <strong><?php echo get_the_author();?></strong>
-                      <span class="single-blog-tags"><?php the_tags('<i class="fa fa-tags"></i>',' / ') ?></span>
+                      <!-- <span class="single-blog-tags"><?php t//he_tags('<i class="fa fa-tags"></i>',' / ') ?></span> -->
                   </small>
                   <hr>
                 <?php the_content(); ?>

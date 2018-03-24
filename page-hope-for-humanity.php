@@ -1,21 +1,23 @@
 <?php get_header( );
 get_template_part( 'templates/content', 'banner' );
+get_template_part( 'templates/content', 'page-title');
 ?>
-<!--title-component-->
-<div class="container-fluid title-conponent">
-  <div class="row title-row justify-content-center">
-    <div class="col separator"></div>
-    <div class="col-auto title">
-      <h1>HOPE FOR HUMANITY</h1>
-    </div>
-    <div class="col separator"></div>
-  </div>
-  <p class="description">
-    Nunc luctus in metus eget fringilla.
-    Aliquam sed justo ligula. Vestibulum nibh erat,
-    pellentesque ut laoreet vitae.
-</div>
-<!--title-component end-->
 
+<div class="humanity-wrapper container-fluid">
+  <div class="row no gutters humanity-row">
+    <?php
+    $args = array(
+      'post_per_page' => -1,
+      'post_type' => 'hope-4-humanity',
+    );
+
+    $query = new WP_Query($args);
+    while($query->have_posts() ) : $query->the_post();
+      get_template_part('templates/content', 'humanity-project');
+    endwhile;?>
+
+  </div>
+
+</div>
 
 <?php get_footer(  ); ?>

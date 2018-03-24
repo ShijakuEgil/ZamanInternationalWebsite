@@ -10,9 +10,6 @@
     <button id="directions-btn"type="button" name="button" class="col-4 btn btn-secondary">Get Directions</button>
   </div>
   <div id="map" class="contact-us-map"></div>
-  <!-- <div id=content>
-      <img src="<?php //echo get_template_directory_uri();?>/img/logo-hope.png" width="300" height="170" alt="logo"></img>
-  </div> -->
   <div class="sidenav-left" id="phone-fax-address">
 
       <h3>Phone|Fax|Address</h3>
@@ -108,36 +105,6 @@
     </form>
 </div>
 </div>
-<!-- <script>
-function myMap() {
-  var myCenter = new google.maps.LatLng(42.294226,-83.293490);
-  var mapCanvas = document.getElementById("googleMap");
-  var mapOptions = {center: myCenter, zoom: 17};
-  var map = new google.maps.Map(mapCanvas, mapOptions);
-  var marker = new google.maps.Marker({position:myCenter});
-  marker.setMap(map);
-
-  var infowindow = new google.maps.InfoWindow({
-    content: "<img src='<?php //echo get_template_directory_uri();?>/img/logo-hope.png' width='210' height='110' alt=''><br />"+
-              "<h6>26091 Trowbridge</h6>"+
-               "<h6>Inkster, MI 48141</h6>"
-  });
-  infowindow.open(map,marker);
-}
-</script>
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBesoH9bG8c55GvG1umLf8W-jzkMD_5KHA&callback=myMap">
-
-</script> -->
-
-
-<!-- <div class="map-div" style="width: 100%; height:100vh;">
-  <iframe width="100%" height="800px"
-  src="https://maps.google.com/maps?width=100%&amp;height=800&amp;hl=en&amp;q=26091%20Trowbridge%20%20Inkster%2C%20MI%2048141+(Zaman%20International)&amp;ie=UTF8&amp;t=h&amp;z=18&amp;iwloc=B&amp;output=embed"
-  frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-  <a href="https://www.maps.ie/create-google-map/">Create Google Map</a>
-</iframe>
-</div> -->
 <script>
 var map, popup, Popup;
 
@@ -175,80 +142,11 @@ var map, popup, Popup;
       }
     });
   }
-  /** Defines the Popup class. */
-// function definePopupClass() {
-//   /**
-//    * A customized popup on the map.
-//    * @param {!google.maps.LatLng} position
-//    * @param {!Element} content
-//    * @constructor
-//    * @extends {google.maps.OverlayView}
-//    */
-//   Popup = function(position, content) {
-//     this.position = position;
-//     content.classList.add('popup-bubble-content');
-//
-//     var pixelOffset = document.createElement('div');
-//     pixelOffset.classList.add('popup-bubble-anchor');
-//     pixelOffset.appendChild(content);
-//
-//     this.anchor = document.createElement('div');
-//     this.anchor.classList.add('popup-tip-anchor');
-//     this.anchor.appendChild(pixelOffset);
-//
-//     // Optionally stop clicks, etc., from bubbling up to the map.
-//     this.stopEventPropagation();
-//   };
-//   // NOTE: google.maps.OverlayView is only defined once the Maps API has
-//   // loaded. That is why Popup is defined inside initMap().
-//   Popup.prototype = Object.create(google.maps.OverlayView.prototype);
-//
-//   /** Called when the popup is added to the map. */
-//   Popup.prototype.onAdd = function() {
-//     this.getPanes().floatPane.appendChild(this.anchor);
-//   };
-//
-//   /** Called when the popup is removed from the map. */
-//   Popup.prototype.onRemove = function() {
-//     if (this.anchor.parentElement) {
-//       this.anchor.parentElement.removeChild(this.anchor);
-//     }
-//   };
-//
-//   /** Called when the popup needs to draw itself. */
-//   Popup.prototype.draw = function() {
-//     var divPosition = this.getProjection().fromLatLngToDivPixel(this.position);
-//     // Hide the popup when it is far out of view.
-//     var display =
-//         Math.abs(divPosition.x) < 4000 && Math.abs(divPosition.y) < 4000 ?
-//         'block' :
-//         'none';
-//
-//     if (display === 'block') {
-//       this.anchor.style.left = divPosition.x + 'px';
-//       this.anchor.style.top = divPosition.y + 'px';
-//     }
-//     if (this.anchor.style.display !== display) {
-//       this.anchor.style.display = display;
-//     }
-//   };
-//
-//   /** Stops clicks/drags from bubbling up to the map. */
-//   Popup.prototype.stopEventPropagation = function() {
-//     var anchor = this.anchor;
-//     anchor.style.cursor = 'auto';
-//
-//     ['click', 'dblclick', 'contextmenu', 'wheel', 'mousedown', 'touchstart',
-//      'pointerdown']
-//         .forEach(function(event) {
-//           anchor.addEventListener(event, function(e) {
-//             e.stopPropagation();
-//           });
-//         });
-//   };
-// }
+// AIzaSyBesoH9bG8c55GvG1umLf8W-jzkMD_5KHA
+
+
 </script>
 <script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBesoH9bG8c55GvG1umLf8W-jzkMD_5KHA&callback=initMap">
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_6oZOskYt1IaUHzjhewzivrDtqFgj9QA&callback=initMap">
 </script>
 <?php get_footer(); ?>

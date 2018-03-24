@@ -15,22 +15,25 @@
       pellentesque ut laoreet vitae.
   </div>
   <!--title-component end-->
+
+
+
 <div class="row container-fluid">
 
-  <div class="col-xs-12 col-sm-9">
+  <div class="col-9">
 
     <div class="blog-container container-fluid">
       <?php
           $blog_loop = new WP_Query(array(
                   'post_type'   => 'blog-post',
-                  'posts_per_page' => 3,
+                  'posts_per_page' => 5,
                   'paged' => get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1)
           );
 
           while($blog_loop->have_posts() ) : $blog_loop->the_post(); ?>
 
               <?php get_template_part( 'templates/content', 'blog' ); ?>
-
+              
           <?php endwhile;?>
       <div class="pagination">
           <?php
