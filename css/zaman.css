@@ -1736,3 +1736,8 @@ main #animated-heading {
     .newsletter .newsletter-content div.submit .btn {
       width: 60%;
       margin: 5% 20%; }
+
+div.tab-pane {
+  width: 100vw; }
+  div.tab-pane div.tab-image {
+    height: 200px; }
