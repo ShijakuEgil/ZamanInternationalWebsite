@@ -600,3 +600,50 @@ function zaman_register_donations_url() {
 	register_post_type( 'donation-page-url', $args );
 }
 add_action( 'init', 'zaman_register_donations_url' );
+function your_prefix_register_post_type() {
+
+	$args = array (
+		'label' => esc_html__( 'boost Posts ', 'text-domain' ),
+		'labels' => array(
+			'menu_name' => esc_html__( 'boost Posts', 'text-domain' ),
+			'name_admin_bar' => esc_html__( 'Boost post', 'text-domain' ),
+			'add_new' => esc_html__( 'Add new', 'text-domain' ),
+			'add_new_item' => esc_html__( 'Add new Boost post', 'text-domain' ),
+			'new_item' => esc_html__( 'New Boost post', 'text-domain' ),
+			'edit_item' => esc_html__( 'Edit Boost post', 'text-domain' ),
+			'view_item' => esc_html__( 'View Boost post', 'text-domain' ),
+			'update_item' => esc_html__( 'Update Boost post ', 'text-domain' ),
+			'all_items' => esc_html__( 'All boost Posts', 'text-domain' ),
+			'search_items' => esc_html__( 'Search boost Posts', 'text-domain' ),
+			'parent_item_colon' => esc_html__( 'Parent Boost post', 'text-domain' ),
+			'not_found' => esc_html__( 'No boost Posts found', 'text-domain' ),
+			'not_found_in_trash' => esc_html__( 'No boost Posts found in Trash', 'text-domain' ),
+			'name' => esc_html__( 'boost Posts ', 'text-domain' ),
+			'singular_name' => esc_html__( 'Boost post ', 'text-domain' ),
+		),
+		'public' => true,
+		'exclude_from_search' => false,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'show_in_nav_menus' => true,
+		'show_in_menu' => true,
+		'show_in_admin_bar' => false,
+		'show_in_rest' => false,
+		'menu_icon' => 'dashicons-admin-users',
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'has_archive' => true,
+		'query_var' => true,
+		'can_export' => true,
+		'rewrite_no_front' => false,
+		'supports' => array(
+			'title',
+			'editor',
+			'thumbnail',
+		),
+		'rewrite' => true,
+	);
+
+	register_post_type( 'boost-post', $args );
+}
+add_action( 'init', 'your_prefix_register_post_type' );
