@@ -2,7 +2,7 @@
 var markers = [];
 var tempLocations = [];
 var locations;
-
+var map;
 
 (function($) {
 
@@ -15,7 +15,7 @@ var locations;
 			mapTypeId:	google.maps.MapTypeId.ROADMAP
 		};
 
-		var map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
+		map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
 
 		var bounds = new google.maps.LatLngBounds();
 		for (var i = 0; i < locations_json.length; i++ ){
@@ -31,13 +31,17 @@ var locations;
 
 	function addMarker( location, map, bounds ) {
 
-		var contentString =    ' <img style="float:left; width:200px; margin-top:30px" src="'+ location.marker_icon + '">'+
+		var contentString =    ' <img style="float:left; width:200px; margin-top:30px" src="'+
+															location.marker_icon + '">'+
     												'	<div style="margin-left:220px; margin-bottom:20px;">'+
       												'<h2>'+location.loc_name +'</h2><p>'+location.address+'</p>' +
-      												'<p><img src="https://maps.googleapis.com/maps/api/streetview?size=350x120&location='+ location.latitude +','+ location.longitude +'&key=AIzaSyA_6oZOskYt1IaUHzjhewzivrDtqFgj9QA"></p>'+
+      												'<p><img src="https://maps.googleapis.com/maps/api/streetview?size=350x120&location='+
+															location.latitude +','+ location.longitude +
+															'&key=AIzaSyA_6oZOskYt1IaUHzjhewzivrDtqFgj9QA"></p>'+
     												'</div>';
 
 		var locationLatLng = new google.maps.LatLng(location.latitude, location.longitude);
+
 		bounds.extend(locationLatLng);
 
 		var marker = new google.maps.Marker({
@@ -89,17 +93,20 @@ var locations;
 	function displayLocations(currLocations){
 
 		$('#locationSelect')
-		    .find('div')
+		    .find('p')
 		    .remove()
 		    .end();
+		$('#right-panel')
+					.find('div')
+					.remove()
+					.end();
 
 		for(var i = 0; i < currLocations.length; i++){
 
 			$('#locationSelect').append(
-				'<div class="container-fluid location-wrapper">'+
-						'<h5><b>' + currLocations[i].loc_name + '</b></h5>'+
-						'<small>' + currLocations[i].address + '</small>'+
-				'</div>'
+						'<p class="location-wrapper" data-hidden="'+i+'"><strong>' + currLocations[i].loc_name +
+						'</strong><br>' + currLocations[i].address +
+						'</p>'
 			);
 		}
 	}
@@ -127,6 +134,26 @@ var locations;
 	  return d;
 	}
 
+//get directions from the user location to the location of the bin
+	function directions_to_bin(userLocation, binLocation) {
+		var directionsDisplay = new google.maps.DirectionsRenderer;
+		var directionsService = new google.maps.DirectionsService;
+
+		directionsDisplay.setMap(map);
+		directionsDisplay.setPanel(document.getElementById('right-panel'));
+		directionsService.route({
+			origin: userLocation,
+			destination: binLocation,
+			travelMode: 'DRIVING'
+		}, function(response, status){
+			if(status ==='OK'){
+				directionsDisplay.setDirections(response);
+			}else{
+				window.alert("We couldnt get directions please try again with a different location!");
+			}
+		});
+	}
+
 $(function() {
 	var locations_str = php_args.locations.replace(/&quot;/g, '"');
 	locations = $.parseJSON(locations_str);
@@ -149,10 +176,26 @@ $(function() {
 		});
 	});
 
+	$("#locationSelect").on('mouseout', 'p.location-wrapper', function() {
+		 	var position = $(this).data("hidden");
+		 	markers[position].setAnimation(null);
+	});
+
+	$("#locationSelect").on('mouseover', 'p.location-wrapper', function() {
+		 	var position = $(this).data("hidden");
+		 	markers[position].setAnimation(google.maps.Animation.BOUNCE);
+	});
+
+	$("#locationSelect").on('click', 'p.location-wrapper', function(){
+			var position = $(this).data("hidden");
+			var userLoc = $("#addressInput").val();
+			var binLoc = tempLocations[position].address;
+			clearLocations();
+			$('#locationSelect')
+					.find('p')
+					.remove()
+					.end();
+			directions_to_bin( userLoc, binLoc );
+	});
 });
 })(jQuery);
-
-
-function directions_to_bin() {
-	alert('getting directions');
-}

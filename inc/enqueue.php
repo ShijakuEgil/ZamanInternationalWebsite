@@ -1,4 +1,17 @@
 <?php
+
+function zaman_admin_scripts($hook){
+  if('toplevel_page_zaman_theme' != $hook){ return;}
+  wp_register_style( 'zaman_admin', get_template_directory_uri().'/css/zaman.admin.css', array(), '1.0.0', 'all' );
+  wp_enqueue_style('zaman_admin');
+
+  wp_enqueue_media();
+
+  wp_register_script('zaman_admin_js', get_template_directory_uri() . '/js/zaman.admin.js', array('jquery'),'1.0.0', true);
+  wp_enqueue_script( 'zaman_admin_js');
+}
+add_action( 'admin_enqueue_scripts', 'zaman_admin_scripts' );
+
 function zaman_enqueue_styles(){
   wp_enqueue_style( 'bootstrap', get_template_directory_uri() .'/css/bootstrap.min.css', array(), '4.0.0', 'all' );
   wp_enqueue_style('style', get_template_directory_uri().'/style.css', array(), '1.0.0', 'all');
@@ -17,6 +30,7 @@ function zaman_enqueue_scripts(){
   wp_enqueue_script( 'about_us_js', get_template_directory_uri() .'/js/about_us.js', array('jquery'), '1.0.0', true);
   wp_enqueue_script( 'scroll_reveal_js', get_template_directory_uri() .'/js/scrollreveal.min.js', array('jquery'), '1.0.0', true);
   wp_enqueue_script( 'sidenav_js', get_template_directory_uri() .'/js/sidenav.js', array('jquery'), '1.0.0', true);
+  wp_enqueue_script( 'funds_js', get_template_directory_uri() .'/js/funds.js', array('jquery'), '1.0.0', true);
 
   wp_register_script('single_default_slideshow', get_template_directory_uri(). '/js/single_default_ui_slideshow.js', array( 'jquery' ), '1.0.0', true );
   wp_enqueue_script( 'single_default_slideshow' );

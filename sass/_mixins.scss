@@ -1,3 +1,4 @@
+
 //Mixings are implamented here
 
 //mixins -----to include @include headfootcol;
@@ -22,6 +23,12 @@
  -webkit-background-clip: text;
  -moz-background-clip: text;
  background-clip: text;
+}
+
+@mixin image_box_shadow_inset(){
+  -webkit-box-shadow:inset 0px 0px 150px 15px rgba(0,0,0,0.8);
+  -moz-box-shadow:inset 0px 0px 150px 15px rgba(0,0,0,0.8);
+  box-shadow: inset 0px 0px 150px 15px rgba(0,0,0,0.8);
 }
 @mixin headerfooterfont{
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5f6f6+0,dbdce2+21,b8bac6+49,dddfe3+80,f5f6f6+100;Grey+Pipe */

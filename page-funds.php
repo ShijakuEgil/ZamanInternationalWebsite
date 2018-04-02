@@ -1,79 +1,63 @@
 <?php
-define('GOOGLE_API_KEY', 'AIzaSyA_6oZOskYt1IaUHzjhewzivrDtqFgj9QA');
-
-add_action('wp_enqueue_scripts', 'zaman_goods_page_map_scripts');
-function zaman_goods_page_map_scripts() {
-
-  wp_register_script('google_map_api', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA_6oZOskYt1IaUHzjhewzivrDtqFgj9QA'. '&sensor=false', false , '3');
-  wp_enqueue_script('google_map_api');
-
-  wp_register_script('goods_js', get_bloginfo('stylesheet_directory') ."/js/google_maps.js", array('jquery','google_map_api'), false, false );
-  wp_enqueue_script('goods_js');
-
-  $locations = array();
-
-  $bin_query = new WP_Query( array(
-    'post_type'   =>    'donation-bin',
-    'post_per_page' => -1
-  ));
-
-  while( $bin_query->have_posts() ) {
-
-    $bin_query->the_post();
-    $bin = get_field('bin_address');
-
-    $locations[] = array(
-      'loc_name'         =>    get_field('name_of_location'),
-      'latitude'         =>    $bin['lat'],
-      'longitude'        =>    $bin['lng'],
-      'address'          =>    $bin['address'],
-      'icon_url'         =>    get_template_directory_uri() .'/img/Donation_bin.png',
-      'marker_icon'      =>    get_template_directory_uri() .'/img/donate_bin.png',
-      'image_url'        =>    zaman_get_featured_image('thumbnail'),
-      'id'               =>    get_the_ID()
-
-    );
-  }
-
-  wp_reset_postdata();
-
-  wp_localize_script('goods_js', 'php_args', array(
-    'locations'     =>    json_encode($locations)
-  ));
-}
-
 get_header();
 get_template_part( 'templates/content', 'banner' );
 get_template_part('templates/content', 'page-title');
  ?>
- <div id="container" class="container-fluid">
-   <div id="content" class="content">
-     <div id="map-canvas"></div>
-     <div class="goods-bin-info-wrapper">
-       <h3 class="goods-bin-info-title">Find A donation bin close to your area!</h3>
-       <div class="goods-search-bin">
-         <div class="form-row">
-          <div class="form-group col-md-8">
-            <label for="inputCity">Location</label>
-            <input type="text" class="form-control" id="addressInput" placeholder="Enter City, State, or/and Zip Code">
-          </div>
-          <div class="form-group col-md-4">
-            <label for="radiusSelect">Radius</label>
-            <select id="radiusSelect" class="form-control">
-              <option value="25" selected>25 mi</option>
-              <option value="15">15 mi</option>
-              <option value="10">10 mi</option>
-              <option value="5">5 mi</option>
-            </select>
-          </div>
-          <button id="searchButton" class="btn btn-primary btn-lg bin-search-button" type="button" id="searchButton" value="Search">SEARCH</button>
-        </div>
-         <div id="locationSelect" class="form-group container-fluid bin-location-select">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+ <div class="funds-wrapper container-fluid">
+   <ul class="nav nav-tabs nav-justified">
+     <li class="nav-item">
+       <a class="nav-link active" data-toggle="tab" href="#recurringDonations">Recurring Donation</a>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link" data-toggle="tab" href="#menu1">One Time Donation</a>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link" data-toggle="tab" href="#menu2">Donate Your Goods</a>
+     </li>
+   </ul>
+   <div class="tab-content">
+     <div id="recurringDonations" class="container-fluid tab-pane active"><br>
+       <div class="container-fluid funds-recurring-donations-title-wrapper">
+         <h2>Recurring Donations</h2>
+         <p>Please select a program that you would like your donation to be applied.</p>
+       </div>
+       <div class="row no-gutters container-fluid">
 
+           <?php
+           $args = array(
+             'post_type'    =>  'donation-page-url',
+             'post_per_page'=>  -1,
+           );
 
- <?php get_footer(); ?>
+           $query = new WP_Query($args);
+
+           while($query->have_posts()): $query->the_post();
+
+           if(get_field('type_of_donation_page') == "recurring"): ?>
+              <div class="col-4 funds-link-wrapper">
+               <a class="funds-recurring-donation-link" href="<?php the_field('donation_page_url');?>">
+                 <div class="funds-recurring-donation-button" style="background-image: url('<?php echo zaman_get_featured_image();?>')">
+                    <h2><?php the_field('name_of_department') ?></h2>
+                 </div>
+               </a>
+            </div>
+           <?php
+         endif;
+         endwhile;
+         wp_reset_postdata();?>
+       </div>
+     </div>
+     <div id="menu1" class="container-fluid tab-pane fade"><br>
+       <h3>Menu 1</h3>
+       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+     </div>
+     <div id="menu2" class="container-fluid tab-pane fade"><br>
+       <h3>Menu 2</h3>
+       <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+     </div>
+   </div>
+ </div>
+
+ <?php
+ get_footer()
+?>

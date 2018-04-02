@@ -55,7 +55,7 @@
     <div class="end-note-container container-fluid">
 
       <?php // TODO: link to volunteer page ?>
-      <a href="#" class="btn btn-lg timeline-end-note" >Be Part <br/>Of <br/>Our Story!</a>
+      <a href="#" class="btn btn-lg timeline-end-note" >Be Part <br/>of <br/>Our Story!</a>
     </div>
 
 <?php get_footer( ); ?>

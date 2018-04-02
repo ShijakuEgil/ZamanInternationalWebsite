@@ -12,6 +12,7 @@
 @import "single-post";
 @import "hope-for-humanity";
 @import "donate-funds";
+@import "funds-page";
 
 // TODO: create styling for responsive design
 
@@ -435,6 +436,8 @@ main {
 						text-align: center;
 						font-size: 80px;
 						font-weight:300;
+						text-transform: uppercase;
+						margin: 0 10vw;
 						}
 					}
 

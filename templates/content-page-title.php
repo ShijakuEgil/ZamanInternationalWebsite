@@ -13,6 +13,6 @@
       <div class="col separator"></div>
     </div>
     <p class="description">
-      <?php echo rwmb_meta( 'description' ); ?>
+      <?php  echo rwmb_meta( 'description' ); ?>
   </div>
 </article>
