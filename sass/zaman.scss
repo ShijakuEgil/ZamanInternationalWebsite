@@ -12,7 +12,6 @@
 @import "single-post";
 @import "hope-for-humanity";
 @import "donate-funds";
-@import "funds-page";
 
 // TODO: create styling for responsive design
 
@@ -48,6 +47,9 @@ nav {
 			opacity: .5;
 			font-weight: bolder;
 			font-size: 20px;
+			@include bp-medium{
+				font-size: 8px;
+			};
 			cursor: pointer;
 			transition: 500ms;
 			&:hover{
@@ -85,6 +87,9 @@ footer{
 				margin-bottom: 20px;
 				text-decoration: none;
 				font-size: 20px;
+				@include bp-medium{
+					font-size: 20px;
+				};
 				font-weight:bold;
 				&:after{	display: block;
 									content: url('../img/separa_34.png');
@@ -99,6 +104,9 @@ footer{
 							a {
 									margin: 0;
 									font-size:15px;
+									@include bp-medium{
+										font-size:10px;
+									}
 									font-weight:normal;
 									transition: .5s;
 									opacity:.5;
@@ -132,6 +140,9 @@ footer{
 		}//contact-us-container
 		h3{
 				font-size:20px;
+				@include bp-medium{
+					font-size:10px;
+				}
 				font-weight:bold;
 				padding:0 50px;
 				&:after{
@@ -144,6 +155,9 @@ footer{
 				.espacio-ico-01{	opacity:1;
 													font-weight:normal;
 													font-size: 18px;
+													@include bp-medium{
+														font-size: 10px;
+													}
 												}
 				a{	text-decoration: none;
 						color: inherit;
@@ -151,6 +165,9 @@ footer{
 						font-style: italic;
 						float: right;
 						font-size: 15px;
+						@include bp-medium{
+							font-size: 10px;
+						}
 						transition: .5s;
 						&:hover{
 							opacity:1;
@@ -159,6 +176,9 @@ footer{
 					span{	opacity:.5;
 								float:left;
 								font-size: 15px;
+								@include bp-medium{
+									font-size: 10px;
+								}
 							}//span
 				}//contact-info
 
@@ -169,6 +189,9 @@ footer{
 							text-align: center;
 						}
 						a{	font-size:30px;
+								@include bp-medium{
+									font-size:10px;
+								}
 								width:50px;
 								height: 50px;
 								line-height: 50px;
@@ -185,6 +208,9 @@ footer{
 				}//social-media
 		.copyright{
 								font-size: 15px;
+								@include bp-medium{
+									font-size: 10px;
+								}
 								text-align: center;
 								font-weight: bold;
 								margin-top: 10px;
@@ -253,6 +279,9 @@ main {
 						.slider-paragraph{
 										padding-top: 2vh;
 										font-size: 35px;
+										@include bp-medium{
+											font-size: 20px;
+										}
 										font-weight:300;
 										@include picture_font_style;
 						}//slider-paragraph
@@ -279,6 +308,9 @@ main {
 					font-size: 100px;
 					@include bp-large{
 						font-size: 100px;
+					}
+					@include bp-medium{
+						font-size: 40px;
 					}
 					.blc{
 						display: inline-block;
@@ -336,6 +368,10 @@ main {
 						border:none;
 						color: $clr-grey-700;
 						font-size: 60px;
+
+						@include bp-medium{
+							font-size: 20px;
+						}
 
 						.btn-icon{
 							text-align: center;
@@ -436,8 +472,6 @@ main {
 						text-align: center;
 						font-size: 80px;
 						font-weight:300;
-						text-transform: uppercase;
-						margin: 0 10vw;
 						}
 					}
 
@@ -647,12 +681,3 @@ main {
     }//submit
   }//newsletter-content
 }//newsletter
-
-
-//boost page css
-div.tab-pane {
-	width:100vw;
-	div.tab-image{
-		height:200px;
-	}
-}
