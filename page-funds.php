@@ -26,7 +26,7 @@ get_template_part('templates/content', 'page-title');
            <?php
            $args = array(
              'post_type'    =>  'donation-page-url',
-             'post_per_page'=>  -1,
+             'post_per_page'=>  -1
            );
 
            $query = new WP_Query($args);

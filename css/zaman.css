@@ -1430,6 +1430,9 @@ main #animated-heading {
     @media only screen and (max-width: 1200px) {
       main #animated-heading .clip {
         font-size: 100px; } }
+    @media only screen and (max-width: 992px) {
+      main #animated-heading .clip {
+        font-size: 40px; } }
     main #animated-heading .clip .blc {
       display: inline-block;
       padding-bottom: 5px;

@@ -13,7 +13,7 @@ function zaman_get_embedded_media( $type = array() ){
 }
 
 //returns the featured image
-function zaman_get_featured_image($type='full'){
-  $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), $type, false, '' );
+function zaman_get_featured_image( $type = 'full' ){
+  $src = wp_get_attachment_image_src( get_post_thumbnail_id(  ), $type );
   return esc_url( $src[0] );
 }

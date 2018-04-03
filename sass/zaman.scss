@@ -280,6 +280,9 @@ main {
 					@include bp-large{
 						font-size: 100px;
 					}
+					@include bp-medium{
+						font-size: 40px;
+					}
 					.blc{
 						display: inline-block;
 						padding-bottom: 5px;
