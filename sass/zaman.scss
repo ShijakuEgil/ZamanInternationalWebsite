@@ -12,7 +12,6 @@
 @import "single-post";
 @import "hope-for-humanity";
 @import "donate-funds";
-@import "funds-page";
 
 // TODO: create styling for responsive design
 
@@ -51,6 +50,7 @@ nav {
 			opacity: .5;
 			font-weight: bolder;
 			font-size: 20px;
+      //samia's changes
 			@include bp-large{
 				font-size: 20px;
 			}
@@ -91,9 +91,11 @@ footer{
 				margin-bottom: 20px;
 				text-decoration: none;
 				font-size: 20px;
+
 				@include bp-large{
 					font-size: 18px;
 				}
+        
 				font-weight:bold;
 				&:after{	display: block;
 									content: url('../img/separa_34.png');
@@ -108,6 +110,9 @@ footer{
 							a {
 									margin: 0;
 									font-size:15px;
+									@include bp-medium{
+										font-size:10px;
+									}
 									font-weight:normal;
 									transition: .5s;
 									opacity:.5;
@@ -141,6 +146,7 @@ footer{
 		}//contact-us-container
 		h3{
 				font-size:20px;
+      
 				@include bp-large{
 					font-size: 18px;
 				}
@@ -156,6 +162,9 @@ footer{
 				.espacio-ico-01{	opacity:1;
 													font-weight:normal;
 													font-size: 18px;
+													@include bp-medium{
+														font-size: 10px;
+													}
 												}
 				a{	text-decoration: none;
 						color: inherit;
@@ -163,6 +172,9 @@ footer{
 						font-style: italic;
 						float: right;
 						font-size: 15px;
+						@include bp-medium{
+							font-size: 10px;
+						}
 						transition: .5s;
 						&:hover{
 							opacity:1;
@@ -171,6 +183,9 @@ footer{
 					span{	opacity:.5;
 								float:left;
 								font-size: 15px;
+								@include bp-medium{
+									font-size: 10px;
+								}
 							}//span
 				}//contact-info
 
@@ -184,6 +199,7 @@ footer{
 							}
 						}
 						a{	font-size:30px;
+              
 								@include bp-large{
 									font-size: 25px;
 								}
@@ -203,6 +219,9 @@ footer{
 				}//social-media
 		.copyright{
 								font-size: 15px;
+								@include bp-medium{
+									font-size: 10px;
+								}
 								text-align: center;
 								font-weight: bold;
 								margin-top: 10px;
@@ -271,6 +290,7 @@ main {
 						.slider-paragraph{
 										padding-top: 2vh;
 										font-size: 35px;
+
 										@include bp-large{
 											font-size: 25px;
 										}
@@ -361,6 +381,7 @@ main {
 
 						@include bp-large{
 							font-size: 30px;
+
 						}
 
 						.btn-icon{
@@ -470,8 +491,6 @@ main {
 							font-size: 45px;
 						}
 						font-weight:300;
-						text-transform: uppercase;
-						margin: 0 10vw;
 						}
 					}
 
