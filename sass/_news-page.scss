@@ -53,24 +53,33 @@ $archive_headline_height:100vh / 1.2;
 .large-section{
   .post-title{
     font-size:55px;
+    @include bp-large{
+      font-size: 40px;
+    }
   }
 }
 .mid-section{
   .second-headline{
     .post-title{
       font-size:45px;
+      @include bp-large{
+        font-size: 30px;
+      }
     }
   }
   .small-sections{
     .col-6{
       .post-title{
         font-size: 30px;
+        @include bp-large{
+          font-size: 20px;
+        }
       }
     }
   }
 }
 .post-title-group{
-  
+
   .post-title{
     a{
       &:hover{
@@ -83,12 +92,20 @@ $archive_headline_height:100vh / 1.2;
 .archive-news{
   height:$archive_headline_height;
   .news-image-wrapper{ height: $archive_headline_height /2;}
-  .post.title{font-size:35px;}
+  .post.title{
+    font-size:35px;
+    @include bp-large{
+      font-size: 30px;
+    }
+  }
 }
 .small-news-archive{
   .news-image-wrapper{height: $archive_headline_height /4;}
   .post-title{
     font-size: 25px;
+    @include bp-large{
+      font-size: 20px;
+    }
   }
 }
 .news-sidebar-section{

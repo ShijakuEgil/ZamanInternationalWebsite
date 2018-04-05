@@ -10,6 +10,9 @@
       position: relative;
       width:inherit;
       height:50vh;
+      @include bp-large{
+        height: 60vh;
+      }
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -23,6 +26,10 @@
         top: 30%;
         @include picture_font_style;
         font-size: 100px;
+        @include bp-large{
+          font-size: 5vw;
+          top: 20vh;
+        }
       }
     }
     div.single-default-ui-wrapper{
@@ -38,6 +45,9 @@
         h1.single-default-ui-title{
           font-weight:lighter;
           font-size: 70px;
+          @include bp-large{
+            font-size: 30px;
+          }
         }
       }
 
@@ -165,6 +175,9 @@
 
         h1.related-posts-banner{
           font-size:60px;
+          @include bp-large{
+            font-size: 30px;
+          }
         }
 
         div.single-ui-related-posts {
@@ -177,6 +190,9 @@
             padding:0;
             font-weight:350;
             font-size: 22px;
+            @include bp-large{
+              font-size: 15px;
+            }
             a{
                text-decoration:none;
                color: $clr-ui-title;

@@ -5,7 +5,7 @@ $picture_size: 15vw;
 ================================*/
 .our-team-container {
     margin: 5% 0;
-    
+
     padding: 5% 10%;
 
   .team-container {
@@ -113,6 +113,10 @@ $picture_size: 15vw;
   .modal-xl {
     width: 90%;
    max-width:1200px;
+
+   @include bp-large{
+     max-width: 920px;
+   }
   }
 }
 .modal-image-container{
@@ -145,14 +149,23 @@ $picture_size: 15vw;
     .fa{
       color:white;
       @include font-size(30px);
+      @include bp-large{
+        font-size: 25px;
+      }
     }
   }
   h1.modal-name{
     font-size:50px;
     font-weight:lighter;
+    @include bp-large{
+      font-size: 40px;
+    }
   }
   h3.modal-job-title{
     font-size:30px;
+    @include bp-large{
+      font-size: 20px;
+    }
     font-style: italic;
     color:$clr-ui-display-1;
   }
@@ -162,6 +175,10 @@ $picture_size: 15vw;
   overflow: auto;
   max-height: 60%;
   font-size: 20px;
+  @include bp-large{
+    font-size: 15px;
+    max-height: 50%;
+  }
   font-weight: 400;
 }
 .modal-button-group{

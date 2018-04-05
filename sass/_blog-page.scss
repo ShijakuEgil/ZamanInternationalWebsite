@@ -8,6 +8,9 @@
     text-align: left;
     padding: 0;
     padding-left:50px;
+    @include bp-large{
+      font-size: 18px;
+    }
 
       .blog-title-excerpt{
 
@@ -20,6 +23,9 @@
               font-weight: 800;
               color: black;
               font-size: 52px;
+              @include bp-large{
+                font-size: 35px;
+              }
               transition: .3s ease;
               &:hover{
                 text-decoration: none;
@@ -88,6 +94,9 @@ div.blog-post-image{
   .page-numbers{
           color:#1f1f1f;
           font-size: 20px;
+          @include bp-large{
+            font-size: 15px;
+          }
           margin: 0 20px;
           &:hover{
             text-decoration: none;

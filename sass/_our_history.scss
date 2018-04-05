@@ -39,6 +39,10 @@ section.timeline{
           top:30%;
           @include picture_font_style;
           font-size: $h2_subtitle;
+          @include bp-large{
+            font-size: 20px;
+            top: 10%;
+          }
           font-weight:bold;
           line-height: 40px;
         }
@@ -65,7 +69,6 @@ section.timeline{
         padding-top:2%;
         height:20%;
         overflow: auto;
-
       }
     }
     &:nth-child(even){
@@ -107,6 +110,7 @@ section.timeline{
     		right: -7.9vw;
     		border-width: 0 0 48vh 8vw;
     		border-color: transparent transparent transparent $clr-grey-200;// #f5f5f5;
+
       	}
         h2.timeline-title{
           right:2vw;
@@ -126,6 +130,10 @@ div.end-note-container{
     line-height: 35px;
     text-align: center;
     font-size:35px;
+    @include bp-large{
+      font-size: 18px;
+      padding-top: 8px;
+    }
     box-sizing: border-box;
     width: 10vw;
     height: 10vw;

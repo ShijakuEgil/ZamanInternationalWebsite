@@ -121,7 +121,7 @@
 }
 //breakpoints for media queries
 @mixin bp-large {
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1281px) {
     @content;
   }
 }

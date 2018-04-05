@@ -3,6 +3,9 @@ padding: 0 5vw;
   .nav-link{
     background-color: $clr-grey-50 !important;
     font-size: 35px;
+    @include bp-large{
+      font-size: 25px;
+    }
     text-decoration: none;
     color:black;
     font-weight:300;
@@ -33,11 +36,14 @@ padding: 0 5vw;
   width:90%;
   height: 200px;
   h2{
-vertical-align: middle;
+    vertical-align: middle;
     text-align:center;
     line-height: 200px;
     @include picture_font_style;
     font-size: 40px;
+    @include bp-large{
+      font-size: 25px;
+    }
     &:hover{
       color: $icon_color;
     }
@@ -45,6 +51,7 @@ vertical-align: middle;
 }
 .funds-recurring-donations-title-wrapper{
   text-align: center;
+
 }
 
 .funds-recurring-donation-link{
