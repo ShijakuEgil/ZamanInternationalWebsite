@@ -8,7 +8,14 @@
     <div class="row title-row no-gutters justify-content-center">
       <div class="col separator"></div>
       <div class="col-auto title">
+        <?php
+        if(get_the_id() == '497' || get_the_id() == '499'):?>
+          <h1>Donate <?php wp_title(''); ?></h1>
+        <?php
+        else:?>
         <h1><?php wp_title(''); ?></h1>
+        <?php
+        endif; ?>
       </div>
       <div class="col separator"></div>
     </div>
