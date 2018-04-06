@@ -13,6 +13,7 @@
 @import "hope-for-humanity";
 @import "donate-funds";
 @import "funds-page";
+@import "donation.pages";
 
 // TODO: create styling for responsive design
 
@@ -454,7 +455,6 @@ main {
 			color:$clr-ui-display-4;
 			font-size: 25px;
 			font-weight: 600;
-			 // margin: 0 4%;
 		}
 }//title-component
 
@@ -654,7 +654,7 @@ main {
 
 //boost page css
 div.tab-pane {
-	width:100vw;
+	width:100%;
 	div.tab-image{
 		height:200px;
 	}
