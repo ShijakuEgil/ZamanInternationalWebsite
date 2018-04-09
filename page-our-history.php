@@ -1,20 +1,6 @@
 <?php get_header( ); ?>
-    <?php get_template_part( 'templates/content', 'banner' ) ?>
-    <!--title-component-->
-    <div class="container-fluid title-conponent">
-      <div class="row title-row justify-content-center">
-        <div class="col separator"></div>
-        <div class="col-auto title">
-          <h1>OUR HISTORY</h1>
-        </div>
-        <div class="col separator"></div>
-      </div>
-      <p class="description">
-        Nunc luctus in metus eget fringilla.
-        Aliquam sed justo ligula. Vestibulum nibh erat,
-        pellentesque ut laoreet vitae.
-    </div>
-    <!--title-component end-->
+    <?php get_template_part( 'templates/content', 'banner' ); ?>
+    <?php get_template_part( 'templates/content', 'page-title' ); ?>
 
     <section class="timeline">
       <div class="container-fluid second">

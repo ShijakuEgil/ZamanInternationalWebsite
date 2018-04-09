@@ -4,7 +4,7 @@
       <div id="myCarousel" class="carousel carousel-fade" data-ride="carousel" data-interval="3000">
 
           <!--carousel-inner-->
-          <div role="listbox" class="carousel-inner embed-responsive ">
+          <div role="listbox" class="home-carousel-inner carousel-inner embed-responsive ">
               <?php
               $k = 0;
               $args = array('post_type' => 'home-carousel');
@@ -34,7 +34,7 @@
 
           <!--animated heading start -->
           <div class="caption v-middle text-center" id="animated-heading">
-            <h2 class="cd-headline clip">
+            <h2 class="cd-headline clip display-1">
               <?php
                 $args = array('post_type' => 'animated-heading');?>
               <?php $query = new WP_Query($args);
@@ -48,7 +48,7 @@
                   <?php $count = 0 ?>
                     <?php foreach($fields as $fields): ?>
                       <b class="<?php if($count == 0){ echo 'is-visible'; }?>"><?php echo $fields; ?></b>
-                      <?php $count++; endforeach;; ?>
+                      <?php $count++; endforeach; ?>
                 </span>
                 <?php } ?>
                 <?php endwhile; ?>
@@ -67,53 +67,49 @@
             <span class="sr-only">Next</span>
           </a>
           <!--prev next index end  -->
+          <!--button group -->
+          <?php
+          $post_id = intval( get_option('page_for_posts'));
+          ?>
+          <div id="button_group_id" class="container-fluid d-flex flex-row justify-content-around">
+               <form class=""action="<?php the_field('orange_button_page_link', get_option( 'page_on_front' ));?>">
+                   <button type="submit" class="btn need-help-btn">
+                     <div class="btn-icon d-flex align-items-center justify-content-center">
+                       <i class="fa fa-handshake-o"></i>
+                     </div>
+                     <span><?php the_field('orange_button_text', get_option( 'page_on_front' ));?></span>
+                    </button>
+               </form>
+
+               <form action="<?php the_field('blue_button_page_link', get_option( 'page_on_front' ));?>">
+                   <button class="btn volunteer-btn">
+                        <div class="btn-icon d-flex align-items-center justify-content-center">
+                          <i class="fa fa-hand-paper-o"></i>
+                         </div>
+                         <span><?php the_field('blue_button_text', get_option( 'page_on_front' )); ?></span>
+                    </button>
+               </form>
+               <form action="<?php the_field('green_button_page_link', get_option( 'page_on_front' ));?>">
+                    <button class="btn donate-btn">
+                     <div class="btn-icon d-flex align-items-center justify-content-center">
+                       <i class="fa fa-money"></i>
+                     </div>
+                     <span><?php the_field('green_button_text', get_option( 'page_on_front' )); ?></span>
+                   </button>
+              </form>
+              <form action="<?php the_field('yellow_button_page_link', get_option( 'page_on_front' ));?>">
+                   <button class="btn wishlists-btn">
+                     <div class="btn-icon d-flex align-items-center justify-content-center">
+                       <i class="fa fa-list-ul"></i>
+                     </div>
+                     <span><?php the_field('yellow_button_text', get_option( 'page_on_front' )); ?></span>
+                   </button>
+              </form>
+          </div>
+        <!--button group end  -->
     </div><!--#myCarousel-->
-    <!--button group -->
-    <div id="button_group_id" class="container-fluid">
-        <button class="btn need-help-btn">
-          <div class="btn-icon">
-            <i class="fa fa-handshake-o"></i>
-          </div>
-          <span>Need Help</span>
-        </button>
 
-        <button class="btn volunteer-btn">
-          <div class="btn-icon">
-            <i class="fa fa-hand-paper-o"></i>
-          </div>
-          <span>Volunteer</span>
-        </button>
-
-        <button class="btn donate-btn">
-          <div class="btn-icon">
-            <i class="fa fa-money"></i>
-          </div>
-          <span>Donate</span>
-        </button>
-
-        <button class="btn wishlists-btn">
-          <div class="btn-icon">
-            <i class="fa fa-list-ul"></i>
-          </div>
-          <span>Wishlists</span>
-        </button>
-    </div>
-  <!--button group end  -->
-
-    <!--title-component-->
-    <div class="container-fluid title-conponent">
-      <div class="row title-row no-gutters justify-content-center">
-        <div class="col separator"></div>
-        <div class="col-auto title">
-          <h1>WHAT WE DO</h1>
-        </div>
-        <div class="col separator"></div>
-      </div>
-      <p class="description">
-        Nunc luctus in metus eget fringilla.
-        Aliquam sed justo ligula. Vestibulum nibh erat,
-        pellentesque ut laoreet vitae.
-    </div>
+    <?php zaman_area_title('what_we_do_title', 'what_we_do_subtitle', 'page_on_front'); ?>
     <!--title-component end-->
 
     <!--start of featured boxes with icons  -->
@@ -121,53 +117,40 @@
         <div class="col-lg item">
           <div data-bs-hover-animate="pulse" class="box">
             <i class="fa fa-eye icon"></i>
-            <h3 class="title-of-box">Vision</h3> <!-- change tittle of box here-->
-            <p class="description-of-box">
-              Aenean tortor est, vulputate quis leo in,
-              vehicula rhoncus lacus. Praesent aliquam in tellus eu.
-            </p><!-- change description of box here-->
-            <a href="#" class="btn btn-outline-primary">Learn more »</a>
+            <h3 class="title-of-box"> <?php the_field('first_title', get_option('page_on_front')); ?></h3>
+
+               <?php the_field('first_subtitle', get_option('page_on_front')); ?>
+
+            <a href="<?php the_field('first_page_link', get_option('page_on_front'));?>"
+                 class="btn btn-outline-primary">Learn more »</a>
           </div>
         </div>
         <div class="col-lg item">
           <div data-bs-hover-animate="pulse" class="box">
             <i class="fa fa-bullseye icon"></i>
-            <h3 class="title-of-box">Mission</h3>
-            <p class="description-of-box">
-              Aenean tortor est, vulputate quis leo in,
-              vehicula rhoncus lacus. Praesent aliquam in tellus eu.
-            </p>
-            <a href="#" class="btn btn-outline-primary">Learn more »</a>
+            <h3 class="title-of-box"> <?php the_field('second_title', get_option('page_on_front')); ?></h3>
+
+              <?php the_field('second_subtitle', get_option('page_on_front')); ?>
+
+            <a href="<?php the_field('second_page_link', get_option('page_on_front'));?>"
+                 class="btn btn-outline-primary">Learn more »</a>
           </div>
         </div>
         <div class="col-lg item">
           <div data-bs-hover-animate="pulse" class="box">
             <i class="fa fa-line-chart icon"></i>
-            <h3 class="title-of-box">Impact</h3>
-            <p class="description-of-box">
-              Aenean tortor est, vulputate quis leo in,
-               vehicula rhoncus lacus. Praesent aliquam in tellus eu.
-             </p>
-            <a href="#" class="btn btn-outline-primary">Learn more »</a>
+            <h3 class="title-of-box"> <?php the_field('third_title', get_option('page_on_front')); ?></h3>
+
+              <?php the_field('third_subtitle', get_option('page_on_front')); ?>
+
+            <a href="<?php the_field('third_page_link', get_option('page_on_front'));?>"
+                 class="btn btn-outline-primary">Learn more »</a>
           </div>
         </div>
     </div>
-    <!--end of featured boxes with icon  -->
-    <!--title-component-->
-    <div class="container-fluid title-conponent">
-      <div class="row no-gutters title-row justify-content-center">
-        <div class="col separator"></div>
-        <div class="col-auto title">
-          <h1>FEATURED CONTENT</h1>
-        </div>
-        <div class="col separator"></div>
-      </div>
-      <p class="description">
-        Nunc luctus in metus eget fringilla.
-        Aliquam sed justo ligula. Vestibulum nibh erat,
-        pellentesque ut laoreet vitae.
-    </div>
-    <!--title-component end-->
+    <?php
+    zaman_area_title('featured_content_title', 'featured_content_subtitle', 'page_on_front');
+    ?>
 
     <!--Featured content updated-->
     <div class="row no-gutters container-fluid featured-contents">
@@ -222,11 +205,10 @@
           endwhile;
       endif;
 ?>
-     <!-- </div> -->
     </div>
     <!--Featured content updated end-->
 
-        <!--   $args_cat = array(
+          <!-- $args_cat = array(
            'include'   =>  '14, 15, 16'
           );
           $categories = get_categories($args_cat);
@@ -237,71 +219,117 @@
                  'posts_per_page'   =>     1,
                  'category__in'    =>    $category->term_id,
                ); -->
+<?php
+     zaman_area_title('newsletter_title', 'newsletter_subtitle', 'page_on_front');
+               ?>
+    <div class="container-fluid newsletter no-gutters text-center">
 
-    <!--title-component-->
-    <div class="container-fluid title-conponent">
-      <div class="row title-row justify-content-center">
-        <div class="col separator"></div>
-        <div class="col-auto title">
-          <h1>STAY CONNECTED</h1>
-        </div>
-        <div class="col separator"></div>
-      </div>
-      <p class="description">
-        Nunc luctus in metus eget fringilla.
-        Aliquam sed justo ligula. Vestibulum nibh erat,
-        pellentesque ut laoreet vitae.
-    </div>
-    <!--title-component end-->
-    <div class="container-fluid newsletter">
-      <div class="row no-gutters newsletter-content">
-        <div class="col-3 newsletter-title">
-            <i class="fa fa-newspaper-o"></i>
-            <h1>Subscribe<br />To Our<br /><span>Newsletter</span></h1>
-        </div>
-        <div class="col-1 newsletter-triangle-title">
-            <!-- <i class="fa fa-play"></i> -->
-        </div>
-        <div class="col-3 newsletter-email">
-          <label class="email-form" for="exampleInputEmail1"><h3>What is your email?</h3></label>
-          <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-          <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
-        </div>
-        <div class="col-1 newsletter-triangle-email">
-            <!-- <i class="fa fa-play"></i> -->
-        </div>
-        <div class="col submit">
 
-          <ul class="submit-checklist">
-            <h3 class="newsletter-submit-title">What is your interest?</h3>
-            <li>
-              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-              <label class="form-check-label" for="defaultCheck1">
-                Zaman Programs
-              </label>
-            </li>
-            <li>
-              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-              <label class="form-check-label" for="defaultCheck2">
-                Volunteering
-              </label>
-            </li>
-            <li>
-              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-              <label class="form-check-label" for="defaultCheck3">
-                Good Deeds Resale
-              </label>
-            </li>
-            <li>
-              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-              <label class="form-check-label" for="defaultCheck4">
-                Donations
-              </label>
-            </li>
-          </ul>
-          <button type="submit" class="btn btn-outline-light">Submit</button>
-        </div>
-      </div>
-    </div>
+             <div id="mc_embed_signup">
+                  <form action="https://zamaninternational.us16.list-manage.com/subscribe/post?u=b5539cd54d0f9cc0863d38f73&amp;id=39c84a9ba0"
+                       method="post"
+                       id="mc-embedded-subscribe-form"
+                       name="mc-embedded-subscribe-form"
+                       class="validate"
+                       target="_blank" novalidate>
+
+                       <div class="row no-gutters newsletter-content">
+                         <div class="col-3 newsletter-title">
+                             <i class="fa fa-newspaper-o"></i>
+                             <h1>Subscribe<br />To Our<br /><span>Newsletter</span></h1>
+                         </div>
+                         <div class="col-1 newsletter-triangle-title">
+                             <!-- <i class="fa fa-play"></i> -->
+                         </div>
+
+                         <div class="col-xl-3 col-lg-2 newsletter-email">
+
+                              <!-- <div id="mc_embed_signup_scroll " > -->
+                                 <div class="indicates-required">
+                                      <span class="asterisk">*</span> indicates required
+                                 </div>
+                                 <div class="mc-field-group">
+                       	          <label for="mce-EMAIL" class="">Email Address <span class="asterisk">*</span></label>
+                       	          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" plceholder="Enter Email...">
+                                 </div>
+                         </div>
+                         <div class="col-1 newsletter-triangle-email">
+                             <!-- <i class="fa fa-play"></i> -->
+                         </div>
+                         <div class="col-3 submit">
+                                   <div class="indicates-required">
+                                        <span class="asterisk">*</span> indicates required
+                                   </div>
+
+                                   <div class="mc-field-group">
+                            	          <label for="mce-FNAME">First Name  <span class="asterisk">*</span></label>
+                            	          <input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
+                                   </div>
+                                   <div class="mc-field-group">
+                       	               <label for="mce-LNAME">Last Name  <span class="asterisk">*</span></label>
+                       	               <input type="text" value="" name="LNAME" class="required" id="mce-LNAME">
+                                   </div>
+                            	     <div id="mce-responses" class="clear">
+                            		     <div class="response" id="mce-error-response" style="display:none"></div>
+                            		     <div class="response" id="mce-success-response" style="display:none"></div>
+                            	     </div>
+                                     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                 <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                         <input type="text" name="b_b5539cd54d0f9cc0863d38f73_39c84a9ba0" tabindex="-1" value="">
+                                 </div>
+                                 <div class="clear">
+                                      <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-outline-light">
+                                 </div>
+                         </div>
+                    </div>
+                      <!-- </div> -->
+               </form>
+
+
+   </div>
+ </div>
+        <!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	/* #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; } */
+	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+<script type='text/javascript'>
+(function($) {
+     window.fnames = new Array();
+     window.ftypes = new Array();
+     fnames[0]='EMAIL';
+     ftypes[0]='email';
+     fnames[1]='FNAME';
+     ftypes[1]='text';
+     fnames[2]='LNAME';
+     ftypes[2]='text';
+     fnames[3]='MMERGE3';
+     ftypes[3]='text';
+     fnames[4]='MMERGE4';
+     ftypes[4]='text';
+     fnames[5]='MMERGE5';
+     ftypes[5]='text';
+     fnames[6]='MMERGE6';
+     ftypes[6]='text';
+     fnames[7]='MMERGE7';
+     ftypes[7]='text';
+     fnames[8]='MMERGE8';
+     ftypes[8]='text';
+     fnames[9]='MMERGE9';
+     ftypes[9]='text';
+     fnames[10]='MMERGE10';
+     ftypes[10]='text';
+     fnames[11]='MMERGE11';
+     ftypes[11]='text';
+}(jQuery));
+var $mcj = jQuery.noConflict(true);
+</script>
+<!--End mc_embed_signup-->
+
+
   </main>
 <?php get_footer(); ?>

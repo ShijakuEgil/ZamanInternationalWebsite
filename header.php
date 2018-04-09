@@ -7,17 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
   </head>
-  <!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
   <body <?php body_class( ); ?>>
     <header>
-      <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-light" role="navigation">
+      <nav class="header-navbar navbar fixed-top navbar-expand-lg navbar-dark" role="navigation">
           <div class="container-fluid">
   <!-- Brand and toggle get grouped for better mobile display -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="<?php home_url();?>">
-                  <img src="<?php echo get_template_directory_uri();?>/img/logo-hope.png" width="170" height="90" alt="logo">
+                  <img src="<?php echo get_template_directory_uri();?>/img/logo-hope.png" width="180" height="90" alt="logo">
             </a>
             <?php
                 wp_nav_menu( array(

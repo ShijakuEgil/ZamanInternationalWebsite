@@ -60,8 +60,8 @@ get_template_part('templates/content', 'page-title');
   $query = new WP_Query($args);
   ?>
     <div class="funds-tab-content text-center tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-      <h2 class="display-4"><?php the_field('onetime_donations_title', get_option('page_for_posts')); ?></h2>
-      <span class="lead"><?php the_field('onetime_donations_subtitle', get_option('page_for_posts')); ?></span>
+      <h2 class="display-4"><?php the_field('one_time_donations_title', get_option('page_for_posts')); ?></h2>
+      <span class="lead"><?php the_field('one_time_donations_subtitle', get_option('page_for_posts')); ?></span>
       <div class="full-button-wrapper text-center container-fluid">
         <?php
         while($query->have_posts()): $query->the_post();?>

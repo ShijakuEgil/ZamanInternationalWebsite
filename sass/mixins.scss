@@ -29,6 +29,7 @@
   -moz-box-shadow:inset 0px 0px 150px 15px rgba(0,0,0,0.8);
   box-shadow: inset 0px 0px 150px 15px rgba(0,0,0,0.8);
 }
+
 @mixin headerfooterfont{
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5f6f6+0,dbdce2+21,b8bac6+49,dddfe3+80,f5f6f6+100;Grey+Pipe */
   background: rgb(245,246,246); /* Old browsers */
@@ -120,6 +121,12 @@
   }
 }
 //breakpoints for media queries
+@mixin bp-xlarge {
+  @media only screen and (max-width: 1680px) {
+    @content;
+  }
+}
+
 @mixin bp-large {
   @media only screen and (max-width: 1281px) {
     @content;

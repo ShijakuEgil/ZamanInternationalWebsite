@@ -68,7 +68,7 @@ get_template_part('templates/content', 'page-title');
           </div>
           <button id="searchButton" class="btn btn-primary btn-lg bin-search-button" type="button" id="searchButton" value="Search">SEARCH</button>
         </div>
-        <small>Select an address for directions to the bin.</small>
+        <small class="goods-directions-subtitle">Select an address for directions to the bin.</small>
          <div id="locationSelect" class="form-group container-fluid bin-location-select">
            <div id="right-panel"></div>
         </div>

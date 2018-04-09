@@ -1,3 +1,4 @@
+// ========================
 // NOTE: FUNDS STYLES
 // ========================
 div.funds-body-wrapper{
@@ -87,9 +88,11 @@ article.funds-link-wrapper{
     // width: 350px;
 }
 
+
 // ===========================
 // NOTE: GOODS STYLES
 // ===========================
+
 #map-canvas{
  height:70vh;
  width:100%;
@@ -172,7 +175,7 @@ article.funds-link-wrapper{
       }
     }
   }
-  small{
+  small.goods-directions-subtitle{
     @include picture_font_style;
     margin-left: 10px;
   }
@@ -225,7 +228,7 @@ div.goods-what-donate-banner{
     left:55vw;
     bottom:20vh;
     width: 35vw;
-    @include rgba(bg, white, .9);
+     @include rgba(bg, white, .9);
 
     h1{
       font-size: 60px;

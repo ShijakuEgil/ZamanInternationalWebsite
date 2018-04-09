@@ -17,7 +17,8 @@
     <div class="col-3 banner-info-wrapper">
       <i class="fa fa-quote-left"></i>
       <?php while(have_posts()) : the_post(); ?>
-        <div class="banner-info">
+
+        <div class="banner-info lead">
               <?php the_content(); ?>
         </div>
       <?php endwhile; ?>

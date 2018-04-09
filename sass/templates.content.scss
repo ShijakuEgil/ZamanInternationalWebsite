@@ -1,0 +1,109 @@
+// ============================
+//NOTE: TOP BANNER PICTURE FOR THE PAGES
+// ===========================
+article.banner-wrapper{
+          margin-top:100px;
+          padding: 0;
+          height:60vh;
+
+          div.banner-image{
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size:cover;
+            width: 100%;
+            height: inherit;
+            margin: 0;
+
+            div.banner-title-header{
+              position:relative;
+
+              h1.banner-title{
+                font-size: 5rem;
+                @include bp-xlarge{
+                     font-size: 4.5rem;
+                }
+                @include bp-large{
+                    font-size: 4rem;
+                }
+                @include bp-medium{
+                    font-size: 3.5rem;
+                }
+                font-weight: 300;
+                padding-left: 30px;
+                @include picture_font_style;
+                position: absolute;
+                left:1vw;
+                top:20vh;
+              }
+            }
+
+            div.banner-info-wrapper{
+              height: inherit;
+               position:relative;
+               // overflow: auto;
+               // visibility: hidden;
+
+
+              i.fa{
+                position: absolute;
+                z-index: 1;
+                color: rgba(0,0,0,.7);
+                text-shadow: 2px 2px 25px rgba(255,255,255,.7);
+                font-size: 4rem;
+                @include bp-xlarge{
+                     font-size: 3.5rem;
+                }
+              }
+              i.fa-quote-left{
+               top:0;
+               left:0;
+              }
+              i.fa-quote-right{
+
+                bottom:0;
+                // left:0;
+                right:0;
+              }
+
+              div.banner-info{
+                text-align: center;
+                max-height:80%;
+                margin-top: 2.5em;
+                overflow: auto;
+
+                p{
+                  @include picture_font_style;
+                  font-size: 1.5rem;
+                  @include bp-large{
+                       font-size:1.4rem
+                  }
+                }
+              }
+            }
+          }
+        }
+
+/*====================================
+// NOTE: TITLE COMPONENT STYLING
+===================================*/
+.title-conponent {
+     margin-top: 5em;
+     margin-bottom:7em;
+     .title-row {
+        	.title {
+        	     h1{
+				font-weight:300;
+        		}
+        	}
+
+        	.separator {
+        	     background: url('../img/header-bg.png') repeat-x center;
+        	}
+     }//.row
+
+     .description {
+        	color:$clr-ui-display-4;
+        	font-weight: 600;
+     }
+}//title-component
