@@ -1262,10 +1262,17 @@ html {
   html {
     font-size: .9rem; } }
 
+html {
+  height: 100%; }
+
+body {
+  min-height: 100%; }
+
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  height: 100%; }
 
 nav.header-navbar {
   background: -moz-linear-gradient(left, #0d4b7e 0%, #499bea 49%, #2c72b4 100%);
@@ -1482,7 +1489,7 @@ footer {
   height: 100%;
   padding-top: 100px; }
   #myCarousel .home-carousel-inner {
-    height: 90vh; }
+    height: -webkit-calc(100vh - 100px); }
     #myCarousel .home-carousel-inner .carousel-item {
       height: inherit;
       display: block;
@@ -1576,7 +1583,7 @@ main #animated-heading {
         font-weight: bold; }
 
 /*====================================
-		CAROUSEL BUTTON STYLE
+// NOTE: 		CAROUSEL BUTTON STYLE
 ===================================*/
 #button_group_id {
   height: 5vw;
@@ -1762,7 +1769,7 @@ main #animated-heading {
         background-color: rgba(0, 0, 0, 0.35);
         text-align: center; }
         .featured-contents article.single-post .post-image .post-header a.featured-post-type {
-          font-size: 60px;
+          font-size: 4rem;
           font-weight: 300;
           color: #f0f9ff;
           opacity: .6;
@@ -1770,6 +1777,15 @@ main #animated-heading {
           -webkit-transition: .3s;
           -o-transition: .3s;
           transition: .3s; }
+          @media only screen and (max-width: 1680px) {
+            .featured-contents article.single-post .post-image .post-header a.featured-post-type {
+              font-size: 3.5rem; } }
+          @media only screen and (max-width: 1281px) {
+            .featured-contents article.single-post .post-image .post-header a.featured-post-type {
+              font-size: 3rem; } }
+          @media only screen and (max-width: 992px) {
+            .featured-contents article.single-post .post-image .post-header a.featured-post-type {
+              font-size: 2.5rem; } }
           .featured-contents article.single-post .post-image .post-header a.featured-post-type:hover {
             text-decoration: none;
             color: #215299;
@@ -1792,13 +1808,16 @@ main #animated-heading {
         overflow: auto;
         height: 100%;
         width: 100%;
-        font-size: 22px;
+        font-size: 1.3rem;
         color: #757575; }
+        @media only screen and (max-width: 1680px) {
+          .featured-contents article.single-post .post-content p {
+            font-size: 1.0rem; } }
       .featured-contents article.single-post .post-content .post-title {
         text-decoration: none;
         font-style: italic;
         font-weight: 300;
-        font-size: 40px; }
+        font-size: 2.5rem; }
         .featured-contents article.single-post .post-content .post-title a {
           text-decoration: none;
           color: black;
@@ -1812,31 +1831,36 @@ main #animated-heading {
 
 .newsletter {
   margin: 0;
-  margin-bottom: 5vh;
   padding: 0; }
+  .newsletter form {
+    padding: 0 !important; }
   .newsletter .newsletter-content {
-    margin: 0 auto;
     padding: 0; }
     .newsletter .newsletter-content .newsletter-title {
-      height: 40vh;
-      max-height: 40vh;
+      height: 300px;
+      max-height: 300px;
       color: #7d8285;
       background-color: #fafafa;
       text-align: center; }
       .newsletter .newsletter-content .newsletter-title .fa-newspaper-o {
         color: #1485ee;
-        font-size: 8rem; }
+        font-size: 9rem; }
+        @media only screen and (max-width: 1680px) {
+          .newsletter .newsletter-content .newsletter-title .fa-newspaper-o {
+            font-size: 7rem; } }
         @media only screen and (max-width: 1281px) {
           .newsletter .newsletter-content .newsletter-title .fa-newspaper-o {
-            font-size: 6rem; } }
+            font-size: 5rem; } }
       .newsletter .newsletter-content .newsletter-title h1 {
-        line-height: 1em;
         font-weight: 400;
-        font-size: 60px;
+        font-size: 3rem;
         text-align: center; }
+        @media only screen and (max-width: 1680px) {
+          .newsletter .newsletter-content .newsletter-title h1 {
+            font-size: 2.8rem; } }
         @media only screen and (max-width: 1281px) {
           .newsletter .newsletter-content .newsletter-title h1 {
-            font-size: 3rem; } }
+            font-size: 2.5rem; } }
     .newsletter .newsletter-content .newsletter-triangle-title {
       background-color: #2196f3;
       content: '';
@@ -1844,16 +1868,21 @@ main #animated-heading {
       position: relative;
       height: 0;
       width: 0;
-      border-top: 20vh solid transparent;
-      border-bottom: 20vh solid transparent;
-      border-left: 20vh solid #fafafa; }
+      border-top: 150px solid transparent;
+      border-bottom: 150px solid transparent;
+      border-left: 150px solid #fafafa; }
     .newsletter .newsletter-content .newsletter-email {
-      height: 40vh;
-      max-height: 40vh;
+      height: 300px;
+      max-height: 300px;
       text-align: left;
       background-color: #2196f3;
       color: #f8f8f8;
-      padding: 7em 0; }
+      padding: 7em 0;
+      position: relative; }
+      .newsletter .newsletter-content .newsletter-email .indicates-required {
+        position: absolute;
+        right: 0;
+        top: 0; }
     .newsletter .newsletter-content .newsletter-triangle-email {
       background-color: #1485ee;
       content: '';
@@ -1861,14 +1890,20 @@ main #animated-heading {
       position: relative;
       height: 0;
       width: 0;
-      border-top: 20vh solid transparent;
-      border-bottom: 20vh solid transparent;
-      border-left: 20vh solid #2196f3; }
+      border-top: 150px solid transparent;
+      border-bottom: 150px solid transparent;
+      border-left: 150px solid #2196f3; }
     .newsletter .newsletter-content div.submit {
-      max-height: 40vh;
+      height: 300px;
+      max-height: 300px;
       background-color: #1485ee;
       color: #f8f8f8;
-      text-align: left; }
+      text-align: left;
+      position: relative; }
+      .newsletter .newsletter-content div.submit .indicates-required {
+        position: absolute;
+        right: 0;
+        top: 0; }
       .newsletter .newsletter-content div.submit h3.newsletter-submit-title {
         font-size: 40px; }
       .newsletter .newsletter-content div.submit input.form-check-input {
@@ -1886,8 +1921,3 @@ main #animated-heading {
       .newsletter .newsletter-content div.submit .mce-responses #mce-error-response a {
         color: white;
         text-decoration: none; }
-
-div.tab-pane {
-  width: 100%; }
-  div.tab-pane div.tab-image {
-    height: 200px; }

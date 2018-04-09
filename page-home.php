@@ -170,7 +170,7 @@
           while($event_query->have_posts() ) : $event_query->the_post();
                 // $calDate = new DateTime(get_field( 'time_date' ));
                   // if($calDate >= $currDate){
-                    get_template_part( 'templates/content', 'featured' );
+               get_template_part( 'templates/content', 'featured' );
                     // $check = false;
                     // }
           endwhile;
@@ -222,7 +222,7 @@
 <?php
      zaman_area_title('newsletter_title', 'newsletter_subtitle', 'page_on_front');
                ?>
-    <div class="container-fluid newsletter no-gutters text-center">
+    <div class="newsletter my-5 container-fluid text-center">
 
 
              <div id="mc_embed_signup">
@@ -233,41 +233,41 @@
                        class="validate"
                        target="_blank" novalidate>
 
-                       <div class="row no-gutters newsletter-content">
-                         <div class="col-3 newsletter-title">
-                             <i class="fa fa-newspaper-o"></i>
-                             <h1>Subscribe<br />To Our<br /><span>Newsletter</span></h1>
+                       <div class="row no-gutters newsletter-content container-fluid">
+                         <div class="col-sm newsletter-title d-flex justify-content-center align-items-center">
+                             <i class="fa fa-newspaper-o float-left mx-xxl-5 mx-xl-4 ml-lg-5"></i>
+                             <h1 class="mx-xxl-5 mx-xl-4 mx-lg-3 mx-">Subscribe<br />To Our<br /><span>Newsletter</span></h1>
                          </div>
-                         <div class="col-1 newsletter-triangle-title">
+                         <div class="col-sm-1 newsletter-triangle-title">
                              <!-- <i class="fa fa-play"></i> -->
                          </div>
 
-                         <div class="col-xl-3 col-lg-2 newsletter-email">
-
+                         <div class="col-sm col-md-2 col-lg-2 col-xl-3 col-xxl-3 newsletter-email d-flex justify-content-center align-items-center">
+                              <div class="indicates-required">
+                                   <span class="asterisk">*</span> All fields are required
+                              </div>
                               <!-- <div id="mc_embed_signup_scroll " > -->
-                                 <div class="indicates-required">
-                                      <span class="asterisk">*</span> indicates required
-                                 </div>
+                              <div class="email-wrapper container-fluid">
                                  <div class="mc-field-group">
-                       	          <label for="mce-EMAIL" class="">Email Address <span class="asterisk">*</span></label>
-                       	          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" plceholder="Enter Email...">
+                       	          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Enter Email Address">
                                  </div>
+                              </div>
                          </div>
-                         <div class="col-1 newsletter-triangle-email">
+                         <div class="col-sm-1 newsletter-triangle-email">
                              <!-- <i class="fa fa-play"></i> -->
                          </div>
-                         <div class="col-3 submit">
+                         <div class="col-sm submit d-flex justify-content-center align-items-center">
                                    <div class="indicates-required">
-                                        <span class="asterisk">*</span> indicates required
+                                        <span class="asterisk">*</span> All fields are required
                                    </div>
+                              <div class="submit-wrapper container-fluid">
+
 
                                    <div class="mc-field-group">
-                            	          <label for="mce-FNAME">First Name  <span class="asterisk">*</span></label>
-                            	          <input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
+                            	          <input type="text" value="" name="FNAME" class="required" id="mce-FNAME" placeholder="First Name">
                                    </div>
                                    <div class="mc-field-group">
-                       	               <label for="mce-LNAME">Last Name  <span class="asterisk">*</span></label>
-                       	               <input type="text" value="" name="LNAME" class="required" id="mce-LNAME">
+                       	               <input type="text" value="" name="LNAME" class="required" id="mce-LNAME" placeholder="Last Name">
                                    </div>
                             	     <div id="mce-responses" class="clear">
                             		     <div class="response" id="mce-error-response" style="display:none"></div>
@@ -280,6 +280,7 @@
                                  <div class="clear">
                                       <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-outline-light">
                                  </div>
+                              </div>
                          </div>
                     </div>
                       <!-- </div> -->

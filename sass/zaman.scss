@@ -1,18 +1,8 @@
 @import "mixins";
 @import "color-pallete";
 @import "variables";
-// @import "content-banner";
-// @import "blog-page";
 @import "blog-sidebar";
-// @import "news-page";
-// @import "calendar-style";
-// @import "team_board_pages";
 @import "contact-us";
-// @import "our_history";
-// @import "single-post";
-// @import "hope-for-humanity";
-// @import "donate-funds";
-// @import "funds-page";
 @import "donation.pages";
 @import "about-us.pages";
 @import "templates.content";
@@ -59,10 +49,18 @@ html {
 
 //sets font and margins as a start default value for overall website
 //===================================
+
+html{
+     height:100%;
+}
+body{
+     min-height:100%;
+}
 body{
 	font-family: 'Roboto', sans-serif;
 	margin:0;
 	padding:0;
+     height:100%;
 }
 //===================================
 
@@ -317,7 +315,7 @@ footer{
      // height: unquote( "-webkit-calc(100vh - 100px)" );
      .home-carousel-inner{
 
-          height:90vh;
+          height:unquote( "-webkit-calc(100vh - 100px)" );
 
 		.carousel-item{
 
@@ -442,7 +440,7 @@ main {
 			}//main
 
 /*====================================
-		CAROUSEL BUTTON STYLE
+// NOTE: 		CAROUSEL BUTTON STYLE
 ===================================*/
 #button_group_id{
 	height: 5vw;
@@ -657,7 +655,16 @@ main {
      	text-align: center;
 
 		a.featured-post-type{
-			font-size:60px;
+			font-size:4rem;
+               @include bp-xlarge{
+                    font-size:3.5rem;
+               }
+               @include bp-large{
+                    font-size: 3rem;
+               }
+               @include bp-medium{
+                    font-size: 2.5rem;
+               }
 			font-weight: 300;
 			@include picture_font_style;
 			transition: .3s;
@@ -691,7 +698,10 @@ main {
 		overflow: auto;
 		height:100%;
 		width:100%;
-		font-size: 22px;
+		font-size: 1.3rem;
+          @include  bp-xlarge{
+               font-size: 1.0rem;
+          }
 		color:$clr-ui-display-1;
    	}//p
 
@@ -699,7 +709,7 @@ main {
 		text-decoration: none;
 		font-style: italic;
 		font-weight: 300;
-		font-size:40px;
+		font-size:2.5rem;
 
 		a{
                text-decoration: none;
@@ -722,59 +732,83 @@ main {
 // ====================
 .newsletter{
      margin: 0;
-     margin-bottom: 5vh;
+     // margin-bottom: 5vh;
      padding: 0;
 
+     form{
+          padding:0 !important;
+     }
+
   .newsletter-content{
-       margin:0 auto;
+       // margin:0 auto;
        padding:0;
 
     .newsletter-title{
-	height:40vh;
-     max-height:40vh;
+	height:300px;
+     max-height:300px;
      color:$paragraph_font_color;
      background-color: $clr-grey-50;
      text-align: center;
 
       .fa-newspaper-o{
 		color:$icon_color;
-          font-size: 8rem;
+          font-size: 9rem;
+          @include bp-xlarge{
+               font-size:7rem;
+          };
           @include bp-large{
-               font-size:6rem;
+               font-size:5rem;
           }
       }
       h1{
-	   line-height: 1em;
+	   // line-height: 1em;
         font-weight: 400;
-        font-size: $h1_title;
+        font-size: 3rem;
         text-align: center;
+        @include bp-xlarge{
+          font-size: 2.8rem;
+        }
         @include bp-large{
-            font-size:3rem;
+            font-size:2.5rem;
         }
     	}
     }//newsletter-title
     .newsletter-triangle-title{
 	     background-color:$clr-blue;
-           @include triangle('right', 20vh, $clr-grey-50);
+           @include triangle('right', 150px, $clr-grey-50);
     }
     .newsletter-email{
-          height:40vh;
-          max-height: 40vh;
+          height:300px;
+          max-height: 300px;
           text-align: left;
 	     background-color: $clr-blue;
           color: rgb(248,248,248);
           padding:7em 0;
+          position: relative;
+
+          .indicates-required{
+               position: absolute;
+               right:0;
+               top:0;
+          }
     }//info
     .newsletter-triangle-email{
       background-color: $icon_color;
-      @include triangle('right', 20vh, $clr-blue);
+      @include triangle('right', 150px, $clr-blue);
     }
     div.submit{
-         max-height: 40vh;
-
-	     background-color: $icon_color;
+          height:300px;
+          max-height:300px;;
+          background-color: $icon_color;
           color:rgb(248,248,248);
-		text-align: left;
+     	text-align: left;
+          position:relative;
+
+          .indicates-required{
+               position:absolute;
+               right:0;
+               top:0;
+          }
 
 		h3.newsletter-submit-title{
 			font-size: $h2_subtitle;
@@ -785,7 +819,7 @@ main {
 
       .btn{
           width: 60%;
-		// margin: 5% 20%;
+
       }
       .mce-responses{
            .response{
@@ -811,9 +845,9 @@ main {
   }//newsletter-content
 }//newsletter
 //boost page css
-div.tab-pane {
-	width:100%;
-	div.tab-image{
-		height:200px;
-	}
-}
+// div.tab-pane {
+// 	width:100%;
+// 	div.tab-image{
+// 		height:200px;
+// 	}
+// }
