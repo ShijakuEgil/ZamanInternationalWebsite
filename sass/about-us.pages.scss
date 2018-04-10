@@ -1,3 +1,31 @@
+/*=================================
+// NOTE: THE NEED PAGE STYLE
+===================================*/
+.the-need-wrapper{
+article.right-article,
+article.left-article{
+  height: 20vw;
+  margin-bottom: 10em;
+}
+  .title-wrapper{
+
+  }
+  .the-need-right-info-wrapper,
+  .the-need-left-info-wrapper{
+    height:inherit;
+    
+    .the-need-right-post-image,
+    .the-need-left-post-image{
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+    .the-need-right-post-info,
+    .the-need-left-post-info{
+        overflow: auto;
+    }
+  }
+}
 // =====================
 // NOTE: NEWS PAGE
 // =====================
@@ -112,13 +140,13 @@ main{
   overflow-x: hidden;
 }
 section.timeline{
-  margin-top:10vh;
+  margin-top:20px;
   position:relative;
 
   .timeline-item{
-    height: 50vh;
+    height: 40vw;
     width:100%;
-    padding-bottom: 10vh;
+    // padding-bottom: vh;
 
     .timeline-divider{
       position:absolute;
@@ -130,31 +158,43 @@ section.timeline{
     }
 
     .timeline-img{
-        width:10vw;
-        height:10vw;
-        background-color: $clr-blue;
-        border: 20px solid $clr-grey-200;
-      	border-radius: 100%;
-      	position: absolute;
-      	left: 45%;
-        z-index: 1;
-        text-align: center;
+          width:10vw;
+          height:10vw;
+          background-color: $clr-blue;
+          border: 20px solid $clr-grey-200;
+          border-radius: 100%;
+          position: absolute;
+          left: 45%;
+          z-index: 1;
+          text-align: center;
 
         .date{
           position:absolute;
           z-index: 2;
-          top:30%;
+          top:20%;
           @include picture_font_style;
-          font-size: $h2_subtitle;
+          font-size: 2rem;
+          line-height: 2rem;
+          @include bp-xlarge{
+               font-size: 1.5rem;
+               line-height: 1.5rem;
+          }
+          @include bp-large{
+               top:15%;
+               font-size: 1.4rem;
+               line-height: 1.4rem;
+          }
           font-weight:bold;
-          line-height: 40px;
+
+
         }
     }
     .timeline-content{
       width:40vw;
 
       .timeline-img-header{
-        height:25vh;
+        position:relative;
+        height:20vw;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -166,11 +206,13 @@ section.timeline{
           font-weight: 400;
           position:absolute;
           top: 2vh;
+          z-index: 3;
         }
       }
       .timeline-paragraph{
         padding-top:2%;
-        height:20%;
+        height:20vw;
+        max-height:150px;
         overflow: auto;
 
       }
@@ -183,15 +225,15 @@ section.timeline{
             background-color: $clr-grey-200;
 
             &::after {
-              content: '';
-      				position: absolute;
-      				border-style: solid;
-      				width: 0;
-      				height: 0;
-      				top: 0;
-      				left: -7.9vw;
-      				border-width: 0px 8vw 48vh 0;
-      				border-color: transparent $clr-grey-200 transparent transparent;
+               content: '';
+			position: absolute;
+			border-style: solid;
+			width: 0;
+			height: 0;
+			top: 0;
+			left: -7.9vw;
+			border-width: 0px 8vw 48vh 0;
+			border-color: transparent $clr-grey-200 transparent transparent;
             }
             h2.timeline-title{
               left:2vw;
@@ -217,6 +259,7 @@ section.timeline{
       	}
         h2.timeline-title{
           right:2vw;
+          @include picture_font_style;
         }
       }
     }
@@ -226,13 +269,22 @@ div.end-note-container{
   position:relative;
   text-align: center;
   margin-bottom: 30vh;
+
   a.timeline-end-note{
     position:absolute;
     left:45%;
     padding-top:25px;
-    line-height: 35px;
+    line-height:1.8rem;
     text-align: center;
-    font-size:35px;
+    font-size:1.8rem;
+     @include bp-xlarge{
+          font-size: 1.5rem;
+          line-height:1.5rem;
+     }
+     @include bp-large{
+          font-size:1.2rem;
+          line-height: 1.2rem;
+     }
     box-sizing: border-box;
     width: 10vw;
     height: 10vw;
@@ -255,22 +307,18 @@ $picture_size: 15vw;
 ================================*/
 .our-team-container {
     margin: 5% 0;
-
     padding: 5% 10%;
 
   .team-container {
       padding: 0;
-      // @include box_shadow;
 
       .team-member{
         border: 1px solid $clr-grey-100;
-        // @include box_shadow;
         margin:auto;
       }
 
     .member-link{
         padding: 5%;
-
 
       .image-container{
         width:$picture_size;
@@ -361,12 +409,12 @@ $picture_size: 15vw;
 // ===========================
 @media (min-width: 768px) {
   .modal-xl {
-    width: 90%;
-   max-width:1200px;
+    width: 80%;
+    max-width:1200px;
   }
 }
 .modal-image-container{
-  height: 30vw;
+  height: 40vw;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -376,7 +424,7 @@ $picture_size: 15vw;
 .modal-body{
   padding:0;
   .team-modal-content{
-    max-height: 30vw;
+    max-height: 40vw;
 
   }
 }
@@ -398,34 +446,41 @@ $picture_size: 15vw;
     }
   }
   h1.modal-name{
-    font-size:50px;
+    @include font-size(40px);
     font-weight:lighter;
+    @include bp-xlarge{
+          @include font-size(30px);
+    }
+    @include bp-large{
+         @include font-size(25px);
+    }
   }
   h3.modal-job-title{
-    font-size:30px;
+    @include font-size(30px);
+    @include bp-xlarge{
+         @include font-size(25px);
+    }
+    @include bp-large{
+         @include font-size(20px);
+    }
     font-style: italic;
     color:$clr-ui-display-1;
   }
 }
 .member-info-container{
-  height: 60%;
   overflow: auto;
-  max-height: 60%;
-  font-size: 20px;
+  @include font-size(20px);
   font-weight: 400;
-}
-.modal-button-group{
-  position:absolute;
-  bottom:10px;
-  right:10px;
-  text-align: right;
-  padding-right: 4%;
-  margin:0;
-
+  @include bp-xlarge{
+        @include font-size(18px);
+  }
+  @include bp-large{
+       @include font-size(15px);
+  }
 }
 
 // ===============================
-// NOTE: HOPE FOR HUMANITY
+// NOTE: THE NEED
 //================================
 div.humanity-row{
   margin-bottom: 15vh;
@@ -453,6 +508,7 @@ article.humanity-col{
       h2{
         a{
           font-size: 50px;
+
           @include picture_font_style;
           transition: .3s ease;
           &:hover{

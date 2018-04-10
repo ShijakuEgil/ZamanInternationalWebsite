@@ -20,7 +20,9 @@ get_template_part( 'templates/content', 'page-title' );
   <a class="nav-item nav-link active"  data-toggle="tab" href="#team-modal-<?php the_ID();?>" role="tab" aria-controls="nav-home" aria-selected="true"><?php the_title(); ?></a>
   <?php endwhile;
   ?>
+<div class="" style="background-image:url()">
 
+</div>
 
   </div>
 </nav>
