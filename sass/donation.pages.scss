@@ -92,7 +92,6 @@ article.funds-link-wrapper{
 // ===========================
 // NOTE: GOODS STYLES
 // ===========================
-
 #map-canvas{
  height:70vh;
  width:100%;
@@ -270,9 +269,21 @@ div.wishlists-body-wrapper{
 
   div.wishlist-row-wrapper{
 
+
     div.wishlist-col-wrapper{
-      height:20vw;
-      background-color: $clr-grey-50;
+      height:auto;
+      // max-height: 40vw;
+      // overflow: overflow;
+      // padding: 1em;
+
+      div.whishlist-content-wrapper{
+        background-color: $clr-grey-100;
+        padding:1em;
+
+        div.wishlist-icon-wrapper{
+          color:$icon_color;
+        }
+      }
     }
   }
 }

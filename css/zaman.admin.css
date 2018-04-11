@@ -2,3 +2,15 @@
     @package zamanTheme
     admin Style
 */
+.wishlist-col-wrapper{
+  height:40vw;
+  max-height: 40vw;
+  overflow: overflow;
+}
+.whishlist-content-wrapper{
+  background-color: $clr-grey-100;
+  padding:1em;
+}
+.wishlist-icon-wrapper{
+  color:$icon_color;
+}

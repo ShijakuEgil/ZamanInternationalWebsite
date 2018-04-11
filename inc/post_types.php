@@ -1,7 +1,7 @@
 <?php
 /*
 ==========================================
-          HOME PAGE CAROUSEL
+// NOTE: HOME PAGE CAROUSEL
 ==========================================
 */
 function zaman_register_home_carousel() {
@@ -54,10 +54,9 @@ add_action( 'init', 'zaman_register_home_carousel' );
 
 /*
 ==========================================
-          HISTORY TIMELINE POST
+// NOTE: HISTORY TIMELINE POST
 ==========================================
 */
-
 function zaman_register_history_timeline() {
 
 	$args = array (
@@ -108,10 +107,9 @@ add_action( 'init', 'zaman_register_history_timeline' );
 
 /*
 ==========================================
-        CONTACT US DEPARTMENTS
+// NOTE: CONTACT US DEPARTMENTS
 ==========================================
 */
-
 function zaman_register_contact_us() {
 
 	$args = array (
@@ -161,10 +159,9 @@ add_action( 'init', 'zaman_register_contact_us' );
 
 /*
 ==========================================
-        HOPE FOR HUMANITY
+// NOTE: HOPE FOR HUMANITY
 ==========================================
 */
-
 function zaman_register_hope_4_humanity() {
 
 	$args = array (
@@ -216,7 +213,7 @@ add_action( 'init', 'zaman_register_hope_4_humanity' );
 
 /*
 ==========================================
-        TEAM MEMBERS
+// NOTE: TEAM MEMBERS
 ==========================================
 */
 function zaman_register_team_members() {
@@ -269,7 +266,7 @@ add_action( 'init', 'zaman_register_team_members' );
 
 /*
 ==========================================
-          NEWS POST
+// NOTE: NEWS POST
 ==========================================
 */
 function zaman_register_news() {
@@ -329,7 +326,7 @@ add_action( 'init', 'zaman_register_news' );
 
 /*
 ==========================================
-         CALENDAR POST
+// NOTE: CALENDAR POST
 ==========================================
 */
 function zaman_register_calendar() {
@@ -497,7 +494,7 @@ add_action( 'init', 'zaman_register_animated_heading' );
 
 /*
 ==========================================
-          DONATION BINS
+// NOTE: DONATION BINS
 ==========================================
 */
 function zaman_register_donation_bins() {
@@ -651,13 +648,11 @@ function zaman_register_wishlists() {
 	register_post_type( 'wish-list', $args );
 }
 add_action( 'init', 'zaman_register_wishlists' );
-
 /*
 ==========================================
 // NOTE: BOOST POST
 ==========================================
 */
-
 function zaman_register_boost_post() {
 
 	$args = array (
@@ -755,5 +750,3 @@ function zaman_register_the_need() {
 
 	register_post_type( 'the-need-post', $args );
 }
-add_action( 'init', 'zaman_register_the_need' );
-

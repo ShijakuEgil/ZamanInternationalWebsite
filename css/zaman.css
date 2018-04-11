@@ -409,8 +409,12 @@ div.goods-what-donate-banner {
         width: 50%; }
 
 div.wishlists-body-wrapper div.wishlist-row-wrapper div.wishlist-col-wrapper {
-  height: 20vw;
-  background-color: #fafafa; }
+  height: auto; }
+  div.wishlists-body-wrapper div.wishlist-row-wrapper div.wishlist-col-wrapper div.whishlist-content-wrapper {
+    background-color: #f5f5f5;
+    padding: 1em; }
+    div.wishlists-body-wrapper div.wishlist-row-wrapper div.wishlist-col-wrapper div.whishlist-content-wrapper div.wishlist-icon-wrapper {
+      color: #1485ee; }
 
 /*=================================
 // NOTE: THE NEED PAGE STYLE
@@ -1306,6 +1310,26 @@ article.banner-wrapper {
 
 .custom-field-btn-primary {
   background-color: red; }
+
+.tab-image {
+  height: 100px; }
+
+.tab-pane {
+  height: 500px; }
+
+div.goods-buttons-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-color: white;
+  margin: 20px 0; }
+  div.goods-buttons-wrapper .col-4 {
+    text-align: center;
+    font-size: 20px; }
+    div.goods-buttons-wrapper .col-4 button {
+      width: 50%; }
 
 html {
   font-size: 1rem; }

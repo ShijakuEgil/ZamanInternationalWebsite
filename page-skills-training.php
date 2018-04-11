@@ -29,12 +29,10 @@ get_template_part( 'templates/content', 'page-title' );
   $k = 0;
   while($query->have_posts()):$query->the_post();?>
 
-
-  <a class="nav-item nav-link active"  data-toggle="tab" href="#team-modal-<?php the_ID();?>" role="tab" aria-controls="nav-home" aria-selected="true"><?php the_title(); ?></a>
-  <?php endwhile;
-  ?>
-<div class="" style="background-image:url()">
-
+  <a class="nav-item nav-link <?php if($k == 0){ echo 'active'; }?>"  data-toggle="tab" href="#team-modal-<?php the_ID();?>" role="tab" aria-controls="nav-home" aria-selected="true"><?php the_title(); ?></a>
+  <?php $k++;
+        endwhile;
+  ?> -->
 
 </div>
 
