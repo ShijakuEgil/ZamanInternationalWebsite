@@ -750,3 +750,55 @@ function zaman_register_the_need() {
 
 	register_post_type( 'the-need-post', $args );
 }
+
+/*
+==========================================
+// NOTE: GALLERY POST
+==========================================
+*/
+function zaman_register_gallery() {
+
+	$args = array (
+		'label' => esc_html__( 'Gallery Photos', 'text-domain' ),
+		'labels' => array(
+			'menu_name' => esc_html__( 'Gallery Photos', 'text-domain' ),
+			'name_admin_bar' => esc_html__( 'Gallery Photo', 'text-domain' ),
+			'add_new' => esc_html__( 'Add new', 'text-domain' ),
+			'add_new_item' => esc_html__( 'Add new Gallery Photo', 'text-domain' ),
+			'new_item' => esc_html__( 'New Gallery Photo', 'text-domain' ),
+			'edit_item' => esc_html__( 'Edit Gallery Photo', 'text-domain' ),
+			'view_item' => esc_html__( 'View Gallery Photo', 'text-domain' ),
+			'update_item' => esc_html__( 'Update Gallery Photo', 'text-domain' ),
+			'all_items' => esc_html__( 'Gallery Photos', 'text-domain' ),
+			'search_items' => esc_html__( 'Search Gallery Photos', 'text-domain' ),
+			'parent_item_colon' => esc_html__( 'Parent Gallery Photo', 'text-domain' ),
+			'not_found' => esc_html__( 'No Gallery Photos found', 'text-domain' ),
+			'not_found_in_trash' => esc_html__( 'No Gallery Photos found in Trash', 'text-domain' ),
+			'name' => esc_html__( 'Gallery Photos', 'text-domain' ),
+			'singular_name' => esc_html__( 'Gallery Photo', 'text-domain' ),
+		),
+		'public' => true,
+		'exclude_from_search' => false,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'show_in_nav_menus' => true,
+		'show_in_menu' => 'events_menu',
+		'show_in_admin_bar' => false,
+		'show_in_rest' => false,
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'has_archive' => true,
+		'query_var' => true,
+		'can_export' => true,
+		'rewrite_no_front' => false,
+		'supports' => array(
+			'title',
+			'editor',
+			'thumbnail',
+		),
+		'rewrite' => true,
+	);
+
+	register_post_type( 'gallery-photo', $args );
+}
+add_action( 'init', 'zaman_register_gallery' );

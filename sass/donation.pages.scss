@@ -265,25 +265,103 @@ div.goods-what-donate-banner{
 // ===========================
 // NOTE: WISHLISTS STYLES
 // ===========================
-div.wishlists-body-wrapper{
+#masonry{
+  column-count: 4;
+  column-gap: 1em;
+}
+@media(min-width: 30em) {
+  #masonry {
+    column-count: 2;
+    column-gap: 1em;
+  }
+}
 
-  div.wishlist-row-wrapper{
+@media(min-width: 40em) {
+  #masonry {
+    column-count: 3;
+    column-gap: 1em;
+  }
+}
 
+@media(min-width: 60em) {
+  #masonry {
+    column-count: 4;
+    column-gap: 1em;
+  }
+}
 
-    div.wishlist-col-wrapper{
-      height:auto;
-      // max-height: 40vw;
-      // overflow: overflow;
-      // padding: 1em;
+.wishlists-body-wrapper{
+  padding: 0 4em;
+}
+.wishlist-single-wrapper{
 
-      div.whishlist-content-wrapper{
-        background-color: $clr-grey-100;
-        padding:1em;
+  background-color: none;
+  display: inline-block;
+  margin: 0 0 1em 0;
+  width: 100%;
 
-        div.wishlist-icon-wrapper{
-          color:$icon_color;
-        }
-      }
-    }
+  .wishlist-icon-wrapper{
+    color:$icon_color;
+  }
+
+}
+div.wishlist-content-wrapper{
+  background-color: $clr-grey-100;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  margin-bottom: -4px;
+}
+
+@keyframes active-in {
+  0% {
+    opacity:1;
+    background-color:white;
+  }
+
+  50% {
+    opacity:0;
+    background-color:rgba(0,0,0,0.90);
+  }
+
+  100% {
+    opacity: 1;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:rgba(0,0,0,0.90);
+  }
+}
+
+@keyframes active-in-img {
+  0% {
+    opacity:1;
+    transform:translate(0%, 0%);
+    top: 0;
+    left: 0;
+    max-width: 100%;
+  }
+  49% {
+    opacity:0;
+    transform: translate(0%, -50%);
+  }
+  50% {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+  }
+  100% {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  width: auto;
+  max-height: 95vh;
+  opacity:1;
   }
 }
