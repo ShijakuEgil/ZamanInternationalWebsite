@@ -657,6 +657,7 @@ add_action( 'init', 'zaman_register_wishlists' );
 // NOTE: BOOST POST
 ==========================================
 */
+
 function zaman_register_boost_post() {
 
 	$args = array (
@@ -703,6 +704,7 @@ function zaman_register_boost_post() {
 	register_post_type( 'boost-post', $args );
 }
 add_action( 'init', 'zaman_register_boost_post' );
+
 /*
 ==========================================
 // NOTE: THE NEED POST
@@ -754,3 +756,4 @@ function zaman_register_the_need() {
 	register_post_type( 'the-need-post', $args );
 }
 add_action( 'init', 'zaman_register_the_need' );
+

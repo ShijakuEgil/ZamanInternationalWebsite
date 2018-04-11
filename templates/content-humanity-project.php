@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID();?>" <?php post_class('col-3 humanity-col'); ?>>
+<article id="post-<?php the_ID();?>" <?php post_class('col-4 humanity-col'); ?>>
 
     <div class="humanity-post-image" style="background-image: url('<?php echo zaman_get_featured_image() ?>')">
 
