@@ -32,17 +32,12 @@ article.banner-wrapper{
                 font-weight: 300;
                 padding-left: 30px;
                 @include picture_font_style;
-                position: absolute;
-                left:1vw;
-                top:20vh;
               }
             }
 
             div.banner-info-wrapper{
               height: inherit;
                position:relative;
-               // overflow: auto;
-               // visibility: hidden;
 
 
               i.fa{

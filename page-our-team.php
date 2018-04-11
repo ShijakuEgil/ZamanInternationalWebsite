@@ -1,23 +1,7 @@
 <?php get_header( );
 get_template_part( 'templates/content', 'banner' );
+get_template_part( 'templates/content', 'page-title' );
 ?>
-
-<!--title-component-->
-<div class="container-fluid title-conponent">
-  <div class="row title-row justify-content-center">
-    <div class="col separator"></div>
-    <div class="col-auto title">
-      <h1>OUR TEAM</h1>
-    </div>
-    <div class="col separator"></div>
-  </div>
-  <p class="description">
-    Nunc luctus in metus eget fringilla.
-    Aliquam sed justo ligula. Vestibulum nibh erat,
-    pellentesque ut laoreet vitae.
-</div>
-<!--title-component end-->
-
 <div class="container-fluid our-team-container">
     <div class="row no-gutters container-fluid team-container">
 <?php
@@ -41,22 +25,24 @@ get_template_part( 'templates/content', 'banner' );
           <div class="modal-content">
             <div class="modal-body">
               <div class="row team-modal-content">
-                <?php
-                  $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full', false, '' );
-                ?>
-                <div class="col-6 modal-image-container container-fluid" style="background-image: url('<?php echo esc_url( $src[0] ); ?>')">
+                <div class="col-6 modal-image-container container-fluid" style="background-image: url('<?php echo zaman_get_featured_image(); ?>')">
                 </div>
-                <div class="col-6 team-member-info">
+                <div class="col-6 team-member-info d-flex align-items-start flex-column">
                   <button type="button" class="btn-close btn-primary" data-dismiss="modal"><i class="fa fa-times"></i></button>
-                  <h1 class="modal-name"><?php the_field('member_name'); ?></h1>
-                  <h3 class="modal-job-title"><?php the_field('member_position_title'); ?></h3>
-                  <hr>
-                  <div class="member-info-container">
-                    <p><?php the_field('member_description'); ?></p>
+                  <div class="header-info-wrapper mb-auto p-2 container-fluid">
+                       <h1 class="modal-name"><?php the_field('member_name'); ?></h1>
+                       <h3 class="modal-job-title"><?php the_field('member_position_title'); ?></h3>
+                       <hr>
                   </div>
-                  <form class="modal-button-group" action="mailto:<?php the_field('member_email');?>" method="post" enctype="text/plain">
-                      <button type="submit" class="btn btn-lg btn-primary">Email</button>
-                  </form>
+                  <div class="member-info-container mb-auto p-2 container-fluid">
+                    <p class="lead"><?php the_field('member_description'); ?></p>
+                  </div>
+                  <div class="button-form-wrapper p-2 container-fluid">
+                       <form class="modal-button-group container-fluid text-right float-right mx-5" action="mailto:<?php the_field('member_email');?>" method="post" enctype="text/plain">
+                           <button type="submit" class="btn btn-lg btn-primary">Email</button>
+                       </form>
+                  </div>
+
                 </div>
               </div>
             </div>

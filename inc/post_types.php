@@ -386,7 +386,7 @@ add_action( 'init', 'zaman_register_calendar' );
 
 /*
 ==========================================
-          BLOG POST
+// NOTE: BLOG POST
 ==========================================
 */
 function zaman_register_blog() {
@@ -445,7 +445,7 @@ add_action( 'init', 'zaman_register_blog' );
 
 /*
 ==========================================
-        aNIMATED HEADING
+// NOTE: ANIMATED HEADING
 ==========================================
 */
 function zaman_register_animated_heading() {
@@ -601,8 +601,11 @@ function zaman_register_donations_url() {
 }
 add_action( 'init', 'zaman_register_donations_url' );
 
-
-// NOTE: Whishlists post type
+/*
+=========================================
+// NOTE: WISHLISTS POSTS
+==========================================
+*/
 function zaman_register_wishlists() {
 
 	$args = array (
@@ -648,6 +651,12 @@ function zaman_register_wishlists() {
 	register_post_type( 'wish-list', $args );
 }
 add_action( 'init', 'zaman_register_wishlists' );
+
+/*
+==========================================
+// NOTE: BOOST POST
+==========================================
+*/
 
 function zaman_register_boost_post() {
 
@@ -695,3 +704,56 @@ function zaman_register_boost_post() {
 	register_post_type( 'boost-post', $args );
 }
 add_action( 'init', 'zaman_register_boost_post' );
+
+/*
+==========================================
+// NOTE: THE NEED POST
+==========================================
+*/
+function zaman_register_the_need() {
+
+	$args = array (
+		'label' => esc_html__( 'The Need Posts', 'text-domain' ),
+		'labels' => array(
+			'menu_name' => esc_html__( 'The Need Posts', 'text-domain' ),
+			'name_admin_bar' => esc_html__( 'The Need Post', 'text-domain' ),
+			'add_new' => esc_html__( 'Add new', 'text-domain' ),
+			'add_new_item' => esc_html__( 'Add new The Need Post', 'text-domain' ),
+			'new_item' => esc_html__( 'New The Need Post', 'text-domain' ),
+			'edit_item' => esc_html__( 'Edit The Need Post', 'text-domain' ),
+			'view_item' => esc_html__( 'View The Need Post', 'text-domain' ),
+			'update_item' => esc_html__( 'Update The Need Post', 'text-domain' ),
+			'all_items' => esc_html__( 'The Need Posts', 'text-domain' ),
+			'search_items' => esc_html__( 'Search The Need Posts', 'text-domain' ),
+			'parent_item_colon' => esc_html__( 'Parent The Need Post', 'text-domain' ),
+			'not_found' => esc_html__( 'No The Need Posts found', 'text-domain' ),
+			'not_found_in_trash' => esc_html__( 'No The Need Posts found in Trash', 'text-domain' ),
+			'name' => esc_html__( 'The Need Posts', 'text-domain' ),
+			'singular_name' => esc_html__( 'The Need Post', 'text-domain' ),
+		),
+		'public' => true,
+		'exclude_from_search' => false,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'show_in_nav_menus' => true,
+		'show_in_menu' => 'about_us_menu',
+		'show_in_admin_bar' => false,
+		'show_in_rest' => false,
+		'capability_type' => 'post',
+		'hierarchical' => false,
+		'has_archive' => true,
+		'query_var' => true,
+		'can_export' => true,
+		'rewrite_no_front' => false,
+		'supports' => array(
+			'title',
+			'editor',
+			'thumbnail',
+		),
+		'rewrite' => true,
+	);
+
+	register_post_type( 'the-need-post', $args );
+}
+add_action( 'init', 'zaman_register_the_need' );
+

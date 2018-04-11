@@ -30,7 +30,7 @@
                     'walker'            => new WP_Bootstrap_Navwalker()
                     )
                   );
-                  ?>
+          ?>
             </div>
             <form action="<?php echo home_url( '/' ); ?>" method="get" class="form-inline my-2 my-lg-0">
                 <fieldset>

@@ -408,6 +408,34 @@ div.goods-what-donate-banner {
       div.goods-what-donate-banner div.goods-buttons-wrapper .col-4 button {
         width: 50%; }
 
+div.wishlists-body-wrapper div.wishlist-row-wrapper div.wishlist-col-wrapper {
+  height: 20vw;
+  background-color: #fafafa; }
+
+/*=================================
+// NOTE: THE NEED PAGE STYLE
+===================================*/
+.the-need-wrapper article.right-article,
+.the-need-wrapper article.left-article {
+  height: 20vw;
+  margin-bottom: 10em; }
+
+.the-need-wrapper .the-need-right-info-wrapper,
+.the-need-wrapper .the-need-left-info-wrapper {
+  height: inherit; }
+  .the-need-wrapper .the-need-right-info-wrapper .the-need-right-post-image,
+  .the-need-wrapper .the-need-right-info-wrapper .the-need-left-post-image,
+  .the-need-wrapper .the-need-left-info-wrapper .the-need-right-post-image,
+  .the-need-wrapper .the-need-left-info-wrapper .the-need-left-post-image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+  .the-need-wrapper .the-need-right-info-wrapper .the-need-right-post-info,
+  .the-need-wrapper .the-need-right-info-wrapper .the-need-left-post-info,
+  .the-need-wrapper .the-need-left-info-wrapper .the-need-right-post-info,
+  .the-need-wrapper .the-need-left-info-wrapper .the-need-left-post-info {
+    overflow: auto; }
+
 .news-page-container {
   margin: 0;
   margin-top: 100px;
@@ -480,12 +508,11 @@ main {
   overflow-x: hidden; }
 
 section.timeline {
-  margin-top: 10vh;
+  margin-top: 20px;
   position: relative; }
   section.timeline .timeline-item {
-    height: 50vh;
-    width: 100%;
-    padding-bottom: 10vh; }
+    height: 40vw;
+    width: 100%; }
     section.timeline .timeline-item .timeline-divider {
       position: absolute;
       top: 0;
@@ -506,17 +533,27 @@ section.timeline {
       section.timeline .timeline-item .timeline-img .date {
         position: absolute;
         z-index: 2;
-        top: 30%;
+        top: 20%;
         color: #f0f9ff;
         opacity: .6;
         text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
-        font-size: 40px;
-        font-weight: bold;
-        line-height: 40px; }
+        font-size: 2rem;
+        line-height: 2rem;
+        font-weight: bold; }
+        @media only screen and (max-width: 1680px) {
+          section.timeline .timeline-item .timeline-img .date {
+            font-size: 1.5rem;
+            line-height: 1.5rem; } }
+        @media only screen and (max-width: 1281px) {
+          section.timeline .timeline-item .timeline-img .date {
+            top: 15%;
+            font-size: 1.4rem;
+            line-height: 1.4rem; } }
     section.timeline .timeline-item .timeline-content {
       width: 40vw; }
       section.timeline .timeline-item .timeline-content .timeline-img-header {
-        height: 25vh;
+        position: relative;
+        height: 20vw;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover; }
@@ -528,10 +565,12 @@ section.timeline {
           font-size: 60px;
           font-weight: 400;
           position: absolute;
-          top: 2vh; }
+          top: 2vh;
+          z-index: 3; }
       section.timeline .timeline-item .timeline-content .timeline-paragraph {
         padding-top: 2%;
-        height: 20%;
+        height: 20vw;
+        max-height: 150px;
         overflow: auto; }
     section.timeline .timeline-item:nth-child(even) .timeline-content {
       float: right;
@@ -563,7 +602,10 @@ section.timeline {
         border-width: 0 0 48vh 8vw;
         border-color: transparent transparent transparent #eeeeee; }
       section.timeline .timeline-item:nth-child(odd) .timeline-content h2.timeline-title {
-        right: 2vw; }
+        right: 2vw;
+        color: #f0f9ff;
+        opacity: .6;
+        text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8); }
 
 div.end-note-container {
   position: relative;
@@ -573,9 +615,9 @@ div.end-note-container {
     position: absolute;
     left: 45%;
     padding-top: 25px;
-    line-height: 35px;
+    line-height: 1.8rem;
     text-align: center;
-    font-size: 35px;
+    font-size: 1.8rem;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 10vw;
@@ -586,6 +628,14 @@ div.end-note-container {
     -webkit-transition: .5s;
     -o-transition: .5s;
     transition: .5s; }
+    @media only screen and (max-width: 1680px) {
+      div.end-note-container a.timeline-end-note {
+        font-size: 1.5rem;
+        line-height: 1.5rem; } }
+    @media only screen and (max-width: 1281px) {
+      div.end-note-container a.timeline-end-note {
+        font-size: 1.2rem;
+        line-height: 1.2rem; } }
     div.end-note-container a.timeline-end-note:hover {
       background-color: #2196f3;
       color: white; }
@@ -710,11 +760,11 @@ div.end-note-container {
 
 @media (min-width: 768px) {
   .modal-xl {
-    width: 90%;
+    width: 80%;
     max-width: 1200px; } }
 
 .modal-image-container {
-  height: 30vw;
+  height: 40vw;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -723,7 +773,7 @@ div.end-note-container {
 .modal-body {
   padding: 0; }
   .modal-body .team-modal-content {
-    max-height: 30vw; }
+    max-height: 40vw; }
 
 .team-member-info .btn-close {
   width: 2.5em;
@@ -741,28 +791,45 @@ div.end-note-container {
     font-size: 1.875rem; }
 
 .team-member-info h1.modal-name {
-  font-size: 50px;
+  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: lighter; }
+  @media only screen and (max-width: 1680px) {
+    .team-member-info h1.modal-name {
+      font-size: 30px;
+      font-size: 1.875rem; } }
+  @media only screen and (max-width: 1281px) {
+    .team-member-info h1.modal-name {
+      font-size: 25px;
+      font-size: 1.5625rem; } }
 
 .team-member-info h3.modal-job-title {
   font-size: 30px;
+  font-size: 1.875rem;
   font-style: italic;
   color: #757575; }
+  @media only screen and (max-width: 1680px) {
+    .team-member-info h3.modal-job-title {
+      font-size: 25px;
+      font-size: 1.5625rem; } }
+  @media only screen and (max-width: 1281px) {
+    .team-member-info h3.modal-job-title {
+      font-size: 20px;
+      font-size: 1.25rem; } }
 
 .member-info-container {
-  height: 60%;
   overflow: auto;
-  max-height: 60%;
   font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400; }
-
-.modal-button-group {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  text-align: right;
-  padding-right: 4%;
-  margin: 0; }
+  @media only screen and (max-width: 1680px) {
+    .member-info-container {
+      font-size: 18px;
+      font-size: 1.125rem; } }
+  @media only screen and (max-width: 1281px) {
+    .member-info-container {
+      font-size: 15px;
+      font-size: 0.9375rem; } }
 
 div.humanity-row {
   margin-bottom: 15vh;
@@ -900,10 +967,7 @@ article.banner-wrapper {
         padding-left: 30px;
         color: #f0f9ff;
         opacity: .6;
-        text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
-        position: absolute;
-        left: 1vw;
-        top: 20vh; }
+        text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8); }
         @media only screen and (max-width: 1680px) {
           article.banner-wrapper div.banner-image div.banner-title-header h1.banner-title {
             font-size: 4.5rem; } }
