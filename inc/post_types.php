@@ -747,9 +747,9 @@ function zaman_register_the_need() {
 		),
 		'rewrite' => true,
 	);
-
 	register_post_type( 'the-need-post', $args );
 }
+add_action( 'init', 'zaman_register_the_need' );
 
 /*
 ==========================================
