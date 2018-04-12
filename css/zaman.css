@@ -1157,99 +1157,81 @@ article.banner-wrapper {
     font-weight: 600; }
 
 .calendar-content {
-  background-color: whitesmoke;
   -webkit-box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.2);
-  padding: 10px;
-  margin: 10px; }
-  .calendar-content .calendar-image {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; }
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  -webkit-box-shadow: inset 1px 1px 150px 45px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 1px 1px 150px 45px rgba(0, 0, 0, 0.4); }
   .calendar-content .calendar-date {
-    height: 300px;
-    background-color: #3E8CD6;
-    position: relative;
-    text-align: center; }
+    background-color: rgba(0, 0, 0, 0.5); }
     .calendar-content .calendar-date .date {
-      color: white;
-      opacity: 0.3;
-      text-shadow: 1px 1px 10px black; }
+      color: #f0f9ff;
+      opacity: .6;
+      text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8); }
     .calendar-content .calendar-date h2 {
       font-size: 75px;
       font-weight: lighter; }
     .calendar-content .calendar-date h1 {
       font-size: 85px;
       font-weight: 900; }
-  .calendar-content .calendar-title {
-    position: relative; }
-    .calendar-content .calendar-title .event-title {
-      margin: 0 10px;
-      max-height: 210px;
-      overflow: hidden; }
-    .calendar-content .calendar-title .title {
-      padding: 0;
-      margin: 0;
-      font-size: 45px;
-      font-weight: 600; }
-      .calendar-content .calendar-title .title a {
-        opacity: 0.7;
-        color: #1f1f1f;
-        text-decoration: none; }
-        .calendar-content .calendar-title .title a:hover {
-          text-decoration: none;
-          color: #3E8CD6;
-          opacity: 1; }
-    .calendar-content .calendar-title .event-info {
-      margin: 0 10px;
-      max-height: 90px;
-      min-width: 100%;
-      display: block;
-      position: absolute;
-      bottom: 0;
-      overflow: hidden; }
-    .calendar-content .calendar-title h6,
-    .calendar-content .calendar-title small {
-      font-size: 16.5px;
-      color: #898989; }
-      .calendar-content .calendar-title h6 .fa,
-      .calendar-content .calendar-title small .fa {
-        font-size: 20px;
-        margin-right: 3px; }
-    .calendar-content .calendar-title h6 {
-      margin-top: 10px; }
+  .calendar-content .calendar-title .event-title {
+    margin: 0 10px;
+    overflow: hidden; }
+  .calendar-content .calendar-title .title {
+    padding: 0;
+    margin: 0;
+    font-size: 45px;
+    font-weight: 600; }
+    .calendar-content .calendar-title .title a {
+      color: #f0f9ff;
+      opacity: .6;
+      text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+      text-decoration: none; }
+      .calendar-content .calendar-title .title a:hover {
+        text-decoration: none;
+        color: #3E8CD6;
+        opacity: 1; }
+  .calendar-content .calendar-title .calendar-event-info {
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 90%;
+    margin: .2em auto; }
+    .calendar-content .calendar-title .calendar-event-info small p {
+      color: #f0f9ff;
+      opacity: .6;
+      text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8); }
 
-.calendar-left-container .background {
-  -webkit-box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.2);
-  box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.2);
-  background-color: whitesmoke;
-  max-height: 100%;
-  width: 100%; }
-  .calendar-left-container .background .past-events-title {
-    text-align: center;
+.calendar-past-event-wrapper {
+  padding-top: 0; }
+  .calendar-past-event-wrapper .past-events-title {
     font-size: 40px;
     font-weight: 900;
-    background-color: lightgrey; }
+    background-color: #f5f5f5; }
 
 .past-events-image-container {
-  -webkit-box-shadow: inset 1px 1px 150px 45px rgba(0, 0, 0, 0.8);
-  box-shadow: inset 1px 1px 150px 45px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: inset 1px 1px 150px 45px rgba(0, 0, 0, 0.7);
+  box-shadow: inset 1px 1px 150px 45px rgba(0, 0, 0, 0.7);
   margin: 10px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
   .past-events-image-container .calendar-date {
-    background-color: rgba(255, 255, 255, 0.7); }
+    background-color: rgba(255, 255, 255, 0.4); }
     .past-events-image-container .calendar-date .date {
       color: #1f1f1f;
       font-weight: 900;
       opacity: 0.8; }
     .past-events-image-container .calendar-date h1 {
-      font-size: 40pt; }
+      font-size: 60px;
+      font-size: 3.75rem; }
     .past-events-image-container .calendar-date h2 {
-      font-size: 35pt; }
+      font-size: 40px;
+      font-size: 2.5rem; }
   .past-events-image-container .calendar-title .title {
-    font-size: 28pt;
+    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: 600;
     text-shadow: 1px 1px 10px black; }
     .past-events-image-container .calendar-title .title a {
@@ -1258,25 +1240,16 @@ article.banner-wrapper {
       text-decoration: none; }
       .past-events-image-container .calendar-title .title a:hover {
         text-decoration: none;
-        color: #3E8CD6;
+        color: #1485ee;
         opacity: 1; }
 
-.btn-group {
-  width: 100%; }
-  .btn-group .btn {
-    width: 100%;
-    font-size: 20pt;
-    font-weight: 600;
-    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.08);
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.08); }
-
-.calendar-right-container .background {
+.calendar-sidebar-container .background {
   -webkit-box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.2);
   background-color: whitesmoke;
   height: 100%;
   width: 100%; }
-  .calendar-right-container .background .widget-title {
+  .calendar-sidebar-container .background .widget-title {
     padding: 0;
     margin: 0;
     text-align: center;
@@ -1390,8 +1363,9 @@ article.banner-wrapper {
       content: "";
       width: 100%;
       height: 50px;
-      background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.15), rgba(255, 215, 0, 0));
+      background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.95), rgba(255, 215, 0, 0));
       background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.15)), to(rgba(255, 215, 0, 0)));
+      background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.15), rgba(255, 215, 0, 0));
       background: -o-linear-gradient(top, rgba(0, 0, 0, 0.15), rgba(255, 215, 0, 0));
       background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(255, 215, 0, 0)); }
     .gallery .gallery-item:after {
@@ -1409,71 +1383,6 @@ article.banner-wrapper {
       max-height: 300px;
       width: auto;
       visibility: hidden; }
-
-/*=================================
-// NOTE: GALLERY MODAL
-==================================*/
-.gallery-single-wrapper .modal {
-  display: none;
-  position: fixed;
-  z-index: 2;
-  margin-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: black;
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.9);
-  /* Black w/ opacity */ }
-  .gallery-single-wrapper .modal .modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 1000px; }
-  .gallery-single-wrapper .modal #caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s; }
-  .gallery-single-wrapper .modal .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s; }
-    .gallery-single-wrapper .modal .close:hover, .gallery-single-wrapper .modal .close:focus {
-      color: #bbb;
-      text-decoration: none;
-      cursor: pointer; }
-
-@-webkit-keyframes zoom {
-  from {
-    -webkit-transform: scale(0); }
-  to {
-    -webkit-transform: scale(1); } }
-
-@keyframes zoom {
-  from {
-    -webkit-transform: scale(0);
-    transform: scale(0); }
-  to {
-    -webkit-transform: scale(1);
-    transform: scale(1); } }
 
 .single-post {
   margin: 0;

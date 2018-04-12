@@ -27,25 +27,20 @@ get_template_part('templates/content', 'page-title');
                 $target= $image['target']; //Open normal or new tab
                 $alt = get_field('photo_gallery_alt', $id); //Get the alt which is a extra field (See below how to add extra fields)
                 $class = get_field('photo_gallery_class', $id);
-                ?>
+            ?>
 
             <a  id="mainImage" class="gallery-item"
                 href="<?php echo $full_image_url;?>"
                 data-lightbox="image-<?php the_ID();?>"
                 data-title="<?php echo $title; ?>"
+                data-alt="<?php echo $alt; ?>"
                 style="background-image: url('<?php echo $full_image_url; ?>')">
                 <img src="<?php echo $full_image_url; ?>"/>
-            </a><?php// echo $title ?>
+            </a>
 
         <?php endforeach; ?>
         </div>
     <?php endif; ?>
-        <div id="galleryModal" class="modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" id="img01">
-            <div class="gallery-modal-title"></div>
-            <div id="gallery-modal-caption"></div>
-        </div>
     </article>
 
   <?php endwhile; ?>
