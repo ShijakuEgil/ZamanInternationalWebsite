@@ -16,6 +16,9 @@ div.funds-body-wrapper{
           color:black;
           border-bottom: 1px solid white;
         }
+        @include bp-large{
+          font-size: 25px;
+        }
       }
     }
   }
@@ -25,8 +28,19 @@ div.funds-body-wrapper{
     border-top: 1px solid transparent;
     width:inherit !important;
     padding: 100px;
+    @include bp-large{
+      padding: 50px;
+    }
     div.funds-tab-content{
       width:inherit !important;
+      .display-4{
+        @include bp-large{
+          font-size: 3rem;
+        }
+      }
+    }
+    @include bp-large{
+      height: 200vh;
     }
   }
 }
@@ -36,12 +50,18 @@ div.full-button-wrapper{
 
   h2{
   font-size: 100px;
+  @include bp-large{
+    font-size: 50px;
+  }
 }
 }
 div.normal-button-wrapper{
   margin-top: 50px;
   h2{
     font-size: 50px;
+    @include bp-large{
+      font-size: 30px;
+    }
   }
 }
 article.funds-link-wrapper{
@@ -84,6 +104,9 @@ article.funds-link-wrapper{
 }
 .tooltip-inner {
     max-width: 600px;
+    @include bp-large{
+      max-width: 350px;
+    }
     /* If max-width does not work, try using width instead */
     // width: 350px;
 }
@@ -154,11 +177,17 @@ article.funds-link-wrapper{
       text-align: center;
       @include picture_font_style;
       font-size: $h2_subtitle;
+      @include bp-large{
+        font-size: 25px;
+      }
     }
     .goods-search-bin{
       width:100%;
       height:50px;
       font-size:25px;
+      @include bp-large{
+        font-size: 20px;
+      }
         label{
           @include picture_font_style;
         }
@@ -180,6 +209,9 @@ article.funds-link-wrapper{
   }
 .bin-location-select{
   max-height:50vh;
+  @include bp-large{
+    max-height: 40vh;
+  }
   overflow:auto;
   overflow-x: hidden;
   padding:0;
@@ -187,6 +219,9 @@ article.funds-link-wrapper{
   p{
     margin-left:10px;
     font-size: 20px;
+    @include bp-large{
+      font-size: 15px;
+    }
     border-bottom:1px solid rgba(255,255,255,.4);
     @include picture_font_style;
     display: block;
@@ -200,6 +235,9 @@ article.funds-link-wrapper{
 div.goods-what-donate-banner{
   position: relative;
   height:90vh;
+  @include bp-large{
+    height: 100vh;
+  }
   background-repeat: no-repeat;
   background-position: center;
   background-size:contain;
@@ -216,6 +254,9 @@ div.goods-what-donate-banner{
 
     h1{
       font-size: 60px;
+      @include bp-large{
+        font-size: 35px;
+      }
       font-weight: 300;
     }
   }
@@ -231,6 +272,9 @@ div.goods-what-donate-banner{
 
     h1{
       font-size: 60px;
+      @include bp-large{
+        font-size: 35px;
+      }
       font-weight: 300;
     }
   }
@@ -240,6 +284,9 @@ div.goods-what-donate-banner{
       li{
         list-style: none;
         font-size: 20px;
+        @include bp-large{
+          font-size: 15px;
+        }
       }
     }
   }
@@ -255,8 +302,15 @@ div.goods-what-donate-banner{
     .col-4{
       text-align: center;
       font-size: 20px;
+      @include bp-large{
+        font-size: 15px;
+      }
       button{
         width: 50%;
+        @include bp-large{
+          width: 40%;
+          font-size: 15px;
+        }
       }
     }
   }
@@ -302,6 +356,9 @@ div.goods-what-donate-banner{
 
   .wishlist-icon-wrapper{
     color:$icon_color;
+    @include bp-large{
+      font-size: 5rem;
+    }
   }
 
 }
@@ -311,6 +368,17 @@ div.wishlist-content-wrapper{
   height: auto;
   width: 100%;
   margin-bottom: -4px;
+  .wishlist-title-wrapper{
+      @include bp-large{
+        font-size: 2.5rem;
+      }
+  }
+  .wishlist-description-wrapper{
+      @include bp-large{
+        font-size: 1rem;
+      }
+  }
+
 }
 
 @keyframes active-in {

@@ -1,4 +1,4 @@
- @import "mixins";
+@import "mixins";
 @import "color-pallete";
 @import "variables";
 @import "blog-sidebar";
@@ -71,6 +71,7 @@ body{
 nav.header-navbar{
 	 @include header_footer_background;
 	  height: 100px;
+
 }
 .navbar-nav{
 	.menu-item{
@@ -84,8 +85,8 @@ nav.header-navbar{
 			@include bp-xlarge{
 				font-size: 1.3rem;
 			}
-			@include bp-large{
-				font-size:1.2rem;
+      @include bp-large{
+				font-size: 1.2rem;
 			}
 
 			@include bp-medium{
@@ -269,7 +270,10 @@ footer{
      			text-align: center;
      		}
      		a{
-                    font-size:30px;
+          font-size:30px;
+          @include bp-large{
+          font-size:25px;
+          }
      			@include bp-medium{
      			font-size:10px;
      			}
@@ -371,6 +375,9 @@ main {
 			.slider-paragraph{
 				padding-top:1em;
 				font-size: 35px;
+        @include bp-large{
+          font-size: 25px;
+        }
 				@include bp-medium{
 					font-size: 20px;
 				}
@@ -593,26 +600,26 @@ main {
 		.icon {
 			font-size:15rem;
 
-               @include bp-large{
-                    font-size: 12rem;
-               }
-               @include bp-medium{
-                    font-size:10rem;
-               }
-               color: $icon_color;
+      @include bp-large{
+        font-size:8rem;
+      }
+      @include bp-medium{
+        font-size:10rem;
+      }
+      color: $icon_color;
 		}
          .title-of-box{
 		     color:$clr-ui-title;
 		     font-weight: 400;
-               font-size:5rem;
-               @include bp-large{
-                    font-size:4.5rem;
-               }
-               @include bp-medium{
-                    font-size: 4rem;
-               }
-               padding: .1em 0;
-               margin: .2em 0;
+         font-size:5rem;
+         @include bp-large{
+   			     font-size: 2rem;
+   			 }
+         @include bp-medium{
+            font-size: 4rem;
+          }
+          padding: .1em 0;
+          margin: .2em 0;
 	     }//title-of-box
           p{
                font-size: 1.3rem;
@@ -621,6 +628,9 @@ main {
                @include bp-xlarge{
                     font-size:1.2rem;
                }
+               @include bp-large{
+         				font-size: 1.0rem;
+         			}
           }
      }//item
 }//impact-boxes
@@ -661,7 +671,7 @@ main {
                     font-size:3.5rem;
                }
                @include bp-large{
-                    font-size: 3rem;
+                    font-size: 2.5rem;
                }
                @include bp-medium{
                     font-size: 2.5rem;
@@ -703,6 +713,9 @@ main {
           @include  bp-xlarge{
                font-size: 1.0rem;
           }
+          @include bp-large{
+            font-size: 1.3rem;
+          }
 		color:$clr-ui-display-1;
    	}//p
 
@@ -711,6 +724,10 @@ main {
 		font-style: italic;
 		font-weight: 300;
 		font-size:2.5rem;
+
+    @include bp-large{
+      font-size: 1.8rem;
+    }
 
 		a{
                text-decoration: none;
