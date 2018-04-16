@@ -32,6 +32,8 @@ function zaman_enqueue_scripts(){
   wp_enqueue_script( 'sidenav_js', get_template_directory_uri() .'/js/sidenav.js', array('jquery'), '1.0.0', true);
   wp_enqueue_script( 'funds_js', get_template_directory_uri() .'/js/funds.js', array('jquery'), '1.0.0', true);
   wp_enqueue_script( 'lightbox_js', get_template_directory_uri() .'/js/lightbox.min.js', array('jquery'), '1.0.0', true);
+  wp_enqueue_script( 'event_pages_js', get_template_directory_uri() .'/js/events.pages.js', array('jquery'), '1.0.0', true);
+
   wp_register_script('single_default_slideshow', get_template_directory_uri(). '/js/single_default_ui_slideshow.js', array( 'jquery' ), '1.0.0', true );
   wp_enqueue_script( 'single_default_slideshow' );
 }

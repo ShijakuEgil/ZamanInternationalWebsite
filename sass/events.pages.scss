@@ -8,9 +8,11 @@
     background-position: center top;
     background-size: cover;
     box-shadow: inset 1px 1px 150px 45px rgba(0,0,0,0.4);
+    min-height:300px;
 
-  .calendar-date{
-    background-color: rgba(0,0,0,0.5);
+    .calendar-date{
+        background-color: rgba(0,0,0,0.5);
+        position:relative;
 
     .date{
       @include picture_font_style;
@@ -45,27 +47,55 @@
         font-weight: 600;
         a{
             @include picture_font_style;
-          // opacity:0.7;
-          text-decoration: none;
-          &:hover{
-            text-decoration: none;
-            color:#3E8CD6;
-            opacity:1;
-          }
         }
-      }
-      .calendar-event-info{
-        @include rgba(bg, black, .5);
-         width:90%;
-         margin: .2em auto;
-         small{
-             p{
-             @include picture_font_style;
-            }
-         }
-      }
+        h2{
+            position: absolute;
+            left:0;
+            top:0;
+            font-weight:lighter;
+        }
+        h1{
+            position:absolute;
+            right:0;
+            top: 60px;
+            font-weight:900;
+        }
+    }
+    .calendar-title{
 
-  }
+        .event-title{
+            margin: 0 10px;
+            overflow: hidden;
+        }
+        .title{
+            padding: 0;
+            margin:0;
+            font-size: 45px;
+            font-weight: 600;
+
+            a{
+                @include picture_font_style;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: none;
+                    color:#3E8CD6;
+                    opacity:1;
+                }
+            }
+        }
+        .calendar-event-info{
+            @include rgba(bg, black, .5);
+            width:90%;
+            margin: .2em auto;
+
+            small{
+
+                p{
+                    @include picture_font_style;
+                }
+            }
+        }
+    }
 }
 
 .calendar-past-event-wrapper{
@@ -105,8 +135,8 @@
           font-size: 25px;
         }
     }
-  }
-  .calendar-title{
+    .calendar-title{
+
     .title{
         @include font-size(30px);
         @include bp-large{
@@ -129,13 +159,24 @@
 }
 
 //right-sidebar styling
-.calendar-sidebar-container{
+.calendar-upcomming-container{
 
-  .background{
-    box-shadow: 1px 1px 20px 1px rgba(0,0,0,.2);
-    background-color: whitesmoke;
-    height:100%;
-    width: 100%;
+    h1{
+        font-size: 40px;
+        font-weight: 900;
+        background-color: $clr-grey-100;
+    }
+    .calendar-month-view{
+        margin:0 auto;
+        div{
+            height: 6.5vw;
+            background: $clr-grey-200;
+            border: 2px solid white;
+            transition: all .3s linear;
+            &:hover{
+                background: white;
+                cursor: pointer;
+            }
 
     .widget-title{
       padding:0;
@@ -149,7 +190,12 @@
       background-color: lightgrey;
       border-radius: 0;
     }
-  }
+}
+.single-event-info{
+    background-color: $clr-grey-100;
+    padding: 10px;
+    width:80%;
+    margin:10px auto;
 }
 
 // ==============================
@@ -164,25 +210,23 @@
            height:20vw;
            position:relative;
            &:hover{
-               cursor: pointer;
-               .gallery-album-cover{
-                   filter: grayscale(100%); /* Current draft standard */
-                   -webkit-filter: grayscale(100%); /* New WebKit */
-                   -moz-filter: grayscale(100%);
-                   -ms-filter: grayscale(100%);
-                   -o-filter: grayscale(100%); /* Not yet supported in Gecko, Opera or IE */
-                   filter: url(resources.svg#desaturate); /* Gecko */
-                   filter: gray; /* IE */
-                   -webkit-filter: grayscale(1);
-                   z-index: -3;
-                   margin: 0;
+                cursor: pointer;
+                .gallery-album-cover{
+                    filter: grayscale(100%); /* Current draft standard */
+                    -webkit-filter: grayscale(100%); /* New WebKit */
+                    -moz-filter: grayscale(100%);
+                    -ms-filter: grayscale(100%);
+                    -o-filter: grayscale(100%); /* Not yet supported in Gecko, Opera or IE */
+                    filter: url(resources.svg#desaturate); /* Gecko */
+                    filter: gray; /* IE */
+                    -webkit-filter: grayscale(1);
+                    z-index: -3;
+                    margin: 0;
                }
                .gallery-album-title{
                    text-decoration: none;
                    opacity:1;
                    color: $icon_color;
-
-
                }
            }
             .gallery-album-cover{

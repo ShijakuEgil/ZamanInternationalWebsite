@@ -4,6 +4,7 @@
 div.funds-body-wrapper{
   padding:50px;
   margin:0;
+  height:auto !important;
 
   #fundsTab{
     li.funds-nav-item{
@@ -244,11 +245,12 @@ div.goods-what-donate-banner{
   background-attachment: fixed;
 
   div.goods-acceptable{
+    overflow: auto;
     text-align: center;
     position: absolute;
     top:5vh;
     left:10vw;
-    bottom:20vh;
+    bottom:30vh;
     width: 35vw;
     @include rgba(bg, white, .9);
 
@@ -262,11 +264,12 @@ div.goods-what-donate-banner{
   }
 
   div.goods-not-acceptable{
+      overflow: auto;
     text-align: center;
     position:absolute;
     top:5vh;
     left:55vw;
-    bottom:20vh;
+    bottom:30vh;
     width: 35vw;
      @include rgba(bg, white, .9);
 
@@ -295,9 +298,9 @@ div.goods-what-donate-banner{
     bottom:0;
     left:0;
     right: 0;
-    padding: 20px;
+    padding: 10px;
     background-color: white;
-    margin: 20px 0;
+    margin: 10px 0;
 
     .col-4{
       text-align: center;

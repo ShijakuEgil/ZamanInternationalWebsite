@@ -1,6 +1,6 @@
+@import "variables";
 @import "mixins";
 @import "color-pallete";
-@import "variables";
 @import "blog-sidebar";
 @import "contact-us";
 @import "donation.pages";
@@ -9,6 +9,7 @@
 @import "events.pages";
 @import "single.pages";
 @import "what-we-do.pages";
+@import "get-involved.pages";
 // TODO: create styling for responsive design
 
 html {
@@ -597,7 +598,8 @@ main {
 	.item{
 		text-align: center;
 
-		.icon {
+        i,
+		.icon{
 			font-size:15rem;
 
       @include bp-large{

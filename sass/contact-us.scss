@@ -1,9 +1,9 @@
 .contact-us-container{
-  position:relative;
-  margin-top:4.5%;
-  width:100%;
-  height: 85vh;
-  text-align: center;
+    position:relative;
+    margin-top:4.5%;
+    width:100%;
+    height: 90vh;
+    text-align: center;
 }
 .contact-us-map{
   width:100%;
@@ -13,6 +13,7 @@
 }
 .direction-pannel {
   position: absolute;
+  display: block;
   bottom:3%;
   left: 35.8%;
   z-index: 8;
@@ -20,9 +21,9 @@
   padding: 0px;
   text-align: center;
   padding-left: 10px;
-  width:30%;
+  width:30vw;
   opacity:0;
-  transition: 0.5s;
+  transition: all 0.5s linear;
   #directions-btn{
     @include bp-large{
 
@@ -38,8 +39,9 @@
     opacity:1;
   }
 }
-.btn-group{
+div.contact-us-btn-group{
   position:absolute;
+  display:block;
   z-index: 9;
   bottom:3%;
   left:35%;

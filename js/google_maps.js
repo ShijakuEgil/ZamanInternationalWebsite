@@ -31,14 +31,15 @@ var map;
 
 	function addMarker( location, map, bounds ) {
 
-		var contentString =    ' <img style="float:left; width:200px; margin-top:30px" src="'+
-															location.marker_icon + '">'+
-    												'	<div style="margin-left:220px; margin-bottom:20px;">'+
-      												'<h2>'+location.loc_name +'</h2><p>'+location.address+'</p>' +
-      												'<p><img src="https://maps.googleapis.com/maps/api/streetview?size=350x120&location='+
-															location.latitude +','+ location.longitude +
-															'&key=AIzaSyA_6oZOskYt1IaUHzjhewzivrDtqFgj9QA"></p>'+
-    												'</div>';
+		var contentString =
+		' <img style="float:left; width:200px; margin-top:30px" src="'+
+			location.marker_icon + '">'+
+    	'	<div style="margin-left:220px; margin-bottom:20px;">'+
+      	'<h2>'+location.loc_name +'</h2><p>'+location.address+'</p>' +
+      	'<p><img src="https://maps.googleapis.com/maps/api/streetview?size=350x120&location='+
+			location.latitude +','+ location.longitude +
+		'&key=AIzaSyA_6oZOskYt1IaUHzjhewzivrDtqFgj9QA"></p>'+
+    	'</div>';
 
 		var locationLatLng = new google.maps.LatLng(location.latitude, location.longitude);
 

@@ -802,3 +802,9 @@ function zaman_register_gallery() {
 	register_post_type( 'gallery-photo', $args );
 }
 add_action( 'init', 'zaman_register_gallery' );
+
+/*
+==========================================
+// NOTE: VOLUNTEER OPPORTUNITY
+==========================================
+*/

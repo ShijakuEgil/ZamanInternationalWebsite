@@ -1,0 +1,297 @@
+/*
+===========================
+// NOTE: VOLUNTEER WITH US STYLE
+============================
+*/
+.partner-body-wrapper,
+.volunteer-body-wrapper{
+
+    .volunteer-quote-wrapper{
+        position:relative;
+        margin:0 auto;
+        padding:20px;
+        border:1px solid $clr-grey-200;
+        .volunteer-quote-image{
+            // position:absolute;
+            height: 30vw;
+            width:100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            @include box_shadow;
+        }
+        .volunteer-quote-text-wrapper{
+            // position: relative;
+            padding: 30px 20px;
+            max-height: 40vw;
+            overflow: auto;
+            // z-index: 99;
+            p.description{
+                font-size: 20px;
+                font-weight:bold;
+                color: $clr-grey-600;
+            }
+        }
+        .volunteer-quote-l{
+            font-size: 200px;
+            position: absolute;
+            left:51%;
+            top:0;
+            z-index: 99;
+            opacity:0.2;
+        }
+        .volunteer-quote-r{
+            font-size: 200px;
+            position: absolute;
+            right:1%;
+            bottom:0;
+            opacity:0.2;
+        }
+    }
+}
+.volunteer-opts-wrapper{
+
+    article.volunteer-opts-single{
+        padding:10px;
+
+        .volunteer-opts-single-image{
+            position:relative;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height:20vw;
+            border-radius: 10px;
+            box-shadow: inset 15px 0px 350px 15px black;
+
+            a.become-a-volunteer-link,
+            a.learn-more-link{
+                position:absolute;
+                @include picture_font_style;
+                font-size: 25px;
+                padding: 5px;
+                border: 1px solid rgba(255,255,255,.6);
+                border-radius: 5px;
+                transition: all .3s linear;
+                &:hover{
+                    text-decoration: none;
+                    color: $icon_color;
+                    border-color: $icon_color;
+
+                }
+            }
+            a.become-a-volunteer-link{
+                bottom:10px;
+                left:10px;
+
+            }
+            a.learn-more-link{
+                top:10px;
+                left:10px;
+            }
+            p.volunteer-opt-title{
+                position: absolute;
+                display: block;
+                right: 10px;
+                left:50%;
+                bottom:10px;
+                top:10px;
+                @include picture_font_style;
+                font-size: 30px;
+                overflow: hidden;
+            }
+        }
+    }
+}
+.volunteer-opts-wrapper{
+
+    article.testimonials-single{
+        padding:50px;
+        position:relative;
+        i{
+            font-size: 100px;
+            opacity:.1;
+        }
+        i.testimonials-quote-l{
+            position:absolute;
+            top:6vw;
+            left:2vw;
+        }
+        i.testimonials-quote-r{
+            position: absolute;
+            bottom:0;
+            right:2vw;
+        }
+        div.testimonials-image{
+            width:5vw;
+            height:5vw;
+            margin:10px auto;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-radius:100%;
+
+        }
+
+        div.testimonials-quote-wrapper{
+            overflow: hidden;
+        }
+    }
+
+}
+
+/*
+===========================
+// NOTE: PARTNER WITH US STYLE
+============================
+*/
+#partnerCarousel{
+    height:10vw;
+    background-color: $clr-grey-200;
+}
+.partner-impact-wrapper {
+    background-color: $clr-grey-50;
+
+    .partner-impact-single{
+
+        .partner-impact-single-image{
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height:20vw;
+
+            .partner-impact-link{
+                @include picture_font_style;
+                font-size: 35px;
+                background-color: rgba(0,0,0,.6);
+                transition: all .4s linear;
+                &:hover{
+                    text-decoration: none;
+                    color:$icon_color;
+                    opacity:1;
+                }
+            }
+        }
+    }
+}
+//CAROUSEL
+.carousel-inner .active,
+.carousel-inner .active + .carousel-item,
+.carousel-inner .active + .carousel-item + .carousel-item,
+.carousel-inner .active + .carousel-item + .carousel-item + .carousel-item  {
+    display: block;
+}
+
+.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item,
+.carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+    transition: none;
+}
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  position: relative;
+  transform: translate3d(0, 0, 0);
+}
+
+.carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: absolute;
+    top: 0;
+    right: -25%;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+}
+
+/* left or forward direction */
+.active.carousel-item-left + .carousel-item-next.carousel-item-left,
+.carousel-item-next.carousel-item-left + .carousel-item,
+.carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+.carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item,
+.carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+    position: relative;
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+}
+
+/* farthest right hidden item must be abso position for animations */
+.carousel-inner .carousel-item-prev.carousel-item-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+}
+
+/* right or prev direction */
+ .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+ .carousel-item-prev.carousel-item-right + .carousel-item,
+ .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+ .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item,
+ .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+     position: relative;
+     transform: translate3d(100%, 0, 0);
+     visibility: visible;
+     display: block;
+     visibility: visible;
+ }
+
+#carouselExample{
+    height:auto;
+}
+.partner-icon{
+    height:10vw;
+    width:10vw;
+}
+
+/*
+===========================
+// NOTE: JOIN OUR TEAM
+============================
+*/
+.employement-boddy-wrapper{
+
+    .employement-inner-wrapper{
+        width: 80vw;
+        background: $clr-grey-50;
+        -webkit-box-shadow: 0px 0px 93px -14px rgba(0,0,0,0.73);
+        -moz-box-shadow: 0px 0px 93px -14px rgba(0,0,0,0.73);
+        box-shadow: 0px 0px 93px -14px rgba(0,0,0,0.73);
+        margin: 0 auto;
+        padding: 5vw 15vw;
+
+        .employement-single-wrapper{
+            width:100%;
+            position: relative;
+            background-color: white;
+            -webkit-box-shadow: 0px 0px 93px -14px rgba(0,0,0,0.73);
+            -moz-box-shadow: 0px 0px 93px -14px rgba(0,0,0,0.73);
+            box-shadow: 0px 0px 93px -14px rgba(0,0,0,0.73);
+            transition: all .3s linear;
+            &:hover{
+                @include rgba(bg , $icon_color, .4);
+                .employement-learn-more-link{
+                    @include picture_font_style;
+                }
+            }
+
+
+            .posted-time{
+                position:absolute;
+                right:20px;
+                top:10px;
+            }
+            .employement-learn-more-link{
+                position:absolute;
+                right:20px;
+                bottom:10px;
+                font-size: 35px;
+                color:white;
+                transition: all .3s linear;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
