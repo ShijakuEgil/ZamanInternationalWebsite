@@ -1,15 +1,19 @@
 <?php get_header();?>
 <div class="contact-us-container">
-  <div class="btn-group" role="group" aria-label="Basic example">
-    <button id="address-btn"type="button" onClick="rightSideNav()" class="btn btn-secondary"><i class="fa fa-chevron-left"></i> Phone/Fax</button>
-    <button id="direction-btn"type="button" onClick="directionNav()" class="btn btn-secondary">Directions</button>
-    <button id="email-btn" type="button" onClick="leftSideNav()" class="btn btn-secondary">Email <i class="fa fa-chevron-right"></i></button>
+
+  <div class="contact-us-btn-group container-fluid" role="group" aria-label="Basic example">
+    <button id="address-btn"type="button" onClick="rightSideNav()" class="btn btn-lg btn-dark"><i class="fa fa-chevron-left"></i> Phone/Fax</button>
+    <button id="direction-btn"type="button" onClick="directionNav()" class="btn btn-lg btn-dark">Directions</button>
+    <button id="email-btn" type="button" onClick="leftSideNav()" class="btn btn-lg btn-dark">Email <i class="fa fa-chevron-right"></i></button>
   </div>
-  <div id="floating-panel" class="row direction-pannel">
+
+  <div id="floating-panel" class="row direction-pannel d-flex">
     <input id="directions-input" type="text" class="col-8 form-control" placeholder="Your Address" required>
     <button id="directions-btn"type="button" name="button" class="col-4 btn btn-secondary">Get Directions</button>
   </div>
+
   <div id="map" class="contact-us-map"></div>
+
   <div class="sidenav-left" id="phone-fax-address">
 
       <h3>Phone|Fax|Address</h3>

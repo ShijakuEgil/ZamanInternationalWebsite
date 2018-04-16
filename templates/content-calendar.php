@@ -2,9 +2,9 @@
 
     <div class="row no-gutters calendar-content" style="background-image: url('<?php echo zaman_get_featured_image(); ?>')" >
 
-      <div class="col-3 calendar-date d-flex flex-column justify-content-center align-items-center">
-          <h2 class="date"><?php echo date('M', strtotime( get_field('date'))); ?></h2>
-          <h1 class="date text-primary"><?php echo date('j', strtotime( get_field('date'))); ?></h1>
+      <div class="col-3 calendar-date ">
+          <h2 class="date display-1 m-1"><?php echo date('M', strtotime( get_field('date'))); ?></h2>
+          <h1 class="date text-primary display-1 m-1"><?php echo date('j', strtotime( get_field('date'))); ?></h1>
       </div>
 
       <div class="col-9 calendar-title d-flex flex-column align-items-start">

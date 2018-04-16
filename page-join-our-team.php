@@ -3,43 +3,26 @@ get_header(  );
 get_template_part( 'templates/content', 'banner' );
 get_template_part( 'templates/content', 'page-title' );
  ?>
+<div class="container-fluid employement-boddy-wrapper">
 
- <div class="row title-row justify-content-center impact-boxes container-fluid">
-     <div class="col-6 calendar-center-container">
+    <div class="employement-inner-wrapper mb-5">
 
-       <?php
-       $args = array(
-                 'posts_per_page' => -1,
-                 'post_type' => 'event',
-                 'orderby' => 'meta_value',
-                 'meta_key' => 'date',
-                 'order' => 'ASC'
-               );
+        <?php $query = new WP_Query(array( 'post_type'  =>  'job_openings', 'posts_per_page'    =>  -1) ); ?>
 
-       // TODO: fix the post per page problem
+        <?php while($query->have_posts() ): $query->the_post(); ?>
+            <div class="employement-single-wrapper mb-5 p-2 d-flex">
 
-       $query = new WP_Query($args);
-       $currDate = strtotime(date( 'Y-m-d' ));
-       // var_dump($currDate);
-       while($query->have_posts() ) : $query->the_post();
-          $calDate = strtotime(date(get_field( 'date' )));
-          // var_dump($calDate);
+                <h1 class="display-3"><?php the_title();?></h1>
+                <p class="posted-time lead">Posted on: <?php the_time('l, F jS, Y'); ?></p>
+                <a class="employement-learn-more-link" href="<?php echo get_permalink(); ?>">Learn More</a>
 
-          // check if date is older than current or not
-
-          if($calDate >= $currDate){ ?>
-            <div class="float-left">
-            <?php get_template_part('templates/content', 'calendar'); ?>
             </div>
-        <?php  }
-        endwhile;
-        wp_reset_postdata();
-        ?>
-        </div>
-        <div class="col-6 container-fluid d-flex justify-content-center align-items-center">
-          <button type="button" class="btn btn-primary">Apply</button>
-        </div>
+        <?php endwhile; ?>
+
+    </div>
 
 </div>
+
+
 
  <?php get_footer() ?>

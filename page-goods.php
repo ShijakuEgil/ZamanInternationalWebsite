@@ -77,43 +77,54 @@ get_template_part('templates/content', 'page-title');
   </div>
 </div>
 
-<div class="container-fluid title-conponent">
-  <div class="row title-row no-gutters justify-content-center">
-    <div class="col separator"></div>
-    <div class="col-auto title">
-      <h1>WHAT CAN I DONATE?</h1>
-    </div>
-    <div class="col separator"></div>
-  </div>
-  <p class="description">
-    Nunc luctus in metus eget fringilla.
-    Aliquam sed justo ligula. Vestibulum nibh erat,
-    pellentesque ut laoreet vitae.</p>
-</div>
+<?php
+     zaman_area_title('area_title', 'area_subtitle', 'page_for_posts');
+               ?>
 <div class="container-fluid goods-what-donate-banner" style="background-image: url('<?php echo get_template_directory_uri();?>/img/goods-banner.jpg')">
 
-  <div class="text-success goods-acceptable">
-    <h1>Acceptable Items</h1>
+  <div class="goods-acceptable">
+    <h1 class="text-success"> <?php the_field('acceptable_list_title', get_option('page_for_posts')); ?></h1>
       <?php the_field('acceptable_items', get_option('page_for_posts')); ?>
   </div>
 
-  <div class="text-danger goods-not-acceptable">
-    <h1>Not Acceptable Items</h1>
+  <div class="goods-not-acceptable">
+    <h1 class="text-danger"><?php the_field('not_acceptable_list_title', get_option('page_for_posts')); ?></h1>
     <?php the_field('not_acceptable_items', get_option('page_for_posts') ); ?>
   </div>
 
   <div class="row container-fluid goods-buttons-wrapper">
     <div class="col-4">
-      <label for="goodsButton">To donate your goods, click on the button below.</label><br><br />
-      <button id="goodsButton" class="btn btn-primary btn-lg">Donate Goods</button>
+      <label for="goodsButton"><?php the_field('left_button_description', get_option('page_for_posts') ); ?></label>
+      <button
+            onclick="window.location='<?php the_field('left_button_page_link', get_option('page_for_posts') ); ?>';"
+            id="goodsButton"
+            class="btn btn-primary btn-lg">
+
+            <?php the_field('left_button_text', get_option('page_for_posts') ); ?>
+
+        </button>
     </div>
+
     <div class="col-4">
-      <label for="monetaryButton">To make a monetary donation, click on the button below.</label><br /><br />
-      <button id="monetaryButton"class="btn btn-primary btn-lg">Donate Funds</button>
+      <label for="monetaryButton"><?php the_field('center_button_description', get_option('page_for_posts') ); ?></label>
+      <button
+            onclick="window.location='<?php the_field('center_button_page_link', get_option('page_for_posts') ); ?>';"
+            id="monetaryButton"
+            class="btn btn-primary btn-lg">
+
+            <?php the_field('center_button_text', get_option('page_for_posts') ); ?>
+
+      </button>
     </div>
+
     <div class="col-4">
-      <label for="whishlistsButton">To learn more about the items that are needed most, plaese visit our whishlists page</label>
-      <button id="whishlistsButton" class="btn btn-primary btn-lg">Whishlists</button>
+      <label for="whishlistsButton"><?php the_field('right_button_description', get_option('page_for_posts') ); ?></label>
+      <button
+            onclick="window.location='<?php the_field('right_button_page_link', get_option('page_for_posts') ); ?>';"
+            id="whishlistsButton"
+            class="btn btn-primary btn-lg">
+
+            <?php the_field('right_button_text', get_option('page_for_posts') ); ?></button>
     </div>
   </div>
 </div>

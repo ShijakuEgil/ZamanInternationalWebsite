@@ -1,8 +1,8 @@
 
 <?php
 /*
- * Template Name: Custom UI
- * Template Post Type: news, event, blog-post
+ * Template Name: Elementor Post UI
+ * Template Post Type: news, event, blog-post, volunteer_opts
  */
 
  get_header();  ?>
@@ -34,12 +34,31 @@
 
                     <h1 class="single-default-ui-title"><?php the_title();?></h1>
                   </div>
+                  <?php if(get_post_type() == 'event'): ?>
+
+                      <div class="single-event-info">
+                          <h1 class="text-center">Location</h1>
+                          <small>
+                              <i class="fa fa-calendar mr-5 float-left text-primary"></i>
+
+                              <p class="the-hour"><?php echo date('l, F j, Y', strtotime(get_field('date'))); ?> | <?php echo date('g:i a', strtotime(get_field('start_time')));?> -
+                                  <?php echo date('g:i a', strtotime( get_field('end_time')));?>
+                              </p>
+                          </small>
+                          <?php $event_location = get_field('location'); ?>
+                          <small><i class="fa fa-map-marker mr-5 float-left text-primary"></i><p class=""><?php echo $event_location['address']; ?></p></small>
+                      </div>
+                  <?php endif; ?>
                 </div>
                 <div class="col-6 center-wrapper">
                   <?php the_content();?>
                 </div>
                 <div class="col-3 right-side-wrapper">
-                    <?php get_template_part( 'templates/content', 'related-posts' );?>
+                    <?php if(get_post_type() == 'event'): ?>
+                        <?php get_template_part('templates/content', 'calendar-upcoming'); ?>
+                    <?php else: ?>
+                      <?php get_template_part( 'templates/content', 'related-posts' );?>
+                    <?php endif; ?>
                 </div>
               </div>
             </article>

@@ -5,7 +5,7 @@ require get_template_directory() .'/inc/custom_fields.php';
 require get_template_directory() .'/inc/class-wp-bootstrap-navwalker.php';
 require get_template_directory() .'/inc/theme_support_functions.php';
 require get_template_directory() .'/inc/custom_functions.php';
-
+require get_template_directory() .'/inc/ajax_functions.php';
 
 // /**
 //  * Filter the upload size limit for non-administrators.

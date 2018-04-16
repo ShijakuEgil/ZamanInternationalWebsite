@@ -1,21 +1,7 @@
 <?php get_header( );
   get_template_part( 'templates/content', 'banner' );
+  get_template_part( 'templates/content', 'page-title');
 ?>
-<!--title-component-->
-<div class="container-fluid title-conponent">
-  <div class="row title-row justify-content-center">
-    <div class="col separator"></div>
-    <div class="col-auto title">
-      <h1> RECENT NEWS</h1>
-    </div>
-    <div class="col separator"></div>
-  </div>
-  <p class="description">
-    Nunc luctus in metus eget fringilla.
-    Aliquam sed justo ligula. Vestibulum nibh erat,
-    pellentesque ut laoreet vitae.
-</div>
-<!--title-component end-->
 <div class="container-fluid news-page-container">
 
 <?php $args = array('post_type' => 'news', 'posts_per_page' => 10);

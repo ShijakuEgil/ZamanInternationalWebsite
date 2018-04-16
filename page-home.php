@@ -33,28 +33,27 @@
           <!--carousel-inner-->
 
           <!--animated heading start -->
+          <?php if( get_field('display_animated_heading', get_option( 'page_on_front' ) ) == 1):?>
           <div class="caption v-middle text-center" id="animated-heading">
             <h2 class="cd-headline clip display-1">
+              <span class="blc"><?php the_field('static_text', get_option('page_on_front')); ?> | </span>
               <?php
-                $args = array('post_type' => 'animated-heading');?>
-              <?php $query = new WP_Query($args);
-              while($query->have_posts()) : $query->the_post();?>
-              <span class="blc"><?php the_field('heading_text'); ?> | </span>
-              <?php
-              $fields = get_post_meta($post->ID, 'text', false);
-              if(count($fields) != 0) { ?>
+                $animated_text = get_field( 'animated_text', get_option ( 'page_on_front') );
+                $fields = explode(',', $animated_text);
+                $count = 0;?>
                 <span class="cd-words-wrapper">
 
-                  <?php $count = 0 ?>
-                    <?php foreach($fields as $fields): ?>
-                      <b class="<?php if($count == 0){ echo 'is-visible'; }?>"><?php echo $fields; ?></b>
-                      <?php $count++; endforeach; ?>
+                    <?php foreach($fields as $field): ?>
+                        <b class="<?php if($count == 0){ echo 'is-visible'; }?>"><?php echo $field; ?></b>
+                        <?php
+                        $count++;
+                    endforeach; ?>
                 </span>
-                <?php } ?>
-                <?php endwhile; ?>
-              </h2>
 
+                <?php //endwhile; ?>
+              </h2>
             </div><!--.caption-->
+        <?php endif; ?>
           <!--animated heading end  -->
 
           <!--prev next index-->
@@ -75,7 +74,7 @@
                <form class=""action="<?php the_field('orange_button_page_link', get_option( 'page_on_front' ));?>">
                    <button type="submit" class="btn need-help-btn">
                      <div class="btn-icon d-flex align-items-center justify-content-center">
-                       <i class="fa fa-handshake-o"></i>
+                       <?php the_field('orange_button_icon', get_option( 'page_on_front' ));?>
                      </div>
                      <span><?php the_field('orange_button_text', get_option( 'page_on_front' ));?></span>
                     </button>
@@ -84,7 +83,7 @@
                <form action="<?php the_field('blue_button_page_link', get_option( 'page_on_front' ));?>">
                    <button class="btn volunteer-btn">
                         <div class="btn-icon d-flex align-items-center justify-content-center">
-                          <i class="fa fa-hand-paper-o"></i>
+                          <?php the_field('blue_button_icon', get_option( 'page_on_front' )); ?>
                          </div>
                          <span><?php the_field('blue_button_text', get_option( 'page_on_front' )); ?></span>
                     </button>
@@ -92,7 +91,7 @@
                <form action="<?php the_field('green_button_page_link', get_option( 'page_on_front' ));?>">
                     <button class="btn donate-btn">
                      <div class="btn-icon d-flex align-items-center justify-content-center">
-                       <i class="fa fa-money"></i>
+                       <?php the_field('green_button_icon', get_option( 'page_on_front' )); ?>
                      </div>
                      <span><?php the_field('green_button_text', get_option( 'page_on_front' )); ?></span>
                    </button>
@@ -100,7 +99,7 @@
               <form action="<?php the_field('yellow_button_page_link', get_option( 'page_on_front' ));?>">
                    <button class="btn wishlists-btn">
                      <div class="btn-icon d-flex align-items-center justify-content-center">
-                       <i class="fa fa-list-ul"></i>
+                       <?php the_field('yellow_button_icon', get_option( 'page_on_front' )); ?>
                      </div>
                      <span><?php the_field('yellow_button_text', get_option( 'page_on_front' )); ?></span>
                    </button>
@@ -116,7 +115,7 @@
     <div class="row no-gutters justify-content-center impact-boxes container-fluid">
         <div class="col-lg item">
           <div data-bs-hover-animate="pulse" class="box">
-            <i class="fa fa-eye icon"></i>
+            <?php the_field( 'first_feature_icon', get_option('page_on_front') ); ?>
             <h3 class="title-of-box"> <?php the_field('first_title', get_option('page_on_front')); ?></h3>
 
                <?php the_field('first_subtitle', get_option('page_on_front')); ?>
@@ -127,7 +126,7 @@
         </div>
         <div class="col-lg item">
           <div data-bs-hover-animate="pulse" class="box">
-            <i class="fa fa-bullseye icon"></i>
+            <?php the_field( 'second_feature_icon', get_option('page_on_front') ); ?>
             <h3 class="title-of-box"> <?php the_field('second_title', get_option('page_on_front')); ?></h3>
 
               <?php the_field('second_subtitle', get_option('page_on_front')); ?>
@@ -138,7 +137,7 @@
         </div>
         <div class="col-lg item">
           <div data-bs-hover-animate="pulse" class="box">
-            <i class="fa fa-line-chart icon"></i>
+            <?php the_field( 'third_feature_icon', get_option('page_on_front') ); ?>
             <h3 class="title-of-box"> <?php the_field('third_title', get_option('page_on_front')); ?></h3>
 
               <?php the_field('third_subtitle', get_option('page_on_front')); ?>

@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: Default UI
+ * Template Name: Default Post UI
  * Template Post Type: news, event, blog-post
  */
 
@@ -15,12 +15,11 @@
             <article id="post-<?php the_ID();?>" <?php post_class("single-post-div default-display"); ?>>
 
 
-
                 <div class="single-post-image" style="background-image: url('<?php echo zaman_get_featured_image(); ?>')">
                   <?php if(get_post_type() == 'news'): ?>
                        <h1 class="single-page-brand">Zaman | News</h1>
                   <?php elseif(get_post_type() == 'event'): ?>
-                      <h1 class="single-page-brand">Zaman | Calendar</h1>
+                      <h1 class="single-page-brand">Zaman | Event</h1>
                   <?php elseif(get_post_type() == 'blog-post'): ?>
                       <h1 class="single-page-brand">Zaman | Blog</h1>
                   <?php endif; ?>
@@ -31,6 +30,21 @@
                     <div class="single-default-ui-title-wrapper">
                       <h1 class="single-default-ui-title"><?php the_title();?></h1>
                     </div>
+                    <?php if(get_post_type() == 'event'): ?>
+
+                        <div class="single-event-info">
+                            <h1 class="text-center">Location</h1>
+                            <small>
+                                <i class="fa fa-calendar mr-5 float-left text-primary"></i>
+
+                                <p class="the-hour"><?php echo date('l, F j, Y', strtotime(get_field('date'))); ?> | <?php echo date('g:i a', strtotime(get_field('start_time')));?> -
+                                    <?php echo date('g:i a', strtotime( get_field('end_time')));?>
+                                </p>
+                            </small>
+                            <?php $event_location = get_field('location'); ?>
+                            <small><i class="fa fa-map-marker mr-5 float-left text-primary"></i><p class=""><?php echo $event_location['address']; ?></p></small>
+                        </div>
+                    <?php endif; ?>
                   </div>
 
                   <div class="col-6 center-wrapper">
@@ -67,11 +81,15 @@
                     <span><?php the_field('url_button_info_text') ?></span><a class="single-post-page-link btn btn-lg <?php the_field('url_button_style'); ?>" href="<?php the_field('url_link');?>"><?php the_field('url_button_text');?></a>
                   <?php endif; ?>
 
-
+                   <?php the_content();?>
                   </div>
 
                   <div class="col-3 right-side-wrapper">
+                    <?php if(get_post_type() == 'event'): ?>
+                        <?php get_template_part('templates/content', 'calendar-upcoming'); ?>
+                    <?php else: ?>
                       <?php get_template_part( 'templates/content', 'related-posts' );?>
+                    <?php endif; ?>
                   </div>
                 </div>
 
