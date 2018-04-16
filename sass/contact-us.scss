@@ -23,6 +23,15 @@
   width:30%;
   opacity:0;
   transition: 0.5s;
+  #directions-btn{
+    @include bp-large{
+
+    }
+  }
+  @include bp-large{
+    width: 28%;
+    left: 37%;
+  }
   &.show-directions{
     bottom: 10%;
     padding:25px;
@@ -37,7 +46,12 @@
   width:30%;
   box-shadow:-1px 1px 15px 15px rgba(black,.4);
   .btn{
+      @include bp-large{
+        font-size: 20px;
+        width: 40%;
+      }
   }
+
 }
 .sidenav-right,
 .sidenav-left{
@@ -51,6 +65,9 @@
   top:0;
   overflow-x: hidden;
   transition: 0.5s;
+  @include bp-large{
+    padding-top: 5%;
+  }
   &.sidenav-open{
     width:25%;
   }

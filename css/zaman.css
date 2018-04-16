@@ -50,6 +50,10 @@
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
+  @media only screen and (max-width: 1281px) {
+    .direction-pannel {
+      width: 28%;
+      left: 37%; } }
   .direction-pannel.show-directions {
     bottom: 10%;
     padding: 25px;
@@ -63,6 +67,10 @@
   width: 30%;
   -webkit-box-shadow: -1px 1px 15px 15px rgba(0, 0, 0, 0.4);
   box-shadow: -1px 1px 15px 15px rgba(0, 0, 0, 0.4); }
+  @media only screen and (max-width: 1281px) {
+    .btn-group .btn {
+      font-size: 20px;
+      width: 40%; } }
 
 .sidenav-right,
 .sidenav-left {
@@ -78,6 +86,10 @@
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
+  @media only screen and (max-width: 1281px) {
+    .sidenav-right,
+    .sidenav-left {
+      padding-top: 5%; } }
   .sidenav-right.sidenav-open,
   .sidenav-left.sidenav-open {
     width: 25%; }
@@ -204,24 +216,42 @@ div.funds-body-wrapper {
       background-color: white;
       color: black;
       border-bottom: 1px solid white; }
+    @media only screen and (max-width: 1281px) {
+      div.funds-body-wrapper #fundsTab li.funds-nav-item a.funds-nav-link {
+        font-size: 25px; } }
   div.funds-body-wrapper #fundsTabContent {
     border: 1px solid #e0e0e0;
     border-top: 1px solid transparent;
     width: inherit !important;
     padding: 100px; }
+    @media only screen and (max-width: 1281px) {
+      div.funds-body-wrapper #fundsTabContent {
+        padding: 50px; } }
     div.funds-body-wrapper #fundsTabContent div.funds-tab-content {
       width: inherit !important; }
+      @media only screen and (max-width: 1281px) {
+        div.funds-body-wrapper #fundsTabContent div.funds-tab-content .display-4 {
+          font-size: 3rem; } }
+    @media only screen and (max-width: 1281px) {
+      div.funds-body-wrapper #fundsTabContent {
+        height: 200vh; } }
 
 div.full-button-wrapper {
   padding: 50px;
   background-color: #fafafa; }
   div.full-button-wrapper h2 {
     font-size: 100px; }
+    @media only screen and (max-width: 1281px) {
+      div.full-button-wrapper h2 {
+        font-size: 50px; } }
 
 div.normal-button-wrapper {
   margin-top: 50px; }
   div.normal-button-wrapper h2 {
     font-size: 50px; }
+    @media only screen and (max-width: 1281px) {
+      div.normal-button-wrapper h2 {
+        font-size: 30px; } }
 
 article.funds-link-wrapper {
   padding: 2px; }
@@ -259,6 +289,9 @@ article.funds-link-wrapper {
 .tooltip-inner {
   max-width: 600px;
   /* If max-width does not work, try using width instead */ }
+  @media only screen and (max-width: 1281px) {
+    .tooltip-inner {
+      max-width: 350px; } }
 
 #map-canvas {
   height: 70vh;
@@ -315,10 +348,16 @@ article.funds-link-wrapper {
       opacity: .6;
       text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
       font-size: 40px; }
+      @media only screen and (max-width: 1281px) {
+        #container .goods-bin-info-wrapper h3.goods-bin-info-title {
+          font-size: 25px; } }
     #container .goods-bin-info-wrapper .goods-search-bin {
       width: 100%;
       height: 50px;
       font-size: 25px; }
+      @media only screen and (max-width: 1281px) {
+        #container .goods-bin-info-wrapper .goods-search-bin {
+          font-size: 20px; } }
       #container .goods-bin-info-wrapper .goods-search-bin label {
         color: #f0f9ff;
         opacity: .6;
@@ -344,6 +383,9 @@ small.goods-directions-subtitle {
   overflow-x: hidden;
   padding: 0;
   margin: 0; }
+  @media only screen and (max-width: 1281px) {
+    .bin-location-select {
+      max-height: 40vh; } }
   .bin-location-select p {
     margin-left: 10px;
     font-size: 20px;
@@ -355,6 +397,9 @@ small.goods-directions-subtitle {
     -webkit-transition: .3s ease;
     -o-transition: .3s ease;
     transition: .3s ease; }
+    @media only screen and (max-width: 1281px) {
+      .bin-location-select p {
+        font-size: 15px; } }
     .bin-location-select p:hover {
       cursor: pointer;
       color: #1485ee; }
@@ -366,6 +411,9 @@ div.goods-what-donate-banner {
   background-position: center;
   background-size: contain;
   background-attachment: fixed; }
+  @media only screen and (max-width: 1281px) {
+    div.goods-what-donate-banner {
+      height: 100vh; } }
   div.goods-what-donate-banner div.goods-acceptable {
     text-align: center;
     position: absolute;
@@ -378,6 +426,9 @@ div.goods-what-donate-banner {
     div.goods-what-donate-banner div.goods-acceptable h1 {
       font-size: 60px;
       font-weight: 300; }
+      @media only screen and (max-width: 1281px) {
+        div.goods-what-donate-banner div.goods-acceptable h1 {
+          font-size: 35px; } }
   div.goods-what-donate-banner div.goods-not-acceptable {
     text-align: center;
     position: absolute;
@@ -390,10 +441,17 @@ div.goods-what-donate-banner {
     div.goods-what-donate-banner div.goods-not-acceptable h1 {
       font-size: 60px;
       font-weight: 300; }
+      @media only screen and (max-width: 1281px) {
+        div.goods-what-donate-banner div.goods-not-acceptable h1 {
+          font-size: 35px; } }
   div.goods-what-donate-banner div.goods-not-acceptable ul li,
   div.goods-what-donate-banner div.goods-acceptable ul li {
     list-style: none;
     font-size: 20px; }
+    @media only screen and (max-width: 1281px) {
+      div.goods-what-donate-banner div.goods-not-acceptable ul li,
+      div.goods-what-donate-banner div.goods-acceptable ul li {
+        font-size: 15px; } }
   div.goods-what-donate-banner div.goods-buttons-wrapper {
     position: absolute;
     bottom: 0;
@@ -405,8 +463,15 @@ div.goods-what-donate-banner {
     div.goods-what-donate-banner div.goods-buttons-wrapper .col-4 {
       text-align: center;
       font-size: 20px; }
+      @media only screen and (max-width: 1281px) {
+        div.goods-what-donate-banner div.goods-buttons-wrapper .col-4 {
+          font-size: 15px; } }
       div.goods-what-donate-banner div.goods-buttons-wrapper .col-4 button {
         width: 50%; }
+        @media only screen and (max-width: 1281px) {
+          div.goods-what-donate-banner div.goods-buttons-wrapper .col-4 button {
+            width: 40%;
+            font-size: 15px; } }
 
 #masonry {
   -webkit-column-count: 4;
@@ -445,6 +510,9 @@ div.goods-what-donate-banner {
   width: 100%; }
   .wishlist-single-wrapper .wishlist-icon-wrapper {
     color: #1485ee; }
+    @media only screen and (max-width: 1281px) {
+      .wishlist-single-wrapper .wishlist-icon-wrapper {
+        font-size: 5rem; } }
 
 div.wishlist-content-wrapper {
   background-color: #f5f5f5;
@@ -452,6 +520,12 @@ div.wishlist-content-wrapper {
   height: auto;
   width: 100%;
   margin-bottom: -4px; }
+  @media only screen and (max-width: 1281px) {
+    div.wishlist-content-wrapper .wishlist-title-wrapper {
+      font-size: 2.5rem; } }
+  @media only screen and (max-width: 1281px) {
+    div.wishlist-content-wrapper .wishlist-description-wrapper {
+      font-size: 1rem; } }
 
 @-webkit-keyframes active-in {
   0% {
@@ -553,6 +627,10 @@ div.wishlist-content-wrapper {
   height: 20vw;
   margin-bottom: 10em; }
 
+@media only screen and (max-width: 1281px) {
+  .the-need-wrapper .title-wrapper .display-4 {
+    font-size: 3rem; } }
+
 .the-need-wrapper .the-need-right-info-wrapper,
 .the-need-wrapper .the-need-left-info-wrapper {
   height: inherit; }
@@ -607,12 +685,21 @@ div.wishlist-content-wrapper {
 
 .large-section .post-title {
   font-size: 55px; }
+  @media only screen and (max-width: 1281px) {
+    .large-section .post-title {
+      font-size: 40px; } }
 
 .mid-section .second-headline .post-title {
   font-size: 45px; }
+  @media only screen and (max-width: 1281px) {
+    .mid-section .second-headline .post-title {
+      font-size: 30px; } }
 
 .mid-section .small-sections .col-6 .post-title {
   font-size: 30px; }
+  @media only screen and (max-width: 1281px) {
+    .mid-section .small-sections .col-6 .post-title {
+      font-size: 20px; } }
 
 .post-title-group .post-title a:hover {
   color: #3E8CD6; }
@@ -623,12 +710,18 @@ div.wishlist-content-wrapper {
     height: 41.66667vh; }
   .archive-news .post.title {
     font-size: 35px; }
+    @media only screen and (max-width: 1281px) {
+      .archive-news .post.title {
+        font-size: 30px; } }
 
 .small-news-archive .news-image-wrapper {
   height: 20.83333vh; }
 
 .small-news-archive .post-title {
   font-size: 25px; }
+  @media only screen and (max-width: 1281px) {
+    .small-news-archive .post-title {
+      font-size: 20px; } }
 
 .news-sidebar-section {
   text-align: center;
@@ -679,7 +772,7 @@ section.timeline {
             line-height: 1.5rem; } }
         @media only screen and (max-width: 1281px) {
           section.timeline .timeline-item .timeline-img .date {
-            top: 15%;
+            top: 30%;
             font-size: 1.4rem;
             line-height: 1.4rem; } }
     section.timeline .timeline-item .timeline-content {
@@ -700,6 +793,9 @@ section.timeline {
           position: absolute;
           top: 2vh;
           z-index: 3; }
+          @media only screen and (max-width: 1281px) {
+            section.timeline .timeline-item .timeline-content .timeline-img-header h2.timeline-title {
+              font-size: 45px; } }
       section.timeline .timeline-item .timeline-content .timeline-paragraph {
         padding-top: 2%;
         height: 20vw;
@@ -767,7 +863,8 @@ div.end-note-container {
         line-height: 1.5rem; } }
     @media only screen and (max-width: 1281px) {
       div.end-note-container a.timeline-end-note {
-        font-size: 1.2rem;
+        padding-top: 30px;
+        font-size: 1.5rem;
         line-height: 1.2rem; } }
     div.end-note-container a.timeline-end-note:hover {
       background-color: #2196f3;
@@ -1005,6 +1102,9 @@ article.humanity-col {
     text-align: left;
     padding: 0;
     padding-left: 50px; }
+    @media only screen and (max-width: 1281px) {
+      .blog-post-wrapper .blog-post-content {
+        font-size: 18px; } }
     .blog-post-wrapper .blog-post-content .blog-title-excerpt h1.blog-post-title {
       margin: 0; }
       .blog-post-wrapper .blog-post-content .blog-title-excerpt h1.blog-post-title a.blog-title-link {
@@ -1017,6 +1117,9 @@ article.humanity-col {
         -webkit-transition: .3s ease;
         -o-transition: .3s ease;
         transition: .3s ease; }
+        @media only screen and (max-width: 1281px) {
+          .blog-post-wrapper .blog-post-content .blog-title-excerpt h1.blog-post-title a.blog-title-link {
+            font-size: 35px; } }
         .blog-post-wrapper .blog-post-content .blog-title-excerpt h1.blog-post-title a.blog-title-link:hover {
           text-decoration: none;
           color: #215299; }
@@ -1066,6 +1169,9 @@ div.blog-post-image {
     color: #1f1f1f;
     font-size: 20px;
     margin: 0 20px; }
+    @media only screen and (max-width: 1281px) {
+      .pagination .page-numbers {
+        font-size: 15px; } }
     .pagination .page-numbers:hover {
       text-decoration: none; }
   .pagination .page-numbers.current {
@@ -1125,9 +1231,15 @@ article.banner-wrapper {
       article.banner-wrapper div.banner-image div.banner-info-wrapper i.fa-quote-left {
         top: 0;
         left: 0; }
+        @media only screen and (max-width: 1281px) {
+          article.banner-wrapper div.banner-image div.banner-info-wrapper i.fa-quote-left {
+            font-size: 35px; } }
       article.banner-wrapper div.banner-image div.banner-info-wrapper i.fa-quote-right {
         bottom: 0;
         right: 0; }
+        @media only screen and (max-width: 1281px) {
+          article.banner-wrapper div.banner-image div.banner-info-wrapper i.fa-quote-right {
+            font-size: 35px; } }
       article.banner-wrapper div.banner-image div.banner-info-wrapper div.banner-info {
         text-align: center;
         max-height: 80%;
@@ -1140,7 +1252,7 @@ article.banner-wrapper {
           font-size: 1.5rem; }
           @media only screen and (max-width: 1281px) {
             article.banner-wrapper div.banner-image div.banner-info-wrapper div.banner-info p {
-              font-size: 1.4rem; } }
+              font-size: 1.2rem; } }
 
 /*====================================
 // NOTE: TITLE COMPONENT STYLING
@@ -1150,11 +1262,18 @@ article.banner-wrapper {
   margin-bottom: 7em; }
   .title-conponent .title-row .title h1 {
     font-weight: 300; }
+    @media only screen and (max-width: 1281px) {
+      .title-conponent .title-row .title h1 {
+        font-size: 50px; } }
   .title-conponent .title-row .separator {
     background: url("../img/header-bg.png") repeat-x center; }
   .title-conponent .description {
+    text-align: center;
     color: #757575;
     font-weight: 600; }
+    @media only screen and (max-width: 1281px) {
+      .title-conponent .description {
+        font-size: 18px; } }
 
 .calendar-content {
   -webkit-box-shadow: 1px 1px 20px 1px rgba(0, 0, 0, 0.2);
@@ -1173,9 +1292,15 @@ article.banner-wrapper {
     .calendar-content .calendar-date h2 {
       font-size: 75px;
       font-weight: lighter; }
+      @media only screen and (max-width: 1281px) {
+        .calendar-content .calendar-date h2 {
+          font-size: 50px; } }
     .calendar-content .calendar-date h1 {
       font-size: 85px;
       font-weight: 900; }
+      @media only screen and (max-width: 1281px) {
+        .calendar-content .calendar-date h1 {
+          font-size: 50px; } }
   .calendar-content .calendar-title .event-title {
     margin: 0 10px;
     overflow: hidden; }
@@ -1184,6 +1309,9 @@ article.banner-wrapper {
     margin: 0;
     font-size: 45px;
     font-weight: 600; }
+    @media only screen and (max-width: 1281px) {
+      .calendar-content .calendar-title .title {
+        font-size: 30px; } }
     .calendar-content .calendar-title .title a {
       color: #f0f9ff;
       opacity: .6;
@@ -1209,6 +1337,9 @@ article.banner-wrapper {
     font-size: 40px;
     font-weight: 900;
     background-color: #f5f5f5; }
+    @media only screen and (max-width: 1281px) {
+      .calendar-past-event-wrapper .past-events-title {
+        font-size: 25px; } }
 
 .past-events-image-container {
   -webkit-box-shadow: inset 1px 1px 150px 45px rgba(0, 0, 0, 0.7);
@@ -1226,14 +1357,23 @@ article.banner-wrapper {
     .past-events-image-container .calendar-date h1 {
       font-size: 60px;
       font-size: 3.75rem; }
+      @media only screen and (max-width: 1281px) {
+        .past-events-image-container .calendar-date h1 {
+          font-size: 25px; } }
     .past-events-image-container .calendar-date h2 {
       font-size: 40px;
       font-size: 2.5rem; }
+      @media only screen and (max-width: 1281px) {
+        .past-events-image-container .calendar-date h2 {
+          font-size: 25px; } }
   .past-events-image-container .calendar-title .title {
     font-size: 30px;
     font-size: 1.875rem;
     font-weight: 600;
     text-shadow: 1px 1px 10px black; }
+    @media only screen and (max-width: 1281px) {
+      .past-events-image-container .calendar-title .title {
+        font-size: 20px; } }
     .past-events-image-container .calendar-title .title a {
       opacity: 0.8;
       color: white;
@@ -1257,6 +1397,9 @@ article.banner-wrapper {
     font-weight: 900;
     background-color: lightgrey;
     border-radius: 0; }
+    @media only screen and (max-width: 1281px) {
+      .calendar-sidebar-container .background .widget-title {
+        font-size: 25px; } }
 
 .gallery-body-wrapper .gallery-row-wrapper {
   padding: 3em; }
@@ -1311,6 +1454,9 @@ article.banner-wrapper {
       -webkit-transition: linear .5s;
       -o-transition: linear .5s;
       transition: linear .5s; }
+      @media only screen and (max-width: 1281px) {
+        .gallery-body-wrapper .gallery-row-wrapper .gallery-album-wrapper .gallery-album-title {
+          font-size: 40px; } }
 
 /*==========================================
 // NOTE: GALLERY PAGE SINGLE PAGE
@@ -1397,6 +1543,9 @@ article.banner-wrapper {
       background-repeat: no-repeat;
       background-size: cover;
       background-attachment: fixed; }
+      @media only screen and (max-width: 1281px) {
+        .single-post article.single-post-div div.single-post-image {
+          height: 60vh; } }
       .single-post article.single-post-div div.single-post-image h1.single-page-brand {
         position: absolute;
         left: 5vw;
@@ -1406,6 +1555,10 @@ article.banner-wrapper {
         opacity: .6;
         text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
         font-size: 100px; }
+        @media only screen and (max-width: 1281px) {
+          .single-post article.single-post-div div.single-post-image h1.single-page-brand {
+            font-size: 5vw;
+            top: 20vh; } }
     .single-post article.single-post-div div.single-default-ui-wrapper div.single-default-ui-left-side-wrapper div.single-default-ui-title-wrapper {
       min-height: 30vh;
       border-right: 3px solid black;
@@ -1413,6 +1566,9 @@ article.banner-wrapper {
     .single-post article.single-post-div div.single-default-ui-wrapper div.single-default-ui-left-side-wrapper h1.single-default-ui-title {
       font-weight: lighter;
       font-size: 70px; }
+      @media only screen and (max-width: 1281px) {
+        .single-post article.single-post-div div.single-default-ui-wrapper div.single-default-ui-left-side-wrapper h1.single-default-ui-title {
+          font-size: 30px; } }
     .single-post article.single-post-div div.single-default-ui-wrapper div.center-wrapper {
       padding: 5vh 2vw;
       /* Slideshow container */
@@ -1516,6 +1672,9 @@ article.banner-wrapper {
         float: right; }
     .single-post article.single-post-div div.single-default-ui-wrapper div.right-side-wrapper h1.related-posts-banner {
       font-size: 60px; }
+      @media only screen and (max-width: 1281px) {
+        .single-post article.single-post-div div.single-default-ui-wrapper div.right-side-wrapper h1.related-posts-banner {
+          font-size: 30px; } }
     .single-post article.single-post-div div.single-default-ui-wrapper div.right-side-wrapper div.single-ui-related-posts {
       background-color: #f5f5f5;
       margin: 20px 0; }
@@ -1524,6 +1683,9 @@ article.banner-wrapper {
         padding: 0;
         font-weight: 350;
         font-size: 22px; }
+        @media only screen and (max-width: 1281px) {
+          .single-post article.single-post-div div.single-default-ui-wrapper div.right-side-wrapper div.single-ui-related-posts h1.related-post-title {
+            font-size: 15px; } }
         .single-post article.single-post-div div.single-default-ui-wrapper div.right-side-wrapper div.single-ui-related-posts h1.related-post-title a {
           text-decoration: none;
           color: #212121; }
@@ -1780,6 +1942,9 @@ footer {
         -webkit-box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5);
         box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5);
         color: rgba(255, 255, 255, 0.4); }
+        @media only screen and (max-width: 1281px) {
+          footer .contact-us .social-media a {
+            font-size: 25px; } }
         @media only screen and (max-width: 992px) {
           footer .contact-us .social-media a {
             font-size: 10px; } }
@@ -1850,6 +2015,9 @@ main .slider-heading {
       color: #f0f9ff;
       opacity: .6;
       text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8); }
+      @media only screen and (max-width: 1281px) {
+        main .slider-heading .carousel-caption .slider-paragraph {
+          font-size: 25px; } }
       @media only screen and (max-width: 992px) {
         main .slider-heading .carousel-caption .slider-paragraph {
           font-size: 20px; } }
@@ -2036,7 +2204,7 @@ main #animated-heading {
       color: #1485ee; }
       @media only screen and (max-width: 1281px) {
         .impact-boxes .item .icon {
-          font-size: 12rem; } }
+          font-size: 8rem; } }
       @media only screen and (max-width: 992px) {
         .impact-boxes .item .icon {
           font-size: 10rem; } }
@@ -2048,7 +2216,7 @@ main #animated-heading {
       margin: .2em 0; }
       @media only screen and (max-width: 1281px) {
         .impact-boxes .item .title-of-box {
-          font-size: 4.5rem; } }
+          font-size: 2rem; } }
       @media only screen and (max-width: 992px) {
         .impact-boxes .item .title-of-box {
           font-size: 4rem; } }
@@ -2059,6 +2227,9 @@ main #animated-heading {
       @media only screen and (max-width: 1680px) {
         .impact-boxes .item p {
           font-size: 1.2rem; } }
+      @media only screen and (max-width: 1281px) {
+        .impact-boxes .item p {
+          font-size: 1.0rem; } }
 
 .featured-contents {
   padding: 2% 1vw;
@@ -2098,7 +2269,7 @@ main #animated-heading {
               font-size: 3.5rem; } }
           @media only screen and (max-width: 1281px) {
             .featured-contents article.single-post .post-image .post-header a.featured-post-type {
-              font-size: 3rem; } }
+              font-size: 2.5rem; } }
           @media only screen and (max-width: 992px) {
             .featured-contents article.single-post .post-image .post-header a.featured-post-type {
               font-size: 2.5rem; } }
@@ -2129,11 +2300,17 @@ main #animated-heading {
         @media only screen and (max-width: 1680px) {
           .featured-contents article.single-post .post-content p {
             font-size: 1.0rem; } }
+        @media only screen and (max-width: 1281px) {
+          .featured-contents article.single-post .post-content p {
+            font-size: 1.3rem; } }
       .featured-contents article.single-post .post-content .post-title {
         text-decoration: none;
         font-style: italic;
         font-weight: 300;
         font-size: 2.5rem; }
+        @media only screen and (max-width: 1281px) {
+          .featured-contents article.single-post .post-content .post-title {
+            font-size: 1.8rem; } }
         .featured-contents article.single-post .post-content .post-title a {
           text-decoration: none;
           color: black;
