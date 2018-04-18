@@ -1,19 +1,12 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class('banner-wrapper container-fluid'); ?>>
 
-  <div class="row no-gutters container-fluid banner-image" style="background-image: url('<?php echo zaman_get_featured_image(); ?>')">
-    <div class="col-9 banner-title-header d-flex align-items-center">
-         <div class="title-wrapper">
-              <h1 class="banner-title">Zaman |<strong>
-              <?php
-              if(get_the_id() == '497' || get_the_id() == '499'):?>
-              Donate <?php wp_title('');?></strong></h1>
-              <?php
-           else:?>
-               <?php wp_title('');?></strong></h1>
-              <?php
-           endif; ?>
-         </div>
-
+    <div class="single-post-image" style="background-image: url('<?php echo zaman_get_featured_image()?>')">
+      <?php if(get_post_type() == 'news'): ?>
+           <h1 class="single-page-brand">Zaman | <b>News</b></h1>
+      <?php elseif(get_post_type() == 'event'): ?>
+          <h1 class="single-page-brand">Zaman | <b>Calendar</b></h1>
+      <?php elseif(get_post_type() == 'blog-post '): ?>
+          <h1 class="single-page-brand">Zaman | <b>Blog</b></h1>
+      <?php elseif(get_post_type() == 'job_openings '): ?>
+          <h1 class="single-page-brand">Zaman | <b>Employement</b></h1>
+      <?php endif; ?>
     </div>
-  </div>
-</article>

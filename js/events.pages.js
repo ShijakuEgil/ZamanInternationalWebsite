@@ -25,26 +25,46 @@
             }
         });
     });
+	$(".calendar-reset-btn").on('click', function(){
+		var ajaxUrl = $(this).data('url');
+		$.ajax({
 
+			url : ajaxUrl,
+			type : 'post',
+			data: {
+
+				action : 'zaman_reset_upcoming_events',
+			},
+			// dataType : "json",
+			error: function(status){
+				console.log(status);
+			},
+			success:function(response){
+				 // response = JSON.parse(response);
+				 console.log('response' + response);
+			  $(".calendar-center-container").html(response);
+			}
+		});
+	})
 	$('#carouselExample').on('slide.bs.carousel', function (e) {
 
-    var $e = $(e.relatedTarget);
-    var idx = $e.index();
-    var itemsPerSlide = 4;
-    var totalItems = $('.carousel-item').length;
+	    var $e = $(e.relatedTarget);
+	    var idx = $e.index();
+	    var itemsPerSlide = 4;
+	    var totalItems = $('.carousel-item').length;
 
-    if (idx >= totalItems-(itemsPerSlide-1)) {
-        var it = itemsPerSlide - (totalItems - idx);
-        for (var i=0; i<it; i++) {
-            // append slides to end
-            if (e.direction=="left") {
-                $('.carousel-item').eq(i).appendTo('.carousel-inner');
-            }
-            else {
-                $('.carousel-item').eq(0).appendTo('.carousel-inner');
-            }
-        }
-    }
-});
+	    if (idx >= totalItems-(itemsPerSlide-1)) {
+	        var it = itemsPerSlide - (totalItems - idx);
+	        for (var i=0; i<it; i++) {
+	            // append slides to end
+	            if (e.direction=="left") {
+	                $('.carousel-item').eq(i).appendTo('.carousel-inner');
+	            }
+	            else {
+	                $('.carousel-item').eq(0).appendTo('.carousel-inner');
+	            }
+	        }
+	    }
+	});
 
 })( jQuery );

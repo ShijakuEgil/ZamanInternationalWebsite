@@ -1,6 +1,35 @@
 // ================================
 // NOTE: STYLE FOR A SINGLE POST
 // ================================
+div.single-post-image
+{
+  position: relative;
+  width:100%;
+  height:50vh;
+  @include bp-large
+  {
+    height: 60vh;
+  }
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment:fixed;
+
+  h1.single-page-brand
+  {
+    position: absolute;
+    left:5vw;
+    right:0;
+    top: 30%;
+    @include picture_font_style;
+    font-size: 100px;
+    @include bp-large
+    {
+      font-size: 5vw;
+      top: 20vh;
+    }
+  }
+}
 .single-post{
   margin:0;
   padding:0;
@@ -8,32 +37,6 @@
   article.single-post-div{
     width:100%;
 
-    div.single-post-image{
-      position: relative;
-      width:inherit;
-      height:50vh;
-      @include bp-large{
-        height: 60vh;
-      }
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment:fixed;
-
-
-      h1.single-page-brand{
-        position: absolute;
-        left:5vw;
-        right:0;
-        top: 30%;
-        @include picture_font_style;
-        font-size: 100px;
-        @include bp-large{
-          font-size: 5vw;
-          top: 20vh;
-        }
-      }
-    }
     div.single-default-ui-wrapper{
 
       div.single-default-ui-left-side-wrapper{

@@ -1,14 +1,5 @@
    <div class="container-fluid single-post">
-
-
             <article id="post-<?php the_ID();?>" <?php post_class("single-post-div default-display"); ?>>
-
-
-                <div class="single-post-image" style="background-image: url('<?php echo zaman_get_featured_image(); ?>')">
-                      <h1 class="single-page-brand">Zaman | Blog</h1>
-
-                </div>
-
                 <div class="container-fluid row no-gutters single-default-ui-wrapper">
                   <div class="col-3 single-default-ui-left-side-wrapper">
                     <div class="single-default-ui-title-wrapper">

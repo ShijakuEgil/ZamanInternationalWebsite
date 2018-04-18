@@ -76,11 +76,11 @@ add_theme_support( 'html5', array('search-form') );
 // NOTE: Remove Default Post Type
 =========================================
 */
-add_action('admin_menu', 'remove_default_post_type');
-
-function remove_default_post_type(){
-  remove_menu_page('edit.php');
-}
+// add_action('admin_menu', 'remove_default_post_type');
+//
+// function remove_default_post_type(){
+//   remove_menu_page('edit.php');
+// }
 
 /*
 ==========================================

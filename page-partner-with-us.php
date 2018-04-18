@@ -29,7 +29,9 @@
     while ($query->have_posts()): $query->the_post();?>
 
     <div class="col-3 partner-impact-single p-2">
-        <div class="partner-impact-single-image d-flex align-items-end" style="background-image:url('<?php echo zaman_get_featured_image(); ?>')">
+        <div    class=" partner-impact-single-image
+                        d-flex align-items-end rounded" 
+                style="background-image:url('<?php echo zaman_get_featured_image(); ?>')">
             <a class="partner-impact-link w-100 text-center" href="<?php echo get_permalink() ?>"><?php the_title(); ?></a>
         </div>
     </div>

@@ -4,6 +4,7 @@ get_template_part( 'templates/content', 'banner' );
 get_template_part( 'templates/content', 'page-title');
  ?>
  <div class="gallery-body-wrapper container-fluid">
+
    <div class="row gallery-row-wrapper no gutters container-fluid">
 
      <?php
@@ -16,9 +17,7 @@ get_template_part( 'templates/content', 'page-title');
      while($query->have_posts()): $query->the_post();?>
         <div class="col-3 gallery-album-wrapper text-center">
 
-            <div class="gallery-album-cover" style="background-image: url('<?php echo zaman_get_featured_image();?>')">
-
-            </div>
+            <div class="gallery-album-cover rounded" style="background-image: url('<?php echo zaman_get_featured_image();?>')"></div>
 
             <a class="gallery-album-title d-flex justify-content-center align-items-center"href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 
@@ -26,7 +25,6 @@ get_template_part( 'templates/content', 'page-title');
      <?php
    endwhile;
    ?>
-
     </div><!--row-wrapper-->
 
 </div><!--boddy-wrapper-->

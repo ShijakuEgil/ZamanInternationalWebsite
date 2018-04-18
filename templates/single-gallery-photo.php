@@ -1,6 +1,9 @@
-<?php get_template_part('templates/content', 'page-title');?>
+<?php //get_template_part('templates/content', 'single-banner'); ?>
+
+
 <article id="post-<?php the_ID();?>" <?php post_class("gallery-single-wrapper mb-5 p-5 "); ?>>
 
+<?php get_template_part('templates/content', 'page-title');?>
     <?php $images = acf_photo_gallery('album_images', $post->ID);
     if( count( $images ) ): ?>
         <div id="galleryWrapper" class="gallery d-flex justify-content-center align-items-center">

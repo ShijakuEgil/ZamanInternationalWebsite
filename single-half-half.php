@@ -16,16 +16,8 @@
 
             <article id="post-<?php the_ID();?>" <?php post_class("single-post-div default-display"); ?>>
 
-              <div class="single-post-image" style="background-image: url('<?php echo zaman_get_featured_image()?>')">
-                <?php if(get_post_type() == 'news'): ?>
-                     <h1 class="single-page-brand">Zaman | News</h1>
-                <?php elseif(get_post_type() == 'event'): ?>
-                    <h1 class="single-page-brand">Zaman | Calendar</h1>
-                <?php elseif(get_post_type() == 'blog-post '): ?>
-                    <h1 class="single-page-brand">Zaman | Blog</h1>
-                <?php endif; ?>
-              </div>
-
+            <?php get_template_part('templates/content', 'single-banner'); ?>
+            
               <div class="container-fluid row no-gutters single-default-ui-wrapper">
 
                 <div class="col-3 single-default-ui-left-side-wrapper">

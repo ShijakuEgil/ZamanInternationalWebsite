@@ -151,33 +151,24 @@
     zaman_area_title('featured_content_title', 'featured_content_subtitle', 'page_on_front');
     ?>
 
-    <!--Featured content updated-->
     <div class="row no-gutters container-fluid featured-contents">
-     <!-- <div class="col-4 single-post"> -->
+
 <?php
-          $args = array(
-            'post_type' => 'event',
-            'posts_per_page' => 1
-            // 'orderby' => 'meta_value',
-            // 'meta_key' => 'time_date',
-            // 'order' => 'ASC'
-              );
-      $event_query = new WP_Query($args);
-      // $check = true;
-      if($event_query->have_posts() ):
-          // $currDate = new DateTime(current_time( 'Y-m-d H:i' ));
-          while($event_query->have_posts() ) : $event_query->the_post();
-                // $calDate = new DateTime(get_field( 'time_date' ));
-                  // if($calDate >= $currDate){
-               get_template_part( 'templates/content', 'featured' );
-                    // $check = false;
-                    // }
-          endwhile;
-      endif;
-      wp_reset_postdata();
+     $curr_args = array(
+         'post_type' => 'event',
+         'posts_per_page' => 1
+     );
+     $query = new WP_Query($curr_args);
+
+    if($query->have_posts()):
+        while( $query->have_posts() ) : $query->the_post();
+
+            get_template_part('templates/content', 'featured');
+
+        endwhile;
+    endif;
+    wp_reset_postdata();
 ?>
-     <!-- </div> -->
-     <!-- <div class="col-4 single-post"> -->
 <?php
       $args = array(
         'post_type' => 'news',
@@ -189,9 +180,8 @@
               get_template_part( 'templates/content', 'featured' );
           endwhile;
       endif;
+      wp_reset_postdata();
 ?>
-     <!-- </div> -->
-     <!-- <div class="col-4 single-post"> -->
 <?php
       $args = array(
         'post_type' => 'blog-post',
@@ -203,6 +193,7 @@
               get_template_part( 'templates/content', 'featured' );
           endwhile;
       endif;
+      wp_reset_postdata();
 ?>
     </div>
     <!--Featured content updated end-->
