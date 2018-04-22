@@ -1,56 +1,63 @@
-<?php get_header( );
-  get_template_part( 'templates/content', 'banner' );
-  get_template_part( 'templates/content', 'page-title');?>
+<?php
 
-<div class="row container-fluid">
 
-  <div class="col-9">
 
-    <div class="blog-container container-fluid">
-      <?php
-          $blog_loop = new WP_Query(array(
-                  'post_type'   => 'blog-post',
-                  'posts_per_page' => 5,
-                  'paged' => get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1)
-          );
+get_header( );
+get_template_part( 'templates/content', 'banner' );
+get_template_part( 'templates/content', 'page-title');
+$blog_loop = new WP_Query(array(
+      'post_type'   => 'blog-post',
+      'posts_per_page' => 5,
+      'paged' => get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1)
+);
+?>
 
-          while($blog_loop->have_posts() ) : $blog_loop->the_post(); ?>
+<div class="row w-100 m-0 px-5 no-gutters blog-body-wrapper">
 
-              <?php get_template_part( 'templates/content', 'blog' ); ?>
+    <div class="col-9 w-100 blog-posts-wrapper pr-5">
+        <?php
+        while($blog_loop->have_posts() ) : $blog_loop->the_post(); ?>
 
-          <?php endwhile;?>
-      <div class="pagination">
-          <?php
-              $big = 999999999;
-                 echo paginate_links( array (
-                   'base' => str_replace( $big, '%#%',get_pagenum_link($big) ),
-                   'format' => '?paged=%#%',
-                   'current'=> max(1 , get_query_var('paged') ),
-                   'total' => $blog_loop->max_num_pages
-              ) );
-          ?>
-      </div>
+            <?php get_template_part( 'templates/content', 'blog' ); ?>
+
+        <?php endwhile;?>
+
     </div>
-  </div>
-  <div class="col-xs-12 col-sm-3 column">
-      <div class="icon-sidebar-container container-fluid">
+    <div class="col-3 sidebar-wrapper rounded text-center">
 
-        <img src="<?php echo get_template_directory_uri();?>/img/logo.png" width="300" height="165" alt="">
+        <h1 class="text-center w-100">Blog Tags</h1>
+        <div class="blog-sidebar-tags-wrapper text-center">
+            <?php
+            $tags = get_tags();
+            $html = '<div class="post_tags">';
+            foreach ( $tags as $tag ) {
+                $tag_link = get_tag_link( $tag->term_id );
 
-        <div class="social-media sidebar-social-media">
-          <h1 class="widget-title">Folow Us On Social Media.</h1>
-          <?php // TODO: insert url values for social media anchors to call contact us page ?>
-          <a href="#"><i class="fa fa-facebook"></i></a>
-          <a href="#"><i class="fa fa-twitter"></i></a>
-          <a href="#"><i class="fa fa-instagram"></i></a>
+                $html .= "<a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug}'>";
+                $html .= "{$tag->name}</a>";
+            }
+            $html .= '</div>';
+            echo $html;
+            ?>
         </div>
 
-        <div class="sidebar-container container-fluid">
+        <h1 class="text-center mt-5"><?php the_field( 'get_involved_title', get_id_by_slug( 'blog' ) ); ?></h1>
 
-        		<?php get_sidebar(); ?>
-
+        <div class="calendar-btn-group btn-group-vertical w-75" role="group" aria-label="Basic example">
+          <button   onclick="window.location='<?php the_field('top_button_page_link', get_id_by_slug( 'blog' ) ); ?>';" type="button" class="btn btn-lg btn-light"><?php the_field( 'top_button_text', get_id_by_slug( 'blog') ); ?></button>
+          <button onclick="window.location='<?php the_field('middle_button_page_link', get_id_by_slug( 'blog' ) ); ?>';" type="button" class="btn btn-lg btn-light"><?php the_field( 'middle_button_text', get_id_by_slug( 'blog') ); ?></button>
+          <button onclick="window.location='<?php the_field('bottom_button_page_link', get_id_by_slug( 'blog' ) ); ?>';" type="button" class="btn btn-lg btn-light"><?php the_field( 'bottom_button_text', get_id_by_slug( 'blog') ); ?></button>
         </div>
-    </div>
 	</div>
 </div>
+<!-- <div class="pagination">
+    <?php// $big = 999999999;
+   //  echo paginate_links( array (
+   //     'base' => str_replace( $big, '%#%',get_pagenum_link($big) ),
+   //     'format' => '?paged=%#%',
+   //     'current'=> max(1 , get_query_var('paged') ),
+   //     'total' => $blog_loop->max_num_pages
+   // ) );
+?>
+</div> -->
 <?php get_footer(); ?>

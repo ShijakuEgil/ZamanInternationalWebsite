@@ -22,8 +22,8 @@
           $query = new WP_Query( $args );
 
           while( $query->have_posts()):$query->the_post();
-          $location = get_field('address');
-          ?>
+            $location = get_field('address');
+            ?>
               <div class="col-auto footer-contact-us-col">
                 <div class="contact-info">
                      <p class="lead"><?php the_title(); ?></p>
@@ -46,7 +46,6 @@
                      </div>
                 </div>
               </div>
-
          <?php endwhile; ?>
             </div><!--.row-->
 

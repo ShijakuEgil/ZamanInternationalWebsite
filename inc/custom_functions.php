@@ -49,6 +49,7 @@ function zaman_area_title($page_title_slug, $page_description_slug, $option){
 <?php
 }
 
+// NOTE: get the page link with page slug
 function get_id_by_slug($page_slug) {
 	$page = get_page_by_path($page_slug);
 	if ($page) {
@@ -56,4 +57,19 @@ function get_id_by_slug($page_slug) {
 	} else {
 		return null;
 	}
+}
+
+// NOTE: get and excerpt 
+function acf_excerpt($field_name) {
+	global $post;
+	$text = get_field($field_name);
+	if ( '' != $text ) {
+		$text = strip_shortcodes( $text );
+		$text = apply_filters('the_content', $text);
+		$text = str_replace(']]&gt;', ']]&gt;', $text);
+		$excerpt_length = 60; // 20 words
+		$excerpt_more = apply_filters('excerpt_more', ' ' . '[...]');
+		$text = wp_trim_words( $text, $excerpt_length, $excerpt_more );
+	}
+	return apply_filters('the_excerpt', $text);
 }

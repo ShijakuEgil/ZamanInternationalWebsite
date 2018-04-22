@@ -9,7 +9,7 @@ get_template_part( 'templates/content', 'page-title');
 
      <?php
      $args = array(
-       'post_type'  =>  'gallery-photo',
+       'post_type'  =>  'gallery_photo',
        'post_per_page'  =>  -1
      );
      $query = new WP_Query($args);

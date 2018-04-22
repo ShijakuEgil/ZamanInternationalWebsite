@@ -1,110 +1,102 @@
 <?php get_header( );
   get_template_part( 'templates/content', 'banner' );
   get_template_part( 'templates/content', 'page-title');
-?>
-<div class="container-fluid news-page-container">
+  $args = array('post_type' => 'news', 'posts_per_page' => 10);
+  $query = new WP_Query($args);
+  ?>
 
-    <?php
-    $args = array('post_type' => 'news', 'posts_per_page' => 10);
-    $query = new WP_Query($args);
+<div class="news-body-wrapper container-fluid m-0 p-5">
 
-    if($query->have_posts() ): $i = 0;
-    ?>
-    <div class="row headline-news no-gutters">
+    <?php if( $query->have_posts() ): $i = 0; ?>
 
-        <?php while($query->have_posts()): $query->the_post(); ?>
-            <?php if($i == 0): ?>
-                <div class="col-6 large-section">
+        <?php while( $query->have_posts() ): $query->the_post(); ?>
 
-                    <!-- <div class="main-headline"> -->
+            <?php if( $i == 0 ): ?>
+    <div class="row news-row-wrapper m-0 p-0">
 
-                        <?php get_template_part( 'templates/content','news' ); ?>
+        <div class="col-6 first-news m-0 p-0">
+            <?php get_template_part( 'templates/content', 'news'); ?>
+        </div>
+            <?php endif; ?>
 
-                    <!-- </div> -->
+            <?php if ( $i == 1 ): ?>
+        <div class="col-6 two-four-news-wrapper m-0 p-0">
 
-                </div><!--large-section-->
-            <?php elseif($i == 1): ?>
-                <div class="col-6 mid-section d-flex flex-column">
-
-                    <!-- <div class="second-headline"> -->
-
-                        <?php get_template_part( 'templates/content','news' ); ?>
-
-                    <!-- </div> -->
-            <?php elseif($i == 2): ?>
-                    <div class="row small-sections no-gutters">
-
-                        <div class="col-6 small-sectionl">
-
-                            <?php get_template_part( 'templates/content','news' ); ?>
-
-                        </div>
-            <?php elseif($i == 3): ?>
-                        <div class="col-6 small-sectionr">
-
-                            <?php get_template_part( 'templates/content','news' ); ?>
-
-                        </div>
-
-                    </div>
-                    <!--samll-sections-->
-
-                </div><!--mid-setion-->
-
-            </div><!--headline-news"-->
-        <?php elseif($i == 4): ?>
-            <div class="row no-gutters container-fluid m-0 p-0 news-and-sidebar">
-
-                <div class="col-9 archive-news-section">
-
-                    <div class="row no-gutters archive-news">
-
-                        <div class="col-6 main-news-archive">
-
-                            <?php get_template_part('templates/content','news'); ?>
-
-        <?php elseif($i == 5):?>
-
-                            <?php get_template_part('templates/content','news'); ?>
-
-                        </div>
-
-        <?php elseif($i == 6): ?>
-
-                        <div class="col-6 small-news-archive">
-                            <?php get_template_part('templates/content','news'); ?>
-
-        <?php elseif( $i > 6 && $i < 9): ?>
-
-                            <?php get_template_part( 'templates/content', 'news' );?>
+            <div class="second-news m-0 p-0">
+                <?php get_template_part( 'templates/content', 'news'); ?>
+            </div>
+            <?php endif; ?>
 
 
-        <?php elseif($i == 9):?>
+            <?php if ( $i == 2 ): ?>
+            <div class="three-four-news-wrapper row no-gutters m-0 p-0">
 
-                            <?php get_template_part( 'templates/content', 'news' ); ?>
-                        </div><!--small-news-archive-->
-                    </div><!--archive-news-->
-                </div><!--archive-news-section-->
-                <div class="col-3 news-sidebar-section rounded">
-                    <?php //get_sidebar(); ?>
+                <div class="col-6 third-news m-0 p-0">
+                    <?php get_template_part( 'templates/content', 'news'); ?>
+                </div>
+            <?php endif; ?>
+
+            <?php if ( $i == 3 ): ?>
+                <div class="col-6 fourth-news m-0 p-0">
+                    <?php get_template_part( 'templates/content', 'news'); ?>
                 </div>
             </div>
-        <?php endif; ?>
-
-<?php $i++; endwhile;
-
-              if($i < 9):?>
-                    </div><!--small-news-archive-->
-                  </div><!--archive-news-->
-                </div><!--archive-news-section-->
-            <div class="col-3 news-sidebar-section">
-        <?php   // get_sidebar(); ?>
         </div>
-        </div><!--news-and-sidebar-->
-        <?php endif; ?>
+    </div>
+            <?php endif; ?>
+            <?php if ( $i == 4 ): ?>
+    <div class="row no-gutters news-sidebar-wrapper container-fluid m-0 p-0">
 
-<?php  endif; ?>
+        <div class="col-9 five-ten-wrapper m-0 p-0">
 
-</div><!--news-page-container-->
+            <div class="row no-gutters five-ten-row-wrapper m-0 p-0">
 
+                <div class="col-6 five-six-wrapper container-fluid m-0 p-0">
+                    <?php get_template_part( 'templates/content', 'news'); ?>
+            <?php endif; ?>
+            <?php if ( $i == 5 ): ?>
+                    <?php get_template_part( 'templates/content', 'news'); ?>
+                </div>
+            <?php endif; ?>
+            <?php if ( $i == 6 ): ?>
+                <div class="col-6 seven-ten-wrapper container-fluid m-0 p-0">
+                    <?php get_template_part( 'templates/content', 'news'); ?>
+            <?php endif; ?>
+            <?php if ( $i > 6 && $i < 9 ): ?>
+                    <?php get_template_part( 'templates/content', 'news'); ?>
+            <?php endif; ?>
+            <?php if ( $i == 9 ): ?>
+                    <?php get_template_part( 'templates/content', 'news'); ?>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 sidebar-wrapper rounded text-center">
+
+            <h1 class="text-light text-center"><?php the_field('category_title', get_id_by_slug( 'newsp' ) ); ?></h1>
+
+            <div class="categories-wrapper container-fluid ">
+
+                <ul class="bycategories">
+                  <?php wp_list_categories('title_li=');?>
+                </ul>
+
+            </div>
+
+            <h1 class="container-fluid text-light text-center"><?php the_field('get_involved_title', get_id_by_slug( 'newsp' ) ); ?></h1>
+
+            <div class="btn-group-vertical w-50 news-get-involved-btns">
+                <button onclick="window.location='<?php the_field('top_button_page_link', get_id_by_slug( 'newsp' ) ); ?>';" type="button" class="btn  btn-light"><?php the_field( 'top_button_text', get_id_by_slug( 'newsp') ); ?></button>
+                <button onclick="window.location='<?php the_field('middle_button_page_link', get_id_by_slug( 'newsp' ) ); ?>';" type="button" class="btn btn-light"><?php the_field( 'middle_button_text', get_id_by_slug( 'newsp') ); ?></button>
+                <button onclick="window.location='<?php the_field('bottom_button_page_link', get_id_by_slug( 'newsp' ) ); ?>';" type="button" class="btn btn-light"><?php the_field( 'bottom_button_text', get_id_by_slug( 'newsp') ); ?></button>
+            </div>
+        </div>
+    </div>
+            <?php endif; ?>
+
+        <?php $i++; ?>
+        <?php endwhile; ?>
+
+    <?php endif; ?>
+
+</div>
 <?php get_footer(); ?>

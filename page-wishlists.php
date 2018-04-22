@@ -1,6 +1,6 @@
 <?php
 /*
-     @authors Egil Shijaku, Samia Chahine
+     @authors Egil Shijaku
      @pacakge ZamanInternational.org
 
      Zaman Wishlists Page

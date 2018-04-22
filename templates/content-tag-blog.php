@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class('blog-post-article row no-gutters rounded'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('tag-blog-post-article row no-gutters rounded'); ?>>
 
   <!-- <div class="row blog-post-wrapper"> -->
 
